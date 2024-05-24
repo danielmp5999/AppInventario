@@ -1,0 +1,23 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |
+        =Set(_Usuario,Office365Users.MyProfileV2());
+        
+        Collect(
+            ProductList,Table(
+            {Screen:"Asignaciones",ID:1,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/r/sites/AppsTiComunicacin/Documentos%20compartidos/Imagenes/klipartz.com.png"},
+            {Screen:"Computo",ID:2,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/s/AppsTiComunicacin/EddOII43sQ1Or0sUXuDrYxYBijxA_aHS9r4ISjJBl-lxfw?e=9pTQyX"},
+            {Screen:"Colaboradores",ID:3,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/s/AppsTiComunicacin/EddOII43sQ1Or0sUXuDrYxYBijxA_aHS9r4ISjJBl-lxfw?e=9pTQyX"},
+            {Screen:"Ventas",ID:4,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/s/AppsTiComunicacin/EddOII43sQ1Or0sUXuDrYxYBijxA_aHS9r4ISjJBl-lxfw?e=9pTQyX"},
+            {Screen:"Prestamos",ID:5,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/s/AppsTiComunicacin/EddOII43sQ1Or0sUXuDrYxYBijxA_aHS9r4ISjJBl-lxfw?e=9pTQyX"},
+            {Screen:"Telefonos",ID:6,Pantalla:Principal,img:"https://bamxp.sharepoint.com/:i:/s/AppsTiComunicacin/EddOII43sQ1Or0sUXuDrYxYBijxA_aHS9r4ISjJBl-lxfw?e=9pTQyX"}
+        ))
+    Theme: =BA
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

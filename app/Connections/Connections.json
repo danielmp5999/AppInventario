@@ -1,0 +1,54 @@
+{
+  "0dfad8b0-cb89-45b0-a8cd-852fa6333cc4": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://bamxp.sharepoint.com/sites/AppsTiComunicacin": {
+        "dataSources": {
+          "Datos": {
+            "tableName": "41d1ec12-f651-4493-8294-7b19afe8c68f"
+          },
+          "Lista": {
+            "tableName": "52d4f25f-a319-4ef8-a308-2e2ed4ca8835"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Datos",
+      "Lista"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0dfad8b0-cb89-45b0-a8cd-852fa6333cc4"
+  },
+  "39800e72-d439-4a5f-825d-ef7defb6c39a": {
+    "appActions": [
+      "MyProfile_V2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Usuarios de Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "39800e72-d439-4a5f-825d-ef7defb6c39a"
+  }
+}
