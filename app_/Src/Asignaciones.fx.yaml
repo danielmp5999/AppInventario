@@ -136,10 +136,25 @@
                             BorderColor: =App.Theme.Colors.Darker40
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
-                            Height: =99
+                            Height: |-
+                                =If(Asignaciones.Size = ScreenSize.ExtraLarge , 
+                                    100, 
+                                    Asignaciones.Size = ScreenSize.Large, 
+                                    100, 
+                                    100
+                                )
                             Image: =ThisItem.Imagen_App
                             ImagePosition: =ImagePosition.Fill
                             LayoutMinWidth: =30
+                            Width: |
+                                =//100
+                                
+                                If(Asignaciones.Size = ScreenSize.ExtraLarge , 
+                                    100, 
+                                    Asignaciones.Size = ScreenSize.Large, 
+                                    100, 
+                                    100
+                                )
                             ZIndex: =8
 
                     TitleContainer2 As groupContainer.verticalAutoLayoutContainer:
