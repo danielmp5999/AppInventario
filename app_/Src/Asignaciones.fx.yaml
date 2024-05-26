@@ -249,7 +249,9 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: |
-                                =Navigate(Asignaciones_Equipos,ScreenTransition.UnCover)
+                                =Navigate(Asignaciones_Equipos,ScreenTransition.UnCover);
+                                Set(varFiltro,"ASIGNADA")
+                            Text: ="Seleccionar"
                             Width: =110
                             X: =0
                             Y: =0

@@ -45,7 +45,9 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Icon: =Icon.ChevronLeft
-                OnSelect: =Navigate(Asignaciones)
+                OnSelect: |-
+                    =Navigate(Asignaciones);
+                    Reset(TextInputCanvas2)
                 Width: =35
                 ZIndex: =1
 
@@ -68,7 +70,9 @@
                         17,
                         14
                     )
-                Text: =Categorias.Selected.CategoryName
+                Text: |-
+                    =Categorias.Selected.CategoryName
+                    //CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName))
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: =96
@@ -82,9 +86,16 @@
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
                 Height: =55
-                Items: =["Asignados", "Disponibles"]
+                Items: |-
+                    =//["Asignados", "Disponibles"]
+                    ["Asignados "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName)), "Disponibles "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="UTILITARIA",DEPTO.Value=Categorias.Selected.CategoryName))]
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
+                OnSelect: |-
+                    =If(TabList1.Selected.Value = "Asignados "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName)),
+                        Set(varFiltro,"ASIGNADA"),
+                        Set(varFiltro,"UTILITARIA")
+                    )
                 Size: |
                     =//'TabList.Size'.Small
                     
@@ -94,7 +105,7 @@
                         'TabList.Size'.Medium,
                         'TabList.Size'.Small
                     )
-                Width: =245
+                Width: =295
                 X: =0
                 Y: =0
                 ZIndex: =4
@@ -125,12 +136,14 @@
                 ZIndex: =1
 
             "TextInputCanvas2 As 'Text input'":
+                AccessibleLabel: =""
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
+                Placeholder: ="Buscar por responsable"
                 Width: =Container3.Width-Icon3.Width-Icon3.Width
                 X: =0
                 Y: =0
@@ -155,8 +168,16 @@
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Items: |-
-                    =Filter([@Lista],ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName
-                    //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
+                    =SortByColumns(
+                        Filter(
+                            //[@Lista]
+                            FiltroUtilitaria
+                            ,
+                            ASIGNACIÓN.Value=varFiltro,DEPTO.Value=Categorias.Selected.CategoryName,
+                            StartsWith(RESPONSABLE,TextInputCanvas2.Value)
+                        //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
+                        )
+                        ,"Codigo_BAMXP",SortOrder.Ascending
                     )
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -191,8 +212,13 @@
                         )
                         */
                         If(First(ThisItem.'Datos adjuntos').Value = Blank(),
-                            170,
-                            Parent.TemplateWidth
+                            If(Asignaciones.Size = ScreenSize.ExtraLarge , 
+                                170, 
+                                Asignaciones.Size = ScreenSize.Large, 
+                                150, 
+                                120
+                            ),
+                            Parent.TemplateHeight
                         )
                     Image: |-
                         =If(First(ThisItem.'Datos adjuntos').Value = Blank(),
@@ -232,7 +258,13 @@
                         )
                         */
                         If(First(ThisItem.'Datos adjuntos').Value = Blank(),
-                            170,
+                            If(Asignaciones.Size = ScreenSize.ExtraLarge , 
+                                170, 
+                                Asignaciones.Size = ScreenSize.Large, 
+                                150, 
+                                120
+                            )
+                            ,
                             Parent.TemplateWidth
                         )
                     X: |-
@@ -256,6 +288,11 @@
                             0
                         )
                         */
+                    Y: |-
+                        =If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                            Parent.TemplateHeight /2 - Image10.Height/2 - Image10.Height/4 ,
+                            0
+                        )
                     ZIndex: =1
 
                 Overlay2 As rectangle:
@@ -279,10 +316,10 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =ThisItem.Title
+                    Text: =ThisItem.Codigo_BAMXP
                     Width: =Parent.TemplateWidth - 64
-                    X: =32
-                    Y: =Overlay2.Y + 16
+                    X: =10
+                    Y: =Overlay2.Y + 5
                     ZIndex: =3
 
                 Subtitle5 As label:
@@ -295,11 +332,26 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =18
-                    Text: =ThisItem.ID
+                    Size: =15
+                    Text: =ThisItem.TIPO
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title5.Width
                     X: =Title5.X
-                    Y: =Title5.Y + Title5.Height + 8
+                    Y: =Title5.Y + Title5.Height + 1
                     ZIndex: =4
+
+                Label1 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Height: =51
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.RESPONSABLE
+                    Width: =Parent.TemplateWidth - Label1.X
+                    X: =Subtitle5.X - 5
+                    Y: =Subtitle5.Y+Subtitle5.Height/1.8
+                    ZIndex: =6
 
