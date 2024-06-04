@@ -35,6 +35,7 @@
       "disableruntimepolicies": false,
       "dynamicschema": false,
       "enableappembeddingux": false,
+      "enablecanvasappruntimecopilot": false,
       "enablechatbotfeature": true,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
@@ -130,13 +131,14 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "es-ES"
   },
   "ScreenOrder": [
     "Bienvenido",
     "Principal",
     "Asignaciones",
     "Asignaciones_Equipos",
-    "Asignaciones_Equipos_Detalle"
+    "Asignaciones_Equipos_Detalle",
+    "Inventario"
   ]
 }

@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Button": {
+  "Botón": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_ButtonCanvas",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Button",
-    "Version": "0.0.29"
+    "TemplateDisplayName": "Botón",
+    "Version": "0.0.36"
   },
   "circle": {
     "CustomGroupControlTemplateName": "",
@@ -41,6 +41,36 @@
     "Name": "circle",
     "OverridableProperties": {},
     "Version": "2.3.0"
+  },
+  "Encabezado": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/Header",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "Header",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Encabezado",
+    "Version": "0.0.29"
+  },
+  "Entrada de texto": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextInputCanvas",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TextInputCanvas",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Entrada de texto",
+    "Version": "0.0.29"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -83,21 +113,6 @@
     "Name": "groupContainer",
     "OverridableProperties": {},
     "Version": "1.3.0"
-  },
-  "Header": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/Header",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "Header",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Header",
-    "Version": "0.0.29"
   },
   "Host": {
     "CustomGroupControlTemplateName": "",
@@ -156,6 +171,21 @@
     "OverridableProperties": {},
     "Version": "2.5.1"
   },
+  "Lista de pestañas": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TabList",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TabList",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Lista de pestañas",
+    "Version": "2.2.20"
+  },
   "rectangle": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -184,22 +214,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Tab list": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TabList",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_TabList",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Tab list",
-    "Version": "2.2.20"
-  },
-  "Text": {
+  "Texto": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextCanvas",
@@ -211,23 +226,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Text",
-    "Version": "0.0.25"
-  },
-  "Text input": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextInputCanvas",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_TextInputCanvas",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Text input",
-    "Version": "0.0.26"
+    "TemplateDisplayName": "Texto",
+    "Version": "0.0.30"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

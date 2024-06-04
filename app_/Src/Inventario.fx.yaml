@@ -1,8 +1,8 @@
-"Asignaciones As screen.'headerGalleryLayout_ver1.0'":
+Inventario As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer2_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -20,7 +20,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer2 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =BA.Colors.Lighter80
             FillPortions: =0
@@ -34,7 +34,7 @@
             RadiusTopRight: =4
             ZIndex: =1
 
-            Icon1 As icon.ArrowLeft:
+            Icon1_1 As icon.ArrowLeft:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =App.Theme.Colors.Darker30
@@ -47,7 +47,7 @@
                 Width: =50
                 ZIndex: =1
 
-            Header2 As Encabezado:
+            Header2_1 As Encabezado:
                 AlignInContainer: =AlignInContainer.Start
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
@@ -58,16 +58,16 @@
                 Logo: ='bamx-1024x414'
                 OnSelectLogo: =false
                 Style: ='Header.Style'.Light
-                Title: ="Asignaciones"
+                Title: ="Inventario"
                 UserEmail: =User().Email
                 UserImage: =User().Image
                 UserName: =User().FullName
-                Width: =Parent.Width -Icon1.Width
+                Width: =Parent.Width -Icon1_1.Width
                 X: =0
                 Y: =0
                 ZIndex: =2
 
-        MainContainer2 As groupContainer.horizontalAutoLayoutContainer:
+        MainContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =Parent.Fill
             LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -82,7 +82,7 @@
             Width: =1000
             ZIndex: =3
 
-            Categorias As gallery.galleryVertical:
+            Categorias_1 As gallery.galleryVertical:
                 AccessibleLabel: ="Items gallery"
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
@@ -98,7 +98,7 @@
                 WrapCount: =If(Asignaciones.Size = ScreenSize.ExtraLarge , 3, Asignaciones.Size = ScreenSize.Large, 2, 1)
                 ZIndex: =5
 
-                GalleryContainer1 As groupContainer.verticalAutoLayoutContainer:
+                GalleryContainer1_1 As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =308
@@ -111,11 +111,11 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =If(Asignaciones.Size = ScreenSize.ExtraLarge, (Parent.Width / 3) - 15, Asignaciones.Size = ScreenSize.Large, (Parent.Width / 2) - 15 , Parent.Width)
-                    X: =5
+                    X: =1
                     Y: =5
                     ZIndex: =6
 
-                    ImageContainer2 As groupContainer.verticalAutoLayoutContainer:
+                    ImageContainer2_1 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =1.5
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
@@ -131,7 +131,7 @@
                         Width: =Parent.Width
                         ZIndex: =7
 
-                        Image3 As image:
+                        Image3_1 As image:
                             AutoDisableOnSelect: =false
                             BorderColor: =App.Theme.Colors.Darker40
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -157,12 +157,12 @@
                                 )
                             ZIndex: =8
 
-                    TitleContainer2 As groupContainer.verticalAutoLayoutContainer:
+                    TitleContainer2_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =8
                         LayoutMinHeight: =100
-                        LayoutMinWidth: =GalleryContainer1.Width
+                        LayoutMinWidth: =GalleryContainer1_1.Width
                         LayoutMode: =LayoutMode.Auto
                         PaddingBottom: =20
                         PaddingLeft: =20
@@ -175,7 +175,7 @@
                         Width: =Parent.Width
                         ZIndex: =9
 
-                        TitleText1 As Texto:
+                        TitleText1_1 As Texto:
                             BorderColor: =""
                             BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
@@ -187,12 +187,12 @@
                             Text: =ThisItem.CategoryName
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Bold
-                            Width: =Parent.Width - TitleContainer2.PaddingLeft
+                            Width: =Parent.Width - TitleContainer2_1.PaddingLeft
                             X: =0
                             Y: =0
                             ZIndex: =10
 
-                        DescriptionText2 As Texto:
+                        DescriptionText2_1 As Texto:
                             BorderColor: =""
                             BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
@@ -219,12 +219,12 @@
                                 CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=ThisItem.CategoryName))
                                 //CountRows(Filter([@Lista],ASIGNACIÓN.Value="UTILITARIA",DEPTO.Value=ThisItem.CategoryName))
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Width: =Parent.Width - TitleContainer2.PaddingLeft
+                            Width: =Parent.Width - TitleContainer2_1.PaddingLeft
                             X: =0
                             Y: =0
                             ZIndex: =11
 
-                    ButtonContainer1 As groupContainer.verticalAutoLayoutContainer:
+                    ButtonContainer1_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         FillPortions: =0
                         Height: =50
@@ -243,7 +243,7 @@
                         Width: =Parent.Width
                         ZIndex: =12
 
-                        Button1 As Botón:
+                        Button1_1 As Botón:
                             AccessibleLabel: ="Featured item button"
                             Align: =""
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
