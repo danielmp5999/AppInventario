@@ -123,7 +123,7 @@
     "ShowStatusBar": true
   },
   "PublishInfo": {
-    "AppName": "Sandbox_inventario Bamxp",
+    "AppName": "dd674c03-aa03-4bba-bf5b-136f2dc43d48",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -131,13 +131,14 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "es-ES"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Bienvenido",
     "Principal",
     "Asignaciones",
     "Asignaciones_Equipos",
-    "Asignaciones_Equipos_Detalle"
+    "Asignaciones_Equipos_Detalle",
+    "Inventario"
   ]
 }

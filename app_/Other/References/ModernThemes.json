@@ -8,9 +8,7 @@
       "BasePaletteColor": "#ff0000",
       "EntityName": "BA",
       "Font": "Arial",
-      "HueTorsion": 0,
-      "ThemeName": "BA",
-      "Vibrancy": 50
+      "ThemeName": "BA"
     },
     {
       "EntityName": "SharePointTheme",
