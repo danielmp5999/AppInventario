@@ -2884,7 +2884,9 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "FontColor"
+        "FontColor",
+        "BorderStyle",
+        "BorderColor"
       ],
       "DynamicProperties": [
         {
@@ -2993,6 +2995,16 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "User"
@@ -3066,7 +3078,14 @@
           "InvariantPropertyName": "Placeholder",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Appearance",
+        "BorderStyle",
+        "BorderColor",
+        "HoverBorderColor",
+        "PressedBorderColor",
+        "DisabledBorderColor",
+        "FocusedBorderColor"
       ],
       "DynamicProperties": [
         {
@@ -3138,6 +3157,41 @@
         {
           "Category": "Data",
           "PropertyName": "Placeholder",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Appearance",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DisabledBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "PressedBorderColor",
           "RuleProviderType": "Unknown"
         },
         {

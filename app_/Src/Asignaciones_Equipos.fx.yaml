@@ -51,10 +51,12 @@
                 Width: =35
                 ZIndex: =1
 
-            TextCanvas1 As Text:
+            TextCanvas1 As Texto:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =false
+                BorderColor: =""
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FillPortions: =1
                 FontColor: =
@@ -81,7 +83,7 @@
                 Y: =0
                 ZIndex: =2
 
-            "TabList1 As 'Tab list'.pcfdataset":
+            "TabList1 As 'Lista de pestañas'.pcfdataset":
                 AlignInContainer: =AlignInContainer.End
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
@@ -135,15 +137,22 @@
                 Width: =35
                 ZIndex: =1
 
-            "TextInputCanvas2 As 'Text input'":
+            "TextInputCanvas2 As 'Entrada de texto'":
                 AccessibleLabel: =""
+                Appearance: ="FilledDarker"
                 BasePaletteColor: =
+                BorderColor: =""
+                BorderStyle: =""
+                DisabledBorderColor: =""
                 DisplayMode: =DisplayMode.Edit
+                FocusedBorderColor: =""
                 FontColor: =
                 Height: =32
+                HoverBorderColor: =""
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Placeholder: ="Buscar por responsable"
+                PressedBorderColor: =""
                 Width: =Container3.Width-Icon3.Width-Icon3.Width
                 X: =0
                 Y: =0
