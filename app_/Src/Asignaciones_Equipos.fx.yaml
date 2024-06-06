@@ -51,7 +51,7 @@
                 Width: =35
                 ZIndex: =1
 
-            TextCanvas1 As Texto:
+            TextCanvas1 As Text:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =false
@@ -83,7 +83,7 @@
                 Y: =0
                 ZIndex: =2
 
-            "TabList1 As 'Lista de pestañas'.pcfdataset":
+            "TabList1 As 'Tab list'.pcfdataset":
                 AlignInContainer: =AlignInContainer.End
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
@@ -137,7 +137,7 @@
                 Width: =35
                 ZIndex: =1
 
-            "TextInputCanvas2 As 'Entrada de texto'":
+            "TextInputCanvas2 As 'Text input'":
                 AccessibleLabel: =""
                 Appearance: ="FilledDarker"
                 BasePaletteColor: =
@@ -220,7 +220,7 @@
                             Parent.TemplateWidth
                         )
                         */
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                        If(First(ThisItem.Attachments).Value = Blank(),
                             If(Asignaciones.Size = ScreenSize.ExtraLarge , 
                                 170, 
                                 Asignaciones.Size = ScreenSize.Large, 
@@ -230,9 +230,9 @@
                             Parent.TemplateHeight
                         )
                     Image: |-
-                        =If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                        =If(First(ThisItem.Attachments).Value = Blank(),
                             Categorias.Selected.Imagen_App,
-                            First(ThisItem.'Datos adjuntos').Value
+                            First(ThisItem.Attachments).Value
                         )
                     ImagePosition: |-
                         =ImagePosition.Fill
@@ -266,7 +266,7 @@
                             First(ThisItem.'Datos adjuntos').Value
                         )
                         */
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                        If(First(ThisItem.Attachments).Value = Blank(),
                             If(Asignaciones.Size = ScreenSize.ExtraLarge , 
                                 170, 
                                 Asignaciones.Size = ScreenSize.Large, 
@@ -285,7 +285,7 @@
                         )
                         */
                         
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                        If(First(ThisItem.Attachments).Value = Blank(),
                             Parent.TemplateWidth /2 - Image10.Width/2,
                             0
                         )
@@ -298,7 +298,7 @@
                         )
                         */
                     Y: |-
-                        =If(First(ThisItem.'Datos adjuntos').Value = Blank(),
+                        =If(First(ThisItem.Attachments).Value = Blank(),
                             Parent.TemplateHeight /2 - Image10.Height/2 - Image10.Height/4 ,
                             0
                         )

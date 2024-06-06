@@ -446,40 +446,40 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Entrada de texto",
+  "Name": "Text input",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "Start",
-      "Description": "Mostrar el texto utilizando la alineación de texto seleccionada.",
+      "Description": "Display text using the selected text alignment.",
       "DescriptionResourceString": "TextInputCanvas_Align_Desc",
-      "DisplayName": "Alinear",
+      "DisplayName": "Align",
       "DisplayNameResourceString": "TextInputCanvas_Align",
       "EnumValues": [
         {
-          "Description": "Inicio",
-          "DisplayName": "Inicio",
+          "Description": "Start",
+          "DisplayName": "Start",
           "IsDefaultValue": true,
           "Name": "Start",
           "Value": "Start"
         },
         {
-          "Description": "Final",
-          "DisplayName": "Final",
+          "Description": "End",
+          "DisplayName": "End",
           "IsDefaultValue": false,
           "Name": "End",
           "Value": "End"
         },
         {
-          "Description": "Centrar",
-          "DisplayName": "Centrar",
+          "Description": "Center",
+          "DisplayName": "Center",
           "IsDefaultValue": false,
           "Name": "Center",
           "Value": "Center"
         },
         {
-          "Description": "Justificar",
-          "DisplayName": "Justificar",
+          "Description": "Justify",
+          "DisplayName": "Justify",
           "IsDefaultValue": false,
           "Name": "Justify",
           "Value": "Justify"
@@ -508,9 +508,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Etiqueta para los lectores de pantalla.",
+      "Description": "Label for screen readers.",
       "DescriptionResourceString": "TextInputCanvas_AccessibleLabel_Desc",
-      "DisplayName": "Etiqueta accesible",
+      "DisplayName": "Accessible label",
       "DisplayNameResourceString": "TextInputCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
@@ -536,9 +536,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Cuando se establece en true, la entrada del usuario se registra tras un retraso de medio segundo. Es útil para retrasar operaciones costosas hasta que el usuario termine de escribir texto (es decir, para filtrar cuándo se utiliza la entrada en otras fórmulas).",
+      "Description": "When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).",
       "DescriptionResourceString": "TextInputCanvas_DelayOutput_Desc",
-      "DisplayName": "Retrasar salida",
+      "DisplayName": "Delay output",
       "DisplayNameResourceString": "TextInputCanvas_DelayOutput",
       "EnumValues": [],
       "HelperUI": "",
@@ -564,9 +564,9 @@
     {
       "Category": "data",
       "DefaultValue": "-1",
-      "Description": "La longitud máxima del contenido de la entrada de texto.",
+      "Description": "The maximum content length of the Text input.",
       "DescriptionResourceString": "TextInputCanvas_MaxLength_Desc",
-      "DisplayName": "Longitud máxima",
+      "DisplayName": "Maximum length",
       "DisplayNameResourceString": "TextInputCanvas_MaxLength",
       "EnumValues": [],
       "HelperUI": "",
@@ -592,21 +592,21 @@
     {
       "Category": "data",
       "DefaultValue": "SingleLine",
-      "Description": "Tipo de entrada de texto: línea única o multilínea.",
+      "Description": "Type of text input: single line or multiline.",
       "DescriptionResourceString": "TextInputCanvas_Mode_Desc",
-      "DisplayName": "Modo",
+      "DisplayName": "Mode",
       "DisplayNameResourceString": "TextInputCanvas_Mode",
       "EnumValues": [
         {
-          "Description": "Línea única",
-          "DisplayName": "Línea única",
+          "Description": "Single line",
+          "DisplayName": "Single line",
           "IsDefaultValue": true,
           "Name": "SingleLine",
           "Value": "SingleLine"
         },
         {
-          "Description": "Multilínea",
-          "DisplayName": "Multilínea",
+          "Description": "Multiline",
+          "DisplayName": "Multiline",
           "IsDefaultValue": false,
           "Name": "Multiline",
           "Value": "Multiline"
@@ -635,9 +635,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El texto de marcador de posición de la entrada de texto.",
+      "Description": "The placeholder text of the text input.",
       "DescriptionResourceString": "TextInputCanvas_Placeholder_Desc",
-      "DisplayName": "Texto de marcador de posición",
+      "DisplayName": "Placeholder text",
       "DisplayNameResourceString": "TextInputCanvas_Placeholder",
       "EnumValues": [],
       "HelperUI": null,
@@ -663,9 +663,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Indica si este control debe contener texto.",
+      "Description": "Whether this control must contain text.",
       "DescriptionResourceString": "TextInputCanvas_Required_Desc",
-      "DisplayName": "Obligatorio",
+      "DisplayName": "Required",
       "DisplayNameResourceString": "TextInputCanvas_Required",
       "EnumValues": [],
       "HelperUI": "",
@@ -691,28 +691,28 @@
     {
       "Category": "data",
       "DefaultValue": "Text",
-      "Description": "Tipo de contenido de la entrada de texto: texto sin formato, contraseña o búsqueda.",
+      "Description": "Content type of text input: plain text, password, or search.",
       "DescriptionResourceString": "TextInputCanvas_Type_Desc",
-      "DisplayName": "Tipo",
+      "DisplayName": "Type",
       "DisplayNameResourceString": "TextInputCanvas_Type",
       "EnumValues": [
         {
-          "Description": "Contraseña",
-          "DisplayName": "Contraseña",
+          "Description": "Password",
+          "DisplayName": "Password",
           "IsDefaultValue": false,
           "Name": "Password",
           "Value": "Password"
         },
         {
-          "Description": "Búsqueda",
-          "DisplayName": "Búsqueda",
+          "Description": "Search",
+          "DisplayName": "Search",
           "IsDefaultValue": false,
           "Name": "Search",
           "Value": "Search"
         },
         {
-          "Description": "Texto",
-          "DisplayName": "Texto",
+          "Description": "Text",
+          "DisplayName": "Text",
           "IsDefaultValue": true,
           "Name": "Text",
           "Value": "Text"
@@ -741,9 +741,9 @@
     {
       "Category": "data",
       "DefaultValue": "None",
-      "Description": "El estado actual de la entrada de texto, con respecto a la validación.",
+      "Description": "The current status of the Text input, with regard to validation.",
       "DescriptionResourceString": "TextInputCanvas_ValidationState_Desc",
-      "DisplayName": "Estado de validación",
+      "DisplayName": "Validation state",
       "DisplayNameResourceString": "TextInputCanvas_ValidationState",
       "EnumValues": [
         {
@@ -754,8 +754,8 @@
           "Value": "Error"
         },
         {
-          "Description": "Ninguno",
-          "DisplayName": "Ninguno",
+          "Description": "None",
+          "DisplayName": "None",
           "IsDefaultValue": true,
           "Name": "None",
           "Value": "None"
@@ -784,9 +784,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Texto que aparece en un control o que el usuario escribe en un control.",
+      "Description": "Text that appears on a control or that the user types into a control.",
       "DescriptionResourceString": "TextInputCanvas_Value_Desc",
-      "DisplayName": "Valor",
+      "DisplayName": "Value",
       "DisplayNameResourceString": "TextInputCanvas_Value",
       "EnumValues": [],
       "HelperUI": "",
@@ -812,9 +812,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Elija una paleta de colores que sea diferente del tema.",
+      "Description": "Choose a color palette that's different from the theme.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Paleta de colores",
+      "DisplayName": "Color palette",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -840,9 +840,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El nombre de la familia de fuentes en la que aparece el texto",
+      "Description": "The name of the family of fonts in which text appears",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Fuente",
+      "DisplayName": "Font",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -868,9 +868,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Establezca el tamaño de fuente para el texto mostrado.",
+      "Description": "Set the font size for displayed text.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Tamaño de fuente",
+      "DisplayName": "Font size",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -896,9 +896,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El color del texto del control",
+      "Description": "The color of text in the control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Color de fuente",
+      "DisplayName": "Font color",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -924,9 +924,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El grosor del texto de un control",
+      "Description": "The weight of the text in a control",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Espesor de la fuente",
+      "DisplayName": "Font weight",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -952,9 +952,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Cursiva",
+      "Description": "Italic",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Cursiva",
+      "DisplayName": "Italic",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -980,9 +980,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Subrayado",
+      "Description": "Underline",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Subrayado",
+      "DisplayName": "Underline",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -1008,9 +1008,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Tachado",
+      "Description": "Strikethrough",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Tachado",
+      "DisplayName": "Strikethrough",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -1036,9 +1036,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de fondo del control.",
+      "Description": "Background color of the control.",
       "DescriptionResourceString": "Fill_Description",
-      "DisplayName": "Relleno",
+      "DisplayName": "Fill",
       "DisplayNameResourceString": "Fill",
       "EnumValues": [],
       "HelperUI": null,
@@ -1064,28 +1064,28 @@
     {
       "Category": "data",
       "DefaultValue": "FilledDarker",
-      "Description": "Apariencia de los bordes y el relleno del control",
+      "Description": "Appearance of the control's borders and fill",
       "DescriptionResourceString": "Appearance_Description",
-      "DisplayName": "Apariencia",
+      "DisplayName": "Appearance",
       "DisplayNameResourceString": "Appearance",
       "EnumValues": [
         {
-          "Description": "Relleno más oscuro",
-          "DisplayName": "Relleno más oscuro",
+          "Description": "Filled Darker",
+          "DisplayName": "Filled Darker",
           "IsDefaultValue": true,
           "Name": "FilledDarker",
           "Value": "FilledDarker"
         },
         {
-          "Description": "Relleno más claro",
-          "DisplayName": "Relleno más claro",
+          "Description": "Filled Lighter",
+          "DisplayName": "Filled Lighter",
           "IsDefaultValue": false,
           "Name": "FilledLighter",
           "Value": "FilledLighter"
         },
         {
-          "Description": "Contorno",
-          "DisplayName": "Contorno",
+          "Description": "Outline",
+          "DisplayName": "Outline",
           "IsDefaultValue": false,
           "Name": "Outline",
           "Value": "Outline"
@@ -1114,9 +1114,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Estilo de los bordes alrededor del control",
+      "Description": "Style of borders around the control",
       "DescriptionResourceString": "BorderStyle_Description",
-      "DisplayName": "Estilo de los bordes",
+      "DisplayName": "Border style",
       "DisplayNameResourceString": "BorderStyle",
       "EnumValues": [],
       "HelperUI": "",
@@ -1142,9 +1142,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Grosor o ancho de los bordes alrededor del control.",
+      "Description": "Thickness or width of borders around the control.",
       "DescriptionResourceString": "BorderThickness_Description",
-      "DisplayName": "Grosor de los bordes",
+      "DisplayName": "Border thickness",
       "DisplayNameResourceString": "BorderThickness",
       "EnumValues": [],
       "HelperUI": "",
@@ -1171,9 +1171,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de los bordes alrededor del control.",
+      "Description": "Color of borders around the control.",
       "DescriptionResourceString": "BorderColor_Description",
-      "DisplayName": "Color de los bordes",
+      "DisplayName": "Border color",
       "DisplayNameResourceString": "BorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1199,9 +1199,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Redondez de las esquinas del control. Un valor de 0 es perfectamente cuadrado.",
+      "Description": "Roundedness of the control's corners. A value of 0 is perfectly square.",
       "DescriptionResourceString": "BorderRadius_Description",
-      "DisplayName": "Radio de los bordes",
+      "DisplayName": "Border radius",
       "DisplayNameResourceString": "BorderRadius",
       "EnumValues": [],
       "HelperUI": "",
@@ -1228,9 +1228,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El valor del relleno superior del control.",
+      "Description": "The value of the control's top padding.",
       "DescriptionResourceString": "PaddingTop_Description",
-      "DisplayName": "Relleno superior",
+      "DisplayName": "Padding top",
       "DisplayNameResourceString": "PaddingTop",
       "EnumValues": [],
       "HelperUI": "",
@@ -1257,9 +1257,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El valor del relleno derecho del control.",
+      "Description": "The value of the control's right padding.",
       "DescriptionResourceString": "PaddingRight_Description",
-      "DisplayName": "Relleno derecho",
+      "DisplayName": "Padding right",
       "DisplayNameResourceString": "PaddingRight",
       "EnumValues": [],
       "HelperUI": "",
@@ -1286,9 +1286,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El valor del relleno inferior del control.",
+      "Description": "The value of the control's bottom padding.",
       "DescriptionResourceString": "PaddingBottom_Description",
-      "DisplayName": "Relleno inferior",
+      "DisplayName": "Padding bottom",
       "DisplayNameResourceString": "PaddingBottom",
       "EnumValues": [],
       "HelperUI": "",
@@ -1315,9 +1315,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "El valor del relleno izquierdo del control.",
+      "Description": "The value of the control's left padding.",
       "DescriptionResourceString": "PaddingLeft_Description",
-      "DisplayName": "Relleno izquierdo",
+      "DisplayName": "Padding left",
       "DisplayNameResourceString": "PaddingLeft",
       "EnumValues": [],
       "HelperUI": "",
@@ -1344,9 +1344,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de los bordes mientras se mantiene el puntero sobre el control.",
+      "Description": "Color of borders while hovering over the control.",
       "DescriptionResourceString": "HoverBorderColor_Description",
-      "DisplayName": "Color de los bordes al mantener el puntero",
+      "DisplayName": "Hover border color",
       "DisplayNameResourceString": "HoverBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1372,9 +1372,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de los bordes mientras se presiona o selecciona el control.",
+      "Description": "Color of borders while pressing or selecting the control.",
       "DescriptionResourceString": "PressedBorderColor_Description",
-      "DisplayName": "Color de los bordes al presionar",
+      "DisplayName": "Pressed border color",
       "DisplayNameResourceString": "PressedBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1400,9 +1400,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de los bordes mientras el control está deshabilitado.",
+      "Description": "Color of borders while the control is disabled.",
       "DescriptionResourceString": "DisabledBorderColor_Description",
-      "DisplayName": "Color de los bordes cuando está deshabilitado",
+      "DisplayName": "Disabled border color",
       "DisplayNameResourceString": "DisabledBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1428,9 +1428,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Color de los bordes mientras el control tiene el foco.",
+      "Description": "Color of borders while the control has focus.",
       "DescriptionResourceString": "FocusedBorderColor_Description",
-      "DisplayName": "Color de los bordes cuando tiene el foco",
+      "DisplayName": "Focused border color",
       "DisplayNameResourceString": "FocusedBorderColor",
       "EnumValues": [],
       "HelperUI": "",
@@ -1942,7 +1942,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Entrada de texto\",\"TextInputCanvas_Align\":\"Alinear\",\"TextInputCanvas_Align_Desc\":\"Mostrar el texto utilizando la alineación de texto seleccionada.\",\"TextInputCanvas_Align_Start\":\"Inicio\",\"TextInputCanvas_Align_End\":\"Final\",\"TextInputCanvas_Align_Center\":\"Centrar\",\"TextInputCanvas_Align_Justify\":\"Justificar\",\"TextInputCanvas_AccessibleLabel\":\"Etiqueta accesible\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Etiqueta para los lectores de pantalla.\",\"TextInputCanvas_DelayOutput\":\"Retrasar salida\",\"TextInputCanvas_DelayOutput_Desc\":\"Cuando se establece en true, la entrada del usuario se registra tras un retraso de medio segundo. Es útil para retrasar operaciones costosas hasta que el usuario termine de escribir texto (es decir, para filtrar cuándo se utiliza la entrada en otras fórmulas).\",\"TextInputCanvas_Mode\":\"Modo\",\"TextInputCanvas_Mode_Desc\":\"Tipo de entrada de texto: línea única o multilínea.\",\"TextInputCanvas_Mode_SingleLine\":\"Línea única\",\"TextInputCanvas_Mode_Multiline\":\"Multilínea\",\"TextInputCanvas_Required\":\"Obligatorio\",\"TextInputCanvas_Required_Desc\":\"Indica si este control debe contener texto.\",\"TextInputCanvas_Value\":\"Valor\",\"TextInputCanvas_Value_Desc\":\"Texto que aparece en un control o que el usuario escribe en un control.\",\"TextInputCanvas_Placeholder\":\"Texto de marcador de posición\",\"TextInputCanvas_Placeholder_Desc\":\"El texto de marcador de posición de la entrada de texto.\",\"TextInputCanvas_Type\":\"Tipo\",\"TextInputCanvas_Type_Desc\":\"Tipo de contenido de la entrada de texto: texto sin formato, contraseña o búsqueda.\",\"TextInputCanvas_Type_Text\":\"Texto\",\"TextInputCanvas_Type_Password\":\"Contraseña\",\"TextInputCanvas_Type_Search\":\"Búsqueda\",\"TextInputCanvas_MaxLength\":\"Longitud máxima\",\"TextInputCanvas_MaxLength_Desc\":\"La longitud máxima del contenido de la entrada de texto.\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"TextInputCanvas_ValidationState\":\"Estado de validación\",\"TextInputCanvas_ValidationState_Desc\":\"El estado actual de la entrada de texto, con respecto a la validación.\",\"TextInputCanvas_ValidationState_None\":\"Ninguno\",\"TextInputCanvas_ValidationState_Error\":\"Error\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\",\"Fill\":\"Relleno\",\"Fill_Description\":\"Color de fondo del control.\",\"BorderStyle\":\"Estilo de los bordes\",\"BorderStyle_Description\":\"Estilo de los bordes alrededor del control\",\"BorderStyle_Dashed\":\"Con guiones\",\"BorderStyle_Dotted\":\"De puntos\",\"BorderStyle_None\":\"Ninguno\",\"BorderStyle_Solid\":\"Continuo\",\"BorderThickness\":\"Grosor de los bordes\",\"BorderThickness_Description\":\"Grosor o ancho de los bordes alrededor del control.\",\"BorderColor\":\"Color de los bordes\",\"BorderColor_Description\":\"Color de los bordes alrededor del control.\",\"BorderRadius\":\"Radio de los bordes\",\"BorderRadius_Description\":\"Redondez de las esquinas del control. Un valor de 0 es perfectamente cuadrado.\",\"PaddingTop\":\"Relleno superior\",\"PaddingTop_Description\":\"El valor del relleno superior del control.\",\"PaddingRight\":\"Relleno derecho\",\"PaddingRight_Description\":\"El valor del relleno derecho del control.\",\"PaddingBottom\":\"Relleno inferior\",\"PaddingBottom_Description\":\"El valor del relleno inferior del control.\",\"PaddingLeft\":\"Relleno izquierdo\",\"PaddingLeft_Description\":\"El valor del relleno izquierdo del control.\",\"HoverBorderColor\":\"Color de los bordes al mantener el puntero\",\"HoverBorderColor_Description\":\"Color de los bordes mientras se mantiene el puntero sobre el control.\",\"PressedBorderColor\":\"Color de los bordes al presionar\",\"PressedBorderColor_Description\":\"Color de los bordes mientras se presiona o selecciona el control.\",\"FocusedBorderColor\":\"Color de los bordes cuando tiene el foco\",\"FocusedBorderColor_Description\":\"Color de los bordes mientras el control tiene el foco.\",\"DisabledBorderColor\":\"Color de los bordes cuando está deshabilitado\",\"DisabledBorderColor_Description\":\"Color de los bordes mientras el control está deshabilitado.\",\"Appearance\":\"Apariencia\",\"Appearance_Description\":\"Apariencia de los bordes y el relleno del control\",\"Appearance_FilledDarker\":\"Relleno más oscuro\",\"Appearance_FilledLighter\":\"Relleno más claro\",\"Appearance_Outline\":\"Contorno\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Text input\",\"TextInputCanvas_Align\":\"Align\",\"TextInputCanvas_Align_Desc\":\"Display text using the selected text alignment.\",\"TextInputCanvas_Align_Start\":\"Start\",\"TextInputCanvas_Align_End\":\"End\",\"TextInputCanvas_Align_Center\":\"Center\",\"TextInputCanvas_Align_Justify\":\"Justify\",\"TextInputCanvas_AccessibleLabel\":\"Accessible label\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Label for screen readers.\",\"TextInputCanvas_DelayOutput\":\"Delay output\",\"TextInputCanvas_DelayOutput_Desc\":\"When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).\",\"TextInputCanvas_Mode\":\"Mode\",\"TextInputCanvas_Mode_Desc\":\"Type of text input: single line or multiline.\",\"TextInputCanvas_Mode_SingleLine\":\"Single line\",\"TextInputCanvas_Mode_Multiline\":\"Multiline\",\"TextInputCanvas_Required\":\"Required\",\"TextInputCanvas_Required_Desc\":\"Whether this control must contain text.\",\"TextInputCanvas_Value\":\"Value\",\"TextInputCanvas_Value_Desc\":\"Text that appears on a control or that the user types into a control.\",\"TextInputCanvas_Placeholder\":\"Placeholder text\",\"TextInputCanvas_Placeholder_Desc\":\"The placeholder text of the text input.\",\"TextInputCanvas_Type\":\"Type\",\"TextInputCanvas_Type_Desc\":\"Content type of text input: plain text, password, or search.\",\"TextInputCanvas_Type_Text\":\"Text\",\"TextInputCanvas_Type_Password\":\"Password\",\"TextInputCanvas_Type_Search\":\"Search\",\"TextInputCanvas_MaxLength\":\"Maximum length\",\"TextInputCanvas_MaxLength_Desc\":\"The maximum content length of the Text input.\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"TextInputCanvas_ValidationState\":\"Validation state\",\"TextInputCanvas_ValidationState_Desc\":\"The current status of the Text input, with regard to validation.\",\"TextInputCanvas_ValidationState_None\":\"None\",\"TextInputCanvas_ValidationState_Error\":\"Error\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\",\"Fill\":\"Fill\",\"Fill_Description\":\"Background color of the control.\",\"BorderStyle\":\"Border style\",\"BorderStyle_Description\":\"Style of borders around the control\",\"BorderStyle_Dashed\":\"Dashed\",\"BorderStyle_Dotted\":\"Dotted\",\"BorderStyle_None\":\"None\",\"BorderStyle_Solid\":\"Solid\",\"BorderThickness\":\"Border thickness\",\"BorderThickness_Description\":\"Thickness or width of borders around the control.\",\"BorderColor\":\"Border color\",\"BorderColor_Description\":\"Color of borders around the control.\",\"BorderRadius\":\"Border radius\",\"BorderRadius_Description\":\"Roundedness of the control's corners. A value of 0 is perfectly square.\",\"PaddingTop\":\"Padding top\",\"PaddingTop_Description\":\"The value of the control's top padding.\",\"PaddingRight\":\"Padding right\",\"PaddingRight_Description\":\"The value of the control's right padding.\",\"PaddingBottom\":\"Padding bottom\",\"PaddingBottom_Description\":\"The value of the control's bottom padding.\",\"PaddingLeft\":\"Padding left\",\"PaddingLeft_Description\":\"The value of the control's left padding.\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderColor_Description\":\"Color of borders while hovering over the control.\",\"PressedBorderColor\":\"Pressed border color\",\"PressedBorderColor_Description\":\"Color of borders while pressing or selecting the control.\",\"FocusedBorderColor\":\"Focused border color\",\"FocusedBorderColor_Description\":\"Color of borders while the control has focus.\",\"DisabledBorderColor\":\"Disabled border color\",\"DisabledBorderColor_Description\":\"Color of borders while the control is disabled.\",\"Appearance\":\"Appearance\",\"Appearance_Description\":\"Appearance of the control's borders and fill\",\"Appearance_FilledDarker\":\"Filled Darker\",\"Appearance_FilledLighter\":\"Filled Lighter\",\"Appearance_Outline\":\"Outline\"}}}",
       "Type": 3
     },
     {

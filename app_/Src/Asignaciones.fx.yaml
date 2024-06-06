@@ -47,7 +47,7 @@
                 Width: =50
                 ZIndex: =1
 
-            Header2 As Encabezado:
+            Header2 As Header:
                 AlignInContainer: =AlignInContainer.Start
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
@@ -175,7 +175,7 @@
                         Width: =Parent.Width
                         ZIndex: =9
 
-                        TitleText1 As Texto:
+                        TitleText1 As Text:
                             BorderColor: =""
                             BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
@@ -192,7 +192,7 @@
                             Y: =0
                             ZIndex: =10
 
-                        DescriptionText2 As Texto:
+                        DescriptionText2 As Text:
                             BorderColor: =""
                             BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
@@ -243,7 +243,7 @@
                         Width: =Parent.Width
                         ZIndex: =12
 
-                        Button1 As Botón:
+                        Button1 As Button:
                             AccessibleLabel: ="Featured item button"
                             Align: =""
                             Appearance: ='ButtonCanvas.Appearance'.Secondary

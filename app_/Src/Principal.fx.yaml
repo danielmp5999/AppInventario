@@ -35,7 +35,7 @@
             RadiusTopRight: =4
             ZIndex: =2
 
-            Header1 As Encabezado:
+            Header1 As Header:
                 AlignInContainer: =AlignInContainer.Start
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
@@ -139,7 +139,7 @@
                     Width: =Parent.Width
                     ZIndex: =8
 
-                    FeatureItemButton1 As Botón:
+                    FeatureItemButton1 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -181,7 +181,7 @@
                         Y: =0
                         ZIndex: =9
 
-                    DescriptionText1 As Texto:
+                    DescriptionText1 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
@@ -262,7 +262,7 @@
                     Width: =Parent.Width
                     ZIndex: =14
 
-                    FeatureItemButton21 As Botón:
+                    FeatureItemButton21 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -292,7 +292,7 @@
                         Y: =0
                         ZIndex: =15
 
-                    DescriptionText21 As Texto:
+                    DescriptionText21 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
@@ -373,7 +373,7 @@
                     Width: =Parent.Width
                     ZIndex: =20
 
-                    FeatureItemButton31 As Botón:
+                    FeatureItemButton31 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -402,7 +402,7 @@
                         Y: =0
                         ZIndex: =21
 
-                    DescriptionText31 As Texto:
+                    DescriptionText31 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
@@ -483,7 +483,7 @@
                     Width: =Parent.Width
                     ZIndex: =26
 
-                    FeatureItemButton41 As Botón:
+                    FeatureItemButton41 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -512,7 +512,7 @@
                         Y: =0
                         ZIndex: =27
 
-                    DescriptionText41 As Texto:
+                    DescriptionText41 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
@@ -593,7 +593,7 @@
                     Width: =Parent.Width
                     ZIndex: =32
 
-                    FeatureItemButton51 As Botón:
+                    FeatureItemButton51 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -622,7 +622,7 @@
                         Y: =0
                         ZIndex: =33
 
-                    DescriptionText51 As Texto:
+                    DescriptionText51 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
@@ -703,7 +703,7 @@
                     Width: =Parent.Width
                     ZIndex: =38
 
-                    FeatureItemButton61 As Botón:
+                    FeatureItemButton61 As Button:
                         AccessibleLabel: ="Featured item button"
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
@@ -732,7 +732,7 @@
                         Y: =0
                         ZIndex: =39
 
-                    DescriptionText61 As Texto:
+                    DescriptionText61 As Text:
                         Align: ='TextCanvas.Align'.Center
                         BorderColor: =""
                         BorderStyle: =""
