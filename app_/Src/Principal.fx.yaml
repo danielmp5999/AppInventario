@@ -283,7 +283,18 @@
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        OnSelect: =
+                        OnSelect: |-
+                            =Navigate(Inventario,ScreenTransition.CoverRight);
+                            ClearCollect(
+                                FiltroDispositivos,
+                                Filter(
+                                    [@Dispositivos],
+                                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                )
+                            );
+                            Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                            Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                            Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                         PressedBorderColor: =""
                         Text: ="Inventario"
                         VerticalAlign: =""

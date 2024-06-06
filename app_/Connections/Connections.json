@@ -17,6 +17,9 @@
           "Datos": {
             "tableName": "41d1ec12-f651-4493-8294-7b19afe8c68f"
           },
+          "Dispositivos": {
+            "tableName": "89f16be6-75f6-4cb8-8b6e-29848cbe1cfa"
+          },
           "Lista": {
             "tableName": "52d4f25f-a319-4ef8-a308-2e2ed4ca8835"
           }
@@ -25,7 +28,8 @@
     },
     "dataSources": [
       "Datos",
-      "Lista"
+      "Lista",
+      "Dispositivos"
     ],
     "dependencies": {},
     "dependents": [],
