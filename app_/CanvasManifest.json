@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 1,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -139,6 +139,7 @@
     "Asignaciones",
     "Asignaciones_Equipos",
     "Asignaciones_Equipos_Detalle",
-    "Inventario"
+    "Inventario",
+    "Inventario_Equipos"
   ]
 }

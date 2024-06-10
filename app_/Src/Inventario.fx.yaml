@@ -43,6 +43,7 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ArrowLeft
+                OnSelect: =Navigate(Principal)
                 PaddingLeft: =10
                 Width: =50
                 ZIndex: =1
@@ -78,7 +79,7 @@
             Width: =1000
             ZIndex: =4
 
-            Gallery5 As gallery.galleryVertical:
+            CatInventario As gallery.galleryVertical:
                 AccessibleLabel: ="Items gallery"
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
@@ -195,16 +196,16 @@
                                         Filter(
                                             FiltroDispositivos,
                                             Estatus.Value = "Activo" &&
-                                            Categorias.Selected = ThisItem.CategoryName
+                                            Categorias.Value = ThisItem.CategoryName
                                         )
                                     ),
                                     "[$-es-ES]0"
                                 )
                                 
-                                &"            Asignados:"&
-                                CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=ThisItem.CategoryName))
-                                &"            Asignados:"&
-                                CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=ThisItem.CategoryName))
+                                &"    Inactivos:"&
+                                CountRows(Filter(FiltroDispositivos,Estatus.Value="Incativo",Categorias.Value=ThisItem.CategoryName))
+                                &"    En Revisión:"&
+                                CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=ThisItem.CategoryName))
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Width: =Parent.Width - TitleContainer3.PaddingLeft
                             X: =0
@@ -232,11 +233,14 @@
 
                         Button2 As Button:
                             AccessibleLabel: ="Featured item button"
+                            AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            OnSelect: =Navigate(Inventario_Equipos)
+                            Text: ="Ver detalles"
                             Width: =110
                             X: =0
                             Y: =0

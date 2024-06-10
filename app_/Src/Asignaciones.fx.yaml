@@ -246,6 +246,7 @@
                         Button1 As Button:
                             AccessibleLabel: ="Featured item button"
                             Align: =""
+                            AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
                             BasePaletteColor: =
                             BorderColor: =""
@@ -266,7 +267,7 @@
                                 =Navigate(Asignaciones_Equipos,ScreenTransition.UnCover);
                                 Set(varFiltro,"ASIGNADA")
                             PressedBorderColor: =""
-                            Text: ="Seleccionar"
+                            Text: ="Ver detalles"
                             VerticalAlign: =""
                             Width: =110
                             X: =0

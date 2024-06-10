@@ -107,7 +107,7 @@
                         'TabList.Size'.Medium,
                         'TabList.Size'.Small
                     )
-                Width: =295
+                Width: =300
                 X: =0
                 Y: =0
                 ZIndex: =4
