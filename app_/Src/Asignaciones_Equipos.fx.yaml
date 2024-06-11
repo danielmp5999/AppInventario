@@ -83,7 +83,7 @@
                 ZIndex: =2
 
             "TabList1 As 'Tab list'.pcfdataset":
-                AlignInContainer: =AlignInContainer.End
+                AlignInContainer: =AlignInContainer.Center
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
                 Height: =55
@@ -186,19 +186,9 @@
                 LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =Min(320, Self.Height - 60)
-                WrapCount: |-
-                    =//If(Asignaciones.Size = ScreenSize.ExtraLarge ; 3; Asignaciones.Size = ScreenSize.Large; 2; 1)
-                    //3
+                WrapCount: |
+                    =
                     If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 3, Asignaciones_Equipos.Size = ScreenSize.Large, 2 , 2)
-                    
-                    /*
-                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge; 
-                        3; 
-                        Asignaciones_Equipos.Size = ScreenSize.Large; 
-                        2; 
-                        2
-                    )
-                    */
                 ZIndex: =1
 
                 Image10 As image:
@@ -217,8 +207,8 @@
                             If(Asignaciones.Size = ScreenSize.ExtraLarge , 
                                 170, 
                                 Asignaciones.Size = ScreenSize.Large, 
-                                150, 
-                                120
+                                130, 
+                                100
                             ),
                             Parent.TemplateHeight
                         )
@@ -263,8 +253,8 @@
                             If(Asignaciones.Size = ScreenSize.ExtraLarge , 
                                 170, 
                                 Asignaciones.Size = ScreenSize.Large, 
-                                150, 
-                                120
+                                130, 
+                                100
                             )
                             ,
                             Parent.TemplateWidth
