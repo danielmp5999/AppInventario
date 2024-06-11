@@ -116,6 +116,18 @@
                 Width: =35
                 ZIndex: =1
 
+            "TextInputCanvas1 As 'Text input'":
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Placeholder: ="Buscar por ID del dispositivo"
+                Width: =Container2.Width-Icon4.Width-Icon4.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+
         MainContainer6 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
