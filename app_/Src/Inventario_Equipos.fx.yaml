@@ -22,6 +22,7 @@
         ZIndex: =1
 
         HeaderContainer6 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -33,7 +34,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            ZIndex: =2
+            ZIndex: =1
 
             Icon6 As icon.ChevronLeft:
                 AlignInContainer: =AlignInContainer.Center
@@ -43,6 +44,7 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Icon: =Icon.ChevronLeft
+                LayoutMinWidth: =35
                 OnSelect: |-
                     =Navigate(Inventario);
                     Reset(TextInputCanvas2)
@@ -88,7 +90,34 @@
                 Y: =0
                 ZIndex: =3
 
+        Container2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =50
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            Icon4 As icon.Search:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =App.Theme.Colors.Darker30
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =35
+                Icon: =Icon.Search
+                PaddingLeft: =6
+                Width: =35
+                ZIndex: =1
+
         MainContainer6 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             LayoutDirection: =LayoutDirection.Vertical

@@ -45,6 +45,7 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Icon: =Icon.ChevronLeft
+                LayoutMinWidth: =35
                 OnSelect: |-
                     =Navigate(Asignaciones);
                     Reset(TextInputCanvas2)
@@ -181,8 +182,8 @@
                         ,"Codigo_BAMXP",SortOrder.Ascending
                     )
                 Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
+                LayoutMinHeight: =35
+                LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: |-
