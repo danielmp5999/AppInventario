@@ -176,8 +176,6 @@
                         ZIndex: =9
 
                         TitleText1 As Text:
-                            BorderColor: =""
-                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =
                             Height: =30
@@ -193,8 +191,6 @@
                             ZIndex: =10
 
                         DescriptionText2 As Text:
-                            BorderColor: =""
-                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =
                             Height: =45
@@ -249,14 +245,9 @@
                             AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
                             BasePaletteColor: =
-                            BorderColor: =""
-                            BorderStyle: =""
-                            DisabledBorderColor: =""
                             DisplayMode: =DisplayMode.Edit
-                            FocusedBorderColor: =""
                             FontColor: =
                             Height: =32
-                            HoverBorderColor: =""
                             Icon: =""
                             IconRotation: =0
                             IconStyle: ="Outline"
@@ -266,7 +257,6 @@
                             OnSelect: |
                                 =Navigate(Asignaciones_Equipos,ScreenTransition.UnCover);
                                 Set(varFiltro,"ASIGNADA")
-                            PressedBorderColor: =""
                             Text: ="Ver detalles"
                             VerticalAlign: =""
                             Width: =110

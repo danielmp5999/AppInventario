@@ -14,6 +14,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Asignaciones_Equipos.ScreenContainer3.HeaderContainer3.Icon2.AccessibleLabel"
                 }
               ],
@@ -194,66 +284,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Asignaciones",
-                "type": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Asignaciones",
-                "type": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.AccessibleLabel"
                 }
               ],
@@ -314,19 +344,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.AccessibleLabel"
+                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6"
+                "module": "Asignaciones",
+                "type": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1"
               }
             }
           ],
@@ -344,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.TabIndex"
+                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6.TabIndex",
+                  "fullyQualifiedName": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.Icon6"
+                "module": "Asignaciones",
+                "type": "Asignaciones.ScreenContainer2.HeaderContainer2.Icon1"
               }
             }
           ],
@@ -368,36 +398,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
         },
         {
           "locations": [
@@ -614,19 +614,109 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Width",
-                "module": "Inventario",
-                "type": "Inventario.ScreenContainer5.HeaderContainer5.Header4"
+                "member": "Text",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2"
               }
             }
           ],
@@ -824,109 +914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Height"
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Height",
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Height",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TextCanvas2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.HeaderContainer6.TabList2"
+                "member": "Width",
+                "module": "Inventario",
+                "type": "Inventario.ScreenContainer5.HeaderContainer5.Header4"
               }
             }
           ],
@@ -1031,7 +1031,7 @@
               }
             }
           ],
-          "version": "1.341"
+          "version": "1.342"
         }
       }
     }

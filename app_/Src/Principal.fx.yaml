@@ -144,16 +144,11 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
@@ -173,7 +168,6 @@
                             
                             Set (CantidadRegistrosAsignada, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "ASIGNADA")));
                             Set (CantidadRegistrosUtilitaria, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "UTILITARIA")))
-                        PressedBorderColor: =""
                         Text: ="Asignaciones"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -183,8 +177,6 @@
 
                     DescriptionText1 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -267,16 +259,11 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
@@ -295,7 +282,6 @@
                             Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
                             Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
-                        PressedBorderColor: =""
                         Text: ="Inventario"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -305,8 +291,6 @@
 
                     DescriptionText21 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -389,23 +373,17 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        PressedBorderColor: =""
                         Text: ="Colaboradores"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -415,8 +393,6 @@
 
                     DescriptionText31 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -499,23 +475,17 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        PressedBorderColor: =""
                         Text: ="Ventas"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -525,8 +495,6 @@
 
                     DescriptionText41 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -609,23 +577,17 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        PressedBorderColor: =""
                         Text: ="Préstamos"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -635,8 +597,6 @@
 
                     DescriptionText51 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -719,23 +679,17 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
-                        BorderColor: =""
-                        BorderStyle: =""
-                        DisabledBorderColor: =""
                         DisplayMode: =DisplayMode.Edit
-                        FocusedBorderColor: =""
                         FontColor: =
                         FontSize: =20
                         FontWeight: =FontWeight.Bold
                         Height: =32
-                        HoverBorderColor: =""
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        PressedBorderColor: =""
                         Text: ="Télefonos"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -745,8 +699,6 @@
 
                     DescriptionText61 As Text:
                         Align: ='TextCanvas.Align'.Center
-                        BorderColor: =""
-                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
