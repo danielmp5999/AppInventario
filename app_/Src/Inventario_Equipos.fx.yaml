@@ -60,17 +60,19 @@
                 LayoutMinWidth: =96
                 Size: |
                     =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge,
-                        23,
+                        24,
                         Asignaciones_Equipos.Size = ScreenSize.Large,
-                        17,
-                        14
+                        18,
+                        Asignaciones_Equipos.Size = ScreenSize.Medium,
+                        14,
+                        10
                     )
                 Text: =CatInventario.Selected.CategoryName
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large, 750 , 200)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 100)
                 X: =0
                 Y: =0
                 ZIndex: =2
