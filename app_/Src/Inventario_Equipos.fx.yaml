@@ -55,7 +55,6 @@
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
                 Height: =TabList1.Height/1.5
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
@@ -66,16 +65,18 @@
                         17,
                         14
                     )
-                Text: =Categorias.Selected.CategoryName
+                Text: =CatInventario.Selected.CategoryName
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
-                Width: =96
+                Width: |-
+                    =//96
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large, 750 , 200)
                 X: =0
                 Y: =0
                 ZIndex: =2
 
             "TabList2 As 'Tab list'.pcfdataset":
-                AlignInContainer: =AlignInContainer.End
+                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
                 Height: =55
@@ -147,26 +148,76 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
-                Items: =CustomGallerySample
+                Items: |-
+                    =//FiltroDispositivos
+                    SortByColumns(
+                        Filter(
+                            //[@Dispositivos]
+                            FiltroDispositivos
+                            ,
+                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName,
+                            StartsWith(ID,TextInputCanvas1.Value)
+                        //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
+                        )
+                        ,"CodBAMXP",SortOrder.Ascending
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =4
                 TemplateSize: =Min(320, Self.Height - 60)
-                WrapCount: =3
+                WrapCount: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 3, Inventario_Equipos.Size = ScreenSize.Large, 2 , 2)
+                Y: =
                 ZIndex: =1
 
                 Image5 As image:
                     BorderColor: =App.Theme.Colors.Darker40
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Height: =Parent.TemplateHeight
+                    Height: |
+                        =//Parent.TemplateHeight
+                        If(First(ThisItem.Attachments).Value = Blank(),
+                            If(Inventario_Equipos.Size = ScreenSize.ExtraLarge , 
+                                170, 
+                                Inventario_Equipos.Size = ScreenSize.Large, 
+                                130, 
+                                100
+                            ),
+                            Parent.TemplateHeight
+                        )
+                    Image: |-
+                        =If(First(ThisItem.Attachments).Value = Blank(),
+                            CatInventario.Selected.Imagen_App,
+                            First(ThisItem.Attachments).Value
+                        )
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
                     RadiusTopRight: =8
-                    Width: =Parent.TemplateWidth
+                    Width: |-
+                        =//Parent.TemplateWidth
+                        If(First(ThisItem.Attachments).Value = Blank(),
+                            If(Inventario_Equipos.Size = ScreenSize.ExtraLarge , 
+                                170, 
+                                Inventario_Equipos.Size = ScreenSize.Large, 
+                                130, 
+                                100
+                            )
+                            ,
+                            Parent.TemplateWidth
+                        )
+                    X: |-
+                        =If(First(ThisItem.Attachments).Value = Blank(),
+                            Parent.TemplateWidth /2 - Image10.Width/2,
+                            0
+                        )
+                    Y: |-
+                        =//0
+                        If(First(ThisItem.Attachments).Value = Blank(),
+                            Parent.TemplateHeight /2 - Image10.Height/2 - Image10.Height/4 ,
+                            0
+                        )
                     ZIndex: =1
 
                 Overlay1 As rectangle:
@@ -190,7 +241,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =20
-                    Text: =ThisItem.SampleHeading
+                    Text: =ThisItem.ID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 64
                     X: =32
@@ -208,7 +259,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =18
-                    Text: =ThisItem.SampleText
+                    Text: =ThisItem.Cod_BAMXP
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title2.Width
                     X: =Title2.X
