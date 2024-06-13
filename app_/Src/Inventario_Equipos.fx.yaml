@@ -83,7 +83,7 @@
                 FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
                 Height: =55
                 Items: |
-                    =["Activos siuu "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                    =["Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
                     "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
                     "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
                 LayoutMinHeight: =55
