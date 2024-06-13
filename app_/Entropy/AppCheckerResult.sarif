@@ -374,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5"
               }
             }
           ],
@@ -404,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.TabIndex"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.TabIndex",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5"
               }
             }
           ],
@@ -1004,19 +1004,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Items"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Items",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5"
               }
             }
           ],
@@ -1034,19 +1034,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.Image"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.Image",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Image",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Image",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5"
               }
             }
           ],
@@ -1064,19 +1064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.X"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.X",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "Width",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5"
               }
             }
           ],
@@ -1094,19 +1094,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.Y"
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5.Y",
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Y",
+                "member": "Height",
                 "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery1.Image5"
+                "type": "Inventario_Equipos.ScreenContainer6.MainContainer6.Gallery5.Image5"
               }
             }
           ],
