@@ -65,18 +65,28 @@
                 Size: |
                     =//14
                     
-                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge,
+                    /*If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge,
                         23,
                         Asignaciones_Equipos.Size = ScreenSize.Large,
                         17,
                         14
+                    )*/
+                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge,
+                        24,
+                        Asignaciones_Equipos.Size = ScreenSize.Large,
+                        18,
+                        Asignaciones_Equipos.Size = ScreenSize.Medium,
+                        14,
+                        10
                     )
                 Text: |-
                     =Categorias.Selected.CategoryName
                     //CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName))
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
-                Width: =96
+                Width: |-
+                    =//96
+                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 1000, Asignaciones_Equipos.Size = ScreenSize.Large,750, Asignaciones_Equipos.Size = ScreenSize.Medium, 400 , 100)
                 Wrap: =true
                 X: =0
                 Y: =0

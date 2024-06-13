@@ -59,11 +59,11 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 Size: |
-                    =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge,
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
                         24,
-                        Asignaciones_Equipos.Size = ScreenSize.Large,
+                        Inventario_Equipos.Size = ScreenSize.Large,
                         18,
-                        Asignaciones_Equipos.Size = ScreenSize.Medium,
+                        Inventario_Equipos.Size = ScreenSize.Medium,
                         14,
                         10
                     )
@@ -72,7 +72,7 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 100)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 100)
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -164,6 +164,8 @@
                         ,"CodBAMXP",SortOrder.Ascending
                     )
                 Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =4
                 TemplateSize: =Min(320, Self.Height - 60)
