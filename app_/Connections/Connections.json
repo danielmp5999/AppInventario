@@ -20,6 +20,9 @@
           "Dispositivos": {
             "tableName": "89f16be6-75f6-4cb8-8b6e-29848cbe1cfa"
           },
+          "Donadores": {
+            "tableName": "78ae258e-52c1-478b-83e0-258db3a17eb4"
+          },
           "Lista": {
             "tableName": "52d4f25f-a319-4ef8-a308-2e2ed4ca8835"
           }
@@ -29,7 +32,8 @@
     "dataSources": [
       "Datos",
       "Lista",
-      "Dispositivos"
+      "Dispositivos",
+      "Donadores"
     ],
     "dependencies": {},
     "dependents": [],
