@@ -140,6 +140,8 @@
     "Asignaciones_Equipos",
     "Asignaciones_Equipos_Detalle",
     "Inventario",
-    "Inventario_Equipos"
+    "Inventario_Equipos",
+    "Inventario_Equipos_Detalles",
+    "Reg_Inventario"
   ]
 }

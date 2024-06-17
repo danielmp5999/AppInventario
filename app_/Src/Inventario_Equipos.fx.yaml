@@ -128,7 +128,7 @@
                 Placeholder: ="Buscar por ID del dispositivo"
                 Width: |-
                     =//Container2.Width-Icon4.Width-Icon4.Width
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1140, Inventario_Equipos.Size = ScreenSize.Large,850, Inventario_Equipos.Size = ScreenSize.Medium, 450 , 200)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1140, Inventario_Equipos.Size = ScreenSize.Large,850, Inventario_Equipos.Size = ScreenSize.Medium, 450 , 190)
                 X: |-
                     =//0
                     35
@@ -151,11 +151,14 @@
                 Height: =40
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
+                OnSelect: |-
+                    =//false
+                    Navigate(Reg_Inventario)
                 PaddingLeft: =
                 PaddingRight: =
                 Text: ="Registrar equipo"
                 Width: |
-                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 150, Inventario_Equipos.Size = ScreenSize.Large,135, Inventario_Equipos.Size = ScreenSize.Medium, 120 , 90)
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 150, Inventario_Equipos.Size = ScreenSize.Large,135, Inventario_Equipos.Size = ScreenSize.Medium, 120 , 110)
                 X: =0
                 Y: =0
                 ZIndex: =3
