@@ -43,6 +43,9 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Icon: =Icon.ArrowLeft
+                OnSelect: |-
+                    =//false
+                    Navigate(Inventario_Equipos)
                 PaddingLeft: =10
                 Width: =45
                 ZIndex: =1
@@ -94,8 +97,198 @@
                 DataSource: =Dispositivos
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
+                NumberOfColumns: =1
                 UseFluentV9Cards: =true
                 ZIndex: =1
+
+                ID_DataCard1 As typedDataCard.fluentV9TextualViewCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ID"
+                    Default: =ThisItem.ID
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,ID)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =1334
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardKey27 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue27 As 'Text input'":
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey27.Y + DataCardKey27.Height + 4
+                        ZIndex: =2
+
+                "'Id_Marca: Marca_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Id_Marca_x003a__x0020_Marca"
+                    Default: |-
+                        =ThisItem.'Id_Marca: Marca'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Marca_x003a__x0020_Marca)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =1334
+                    X: =0
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey24 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue24 As Combobox.pcfdataset:
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Items: =Choices([@Dispositivos].Id_Marca_x003a__x0020_Marca)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey24.Y + DataCardKey24.Height + 4
+                        ZIndex: =2
+
+                "'Id_Modelo: Modelo_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Id_Modelo_x003a__x0020_Modelo"
+                    Default: |-
+                        =ThisItem.'Id_Modelo: Modelo'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Modelo_x003a__x0020_Modelo)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =1334
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCardKey25 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue25 As Combobox.pcfdataset:
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Items: =Choices([@Dispositivos].Id_Modelo_x003a__x0020_Modelo)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey25.Y + DataCardKey25.Height + 4
+                        ZIndex: =2
+
+                "'Id_Tipo: Tipo_Disp_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Id_Tipo_x003a__x0020_Tipo_Disp"
+                    Default: |-
+                        =ThisItem.'Id_Tipo: Tipo_Disp'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Tipo_x003a__x0020_Tipo_Disp)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =1334
+                    X: =0
+                    Y: =5
+                    ZIndex: =1
+
+                    DataCardKey26 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue26 As Combobox.pcfdataset:
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Items: =Choices([@Dispositivos].Id_Tipo_x003a__x0020_Tipo_Disp)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey26.Y + DataCardKey26.Height + 4
+                        ZIndex: =2
+
+                "'Id_Donador: Nombre_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Id_Donador_x003a__x0020_Nombre"
+                    Default: |-
+                        =ThisItem.'Id_Donador: Nombre'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Donador_x003a__x0020_Nombre)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =1334
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey23 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue23 As Combobox.pcfdataset:
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Items: =Choices([@Dispositivos].Id_Donador_x003a__x0020_Nombre)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey23.Y + DataCardKey23.Height + 4
+                        ZIndex: =2
 
                 Categorias_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
@@ -108,9 +301,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue20.Selected
-                    Width: =444
+                    Width: =1334
                     X: =0
-                    Y: =3
+                    Y: =12
                     ZIndex: =1
 
                     DataCardKey20 As Text:
@@ -170,9 +363,9 @@
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, CodBAMXP)
                     Required: =false
                     Update: =DataCardValue21.Value
-                    Width: =444
-                    X: =1
-                    Y: =3
+                    Width: =1334
+                    X: =0
+                    Y: =6
                     ZIndex: =1
 
                     DataCardKey21 As Text:
@@ -232,9 +425,9 @@
                     Height: =70
                     Required: =false
                     Update: =Value(DataCardValue22.Value)
-                    Width: =444
-                    X: =2
-                    Y: =3
+                    Width: =1334
+                    X: =0
+                    Y: =10
                     ZIndex: =1
 
                     DataCardKey22 As Text:
@@ -281,158 +474,6 @@
                         Y: =DataCardKey22.Y
                         ZIndex: =4
 
-                "'Id_Donador: Nombre_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Id_Donador_x003a__x0020_Nombre"
-                    Default: |-
-                        =ThisItem.'Id_Donador: Nombre'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Donador_x003a__x0020_Nombre)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Width: =444
-                    X: =0
-                    Y: =4
-                    ZIndex: =1
-
-                    DataCardKey23 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue23 As Combobox.pcfdataset:
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =DisplayMode.View
-                        Height: =32
-                        Items: =Choices([@Dispositivos].Id_Donador_x003a__x0020_Nombre)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey23.Y + DataCardKey23.Height + 4
-                        ZIndex: =2
-
-                "'Id_Marca: Marca_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Id_Marca_x003a__x0020_Marca"
-                    Default: |-
-                        =ThisItem.'Id_Marca: Marca'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Marca_x003a__x0020_Marca)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Width: =444
-                    X: =1
-                    Y: =4
-                    ZIndex: =1
-
-                    DataCardKey24 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue24 As Combobox.pcfdataset:
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =DisplayMode.View
-                        Height: =32
-                        Items: =Choices([@Dispositivos].Id_Marca_x003a__x0020_Marca)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey24.Y + DataCardKey24.Height + 4
-                        ZIndex: =2
-
-                "'Id_Modelo: Modelo_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Id_Modelo_x003a__x0020_Modelo"
-                    Default: |-
-                        =ThisItem.'Id_Modelo: Modelo'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Modelo_x003a__x0020_Modelo)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Width: =444
-                    X: =2
-                    Y: =4
-                    ZIndex: =1
-
-                    DataCardKey25 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue25 As Combobox.pcfdataset:
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =DisplayMode.View
-                        Height: =32
-                        Items: =Choices([@Dispositivos].Id_Modelo_x003a__x0020_Modelo)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey25.Y + DataCardKey25.Height + 4
-                        ZIndex: =2
-
-                "'Id_Tipo: Tipo_Disp_DataCard1' As typedDataCard.fluentV9ComboBoxViewCard":
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Id_Tipo_x003a__x0020_Tipo_Disp"
-                    Default: |-
-                        =ThisItem.'Id_Tipo: Tipo_Disp'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Tipo_x003a__x0020_Tipo_Disp)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Width: =444
-                    X: =0
-                    Y: =5
-                    ZIndex: =1
-
-                    DataCardKey26 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue26 As Combobox.pcfdataset:
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =DisplayMode.View
-                        Height: =32
-                        Items: =Choices([@Dispositivos].Id_Tipo_x003a__x0020_Tipo_Disp)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey26.Y + DataCardKey26.Height + 4
-                        ZIndex: =2
-
                 Num_Serie_DataCard2 As typedDataCard.fluentV9NumberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -444,9 +485,9 @@
                     Height: =70
                     Required: =false
                     Update: =Value(DataCardValue11.Value)
-                    Width: =444
+                    Width: =1334
                     X: =0
-                    Y: =0
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey11 As Text:
@@ -505,9 +546,9 @@
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Caracteristicas)
                     Required: =false
                     Update: =DataCardValue12.Value
-                    Width: =444
-                    X: =1
-                    Y: =0
+                    Width: =1334
+                    X: =0
+                    Y: =8
                     ZIndex: =2
 
                     DataCardKey12 As Text:
@@ -567,9 +608,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue13.SelectedDate
-                    Width: =444
-                    X: =2
-                    Y: =0
+                    Width: =1334
+                    X: =0
+                    Y: =7
                     ZIndex: =2
 
                     DataCardKey13 As Text:
@@ -629,9 +670,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue14.Selected
-                    Width: =444
+                    Width: =1334
                     X: =0
-                    Y: =1
+                    Y: =9
                     ZIndex: =2
 
                     DataCardKey14 As Text:
@@ -690,9 +731,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue15.Checked
-                    Width: =444
-                    X: =1
-                    Y: =1
+                    Width: =1334
+                    X: =0
+                    Y: =13
                     ZIndex: =2
 
                     DataCardKey15 As Text:
@@ -752,9 +793,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue16.Checked
-                    Width: =444
-                    X: =2
-                    Y: =1
+                    Width: =1334
+                    X: =0
+                    Y: =14
                     ZIndex: =2
 
                     DataCardKey16 As Text:
@@ -814,9 +855,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue17.Selected
-                    Width: =444
+                    Width: =1334
                     X: =0
-                    Y: =2
+                    Y: =11
                     ZIndex: =2
 
                     DataCardKey17 As Text:
@@ -862,158 +903,5 @@
                         Width: =30
                         X: =0
                         Y: =DataCardKey17.Y
-                        ZIndex: =4
-
-                Id_Modelo_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Id_Modelo2"
-                    Default: =ThisItem.Id_Modelo
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Id_Modelo2)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Update: =DataCardValue18.Selected
-                    Width: =444
-                    X: =1
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey18 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue18 As Combobox.pcfdataset:
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        Items: =Choices([@Dispositivos].Id_Modelo2)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey18.Y + DataCardKey18.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage18 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue18.Y + DataCardValue18.Height
-                        ZIndex: =3
-
-                    StarVisible18 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =20
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey18.Y
-                        ZIndex: =4
-
-                Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="{Attachments}"
-                    Default: =ThisItem.Attachments
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,'{Attachments}')
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =DataCardValue19.Attachments
-                    Width: =444
-                    X: =2
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey19 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue19 As attachments:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        IsInDataCard: =true
-                        ItemColor: =RGBA(255, 255, 255, 1)
-                        ItemFill: =App.Theme.Colors.Primary
-                        ItemHoverColor: =RGBA(0, 0, 0, 1)
-                        ItemHoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Parent.Default
-                        PaddingBottom: =5
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        PaddingRight: =5
-                        PaddingTop: =5
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =App.Theme.Colors.Darker30
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey19.Y + DataCardKey19.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage19 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue19.Y + DataCardValue19.Height
-                        ZIndex: =3
-
-                    StarVisible19 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey19.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey19.Y
                         ZIndex: =4
 

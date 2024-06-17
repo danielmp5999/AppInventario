@@ -524,36 +524,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.Attachments_DataCard2.DataCardValue19.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.Attachments_DataCard2.DataCardValue19.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Reg_Inventario",
-                "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.Attachments_DataCard2.DataCardValue19"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.'Id_Donador: Nombre_DataCard1'.DataCardValue23.AccessibleLabel"
                 }
               ],
@@ -657,6 +627,96 @@
                 "member": "AccessibleLabel",
                 "module": "Reg_Inventario",
                 "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.'Id_Tipo: Tipo_Disp_DataCard1'.DataCardValue26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.ID_DataCard1.DataCardValue27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.ID_DataCard1.DataCardValue27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form2.ID_DataCard1.DataCardValue27"
               }
             }
           ],
