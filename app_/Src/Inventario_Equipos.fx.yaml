@@ -126,10 +126,39 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Placeholder: ="Buscar por ID del dispositivo"
-                Width: =Container2.Width-Icon4.Width-Icon4.Width
-                X: =0
+                Width: |-
+                    =//Container2.Width-Icon4.Width-Icon4.Width
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1140, Inventario_Equipos.Size = ScreenSize.Large,850, Inventario_Equipos.Size = ScreenSize.Medium, 450 , 200)
+                X: |-
+                    =//0
+                    35
                 Y: =0
                 ZIndex: =2
+
+            ButtonCanvas1 As Button:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                FontSize: |-
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
+                        15,
+                        Inventario_Equipos.Size = ScreenSize.Large,
+                        13,
+                        Inventario_Equipos.Size = ScreenSize.Medium,
+                        11,
+                        10
+                    )
+                Height: =40
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                PaddingLeft: =
+                PaddingRight: =
+                Text: ="Registrar equipo"
+                Width: |
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 150, Inventario_Equipos.Size = ScreenSize.Large,135, Inventario_Equipos.Size = ScreenSize.Medium, 120 , 90)
+                X: =0
+                Y: =0
+                ZIndex: =3
 
         MainContainer6 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
