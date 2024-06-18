@@ -584,19 +584,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13.AccessibleLabel"
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.ButtonCanvas2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13.AccessibleLabel",
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.ButtonCanvas2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Reg_Inventario",
-                "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13"
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.ButtonCanvas2"
               }
             }
           ],

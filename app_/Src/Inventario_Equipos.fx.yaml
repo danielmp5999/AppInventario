@@ -181,6 +181,7 @@
             "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
+                DisplayMode: =DisplayMode.View
                 Items: |-
                     =//FiltroDispositivos
                     SortByColumns(
