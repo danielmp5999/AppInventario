@@ -131,7 +131,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue12.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =0
                     ZIndex: =1
@@ -192,7 +194,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue14.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =2
                     ZIndex: =1
@@ -253,7 +257,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue15.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =2
                     ZIndex: =1
@@ -315,7 +321,9 @@
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Cod_BAMXP)
                     Required: =false
                     Update: =DataCardValue11.Value
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =3
                     ZIndex: =1
@@ -379,7 +387,9 @@
                     Height: =70
                     Required: =false
                     Update: =Image4.Image
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =5
                     ZIndex: =1
@@ -452,7 +462,7 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue4.SelectedDate
-                    Width: =667
+                    Width: =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 600 , 350)
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -514,7 +524,9 @@
                     Height: =70
                     Required: =false
                     Update: =Value(DataCardValue2.Value)
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =1
                     ZIndex: =2
@@ -574,7 +586,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue10.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =1
                     ZIndex: =2
@@ -636,7 +650,9 @@
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Caracteristicas)
                     Required: =false
                     Update: =DataCardValue3.Value
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =3
                     ZIndex: =2
@@ -698,7 +714,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue8.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =4
                     ZIndex: =2
@@ -759,7 +777,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue5.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =4
                     ZIndex: =2
@@ -820,7 +840,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue9.Selected
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =5
                     ZIndex: =2
@@ -881,7 +903,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue6.Checked
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =0
                     Y: =6
                     ZIndex: =2
@@ -943,7 +967,9 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue7.Checked
-                    Width: =667
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 630 , 350)
                     X: =1
                     Y: =6
                     ZIndex: =2
