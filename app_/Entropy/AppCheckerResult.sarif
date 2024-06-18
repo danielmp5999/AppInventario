@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.AccessibleLabel"
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.AccessibleLabel",
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Inventario",
-                "type": "Inventario.ScreenContainer5.HeaderContainer5.Icon5"
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.TabIndex"
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.TabIndex",
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Inventario",
-                "type": "Inventario.ScreenContainer5.HeaderContainer5.Icon5"
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
               }
             }
           ],
@@ -344,6 +344,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Inventario_Equipos",
+                "type": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.Container2.TextInputCanvas1.AccessibleLabel"
                 }
               ],
@@ -494,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1.AccessibleLabel"
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1.AccessibleLabel",
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Inventario_Equipos",
-                "type": "Inventario_Equipos.ScreenContainer6.Container2.ButtonCanvas1"
+                "module": "Inventario",
+                "type": "Inventario.ScreenContainer5.HeaderContainer5.Icon5"
               }
             }
           ],
@@ -524,49 +554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel"
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Reg_Inventario",
-                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7.TabIndex",
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Icon5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Reg_Inventario",
-                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.Icon7"
+                "module": "Inventario",
+                "type": "Inventario.ScreenContainer5.HeaderContainer5.Icon5"
               }
             }
           ],
@@ -578,6 +578,66 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.'Foto del dispositivo_DataCard1'.AddPicture1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.'Foto del dispositivo_DataCard1'.AddPicture1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.'Foto del dispositivo_DataCard1'.AddPicture1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.MainContainer8.Form1.ID_DataCard1.DataCardValue13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -794,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width"
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3.Size"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width",
+                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3.Size",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Width",
-                "module": "Inventario",
-                "type": "Inventario.ScreenContainer5.HeaderContainer5.Header4"
+                "member": "Size",
+                "module": "Reg_Inventario",
+                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3"
               }
             }
           ],
@@ -1214,19 +1274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3.Size"
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3.Size",
+                  "fullyQualifiedName": "Inventario.ScreenContainer5.HeaderContainer5.Header4.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Size",
-                "module": "Reg_Inventario",
-                "type": "Reg_Inventario.ScreenContainer8.HeaderContainer8.TextCanvas3"
+                "member": "Width",
+                "module": "Inventario",
+                "type": "Inventario.ScreenContainer5.HeaderContainer5.Header4"
               }
             }
           ],

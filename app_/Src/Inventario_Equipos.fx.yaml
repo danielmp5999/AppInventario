@@ -319,7 +319,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =ThisItem.CodBAMXP
+                    Text: =ThisItem.Cod_BAMXP
                     Width: =Parent.TemplateWidth - 64
                     X: =10
                     Y: =Overlay3.Y + 5
