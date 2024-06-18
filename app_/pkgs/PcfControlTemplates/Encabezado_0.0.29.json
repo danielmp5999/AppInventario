@@ -283,8 +283,8 @@
   "DisplayNameKey": "Header_Display_Key",
   "Events": [
     {
-      "Description": "The event to trigger when the logo is selected",
-      "DisplayName": "On select logo",
+      "Description": "El evento que se desencadenará cuando se seleccione el logotipo",
+      "DisplayName": "Al seleccionar logotipo",
       "Hidden": false,
       "IsPrimaryInput": false,
       "Name": "OnSelectLogo",
@@ -461,14 +461,14 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Header",
+  "Name": "Encabezado",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Choose a color palette that's different from the theme.",
+      "Description": "Puede proporcionar una paleta de colores diferente para el elemento seleccionado si especifica un color base de la paleta. Este color genera un conjunto de colores similares que se aplicarán después a diferentes aspectos del elemento, siendo los más habituales: relleno, borde y estados de interacción. Un valor en blanco indica que el elemento usará la paleta de colores del tema de la aplicación.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Color palette",
+      "DisplayName": "Color base de la paleta",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -494,28 +494,28 @@
     {
       "Category": "data",
       "DefaultValue": "Primary",
-      "Description": "The header background style",
+      "Description": "El estilo de fondo del encabezado",
       "DescriptionResourceString": "Style_Desc_Key",
-      "DisplayName": "Style",
+      "DisplayName": "Estilo",
       "DisplayNameResourceString": "Style_Display_Key",
       "EnumValues": [
         {
-          "Description": "Neutral",
-          "DisplayName": "Neutral",
+          "Description": "Neutro",
+          "DisplayName": "Neutro",
           "IsDefaultValue": false,
           "Name": "Neutral",
           "Value": "Neutral"
         },
         {
-          "Description": "Primary",
-          "DisplayName": "Primary",
+          "Description": "Principal",
+          "DisplayName": "Principal",
           "IsDefaultValue": true,
           "Name": "Primary",
           "Value": "Primary"
         },
         {
-          "Description": "Light",
-          "DisplayName": "Light",
+          "Description": "Claro",
+          "DisplayName": "Claro",
           "IsDefaultValue": false,
           "Name": "Light",
           "Value": "Light"
@@ -544,9 +544,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The name of the family of fonts in which text appears",
+      "Description": "El nombre de la familia de fuentes en la que aparece el texto",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Font",
+      "DisplayName": "Fuente",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -572,9 +572,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The color of text in the control",
+      "Description": "El color del texto del control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Font color",
+      "DisplayName": "Color de fuente",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -600,9 +600,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The control's logo image",
+      "Description": "La imagen del logotipo del control",
       "DescriptionResourceString": "Logo_Desc_Key",
-      "DisplayName": "Logo",
+      "DisplayName": "Logotipo",
       "DisplayNameResourceString": "Logo_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -628,9 +628,9 @@
     {
       "Category": "data",
       "DefaultValue": "true",
-      "Description": "Toggles displaying the logo",
+      "Description": "Alterna la visualización del logotipo",
       "DescriptionResourceString": "IsLogoVisible_Desc_Key",
-      "DisplayName": "Show logo",
+      "DisplayName": "Visible",
       "DisplayNameResourceString": "IsLogoVisible_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -655,10 +655,10 @@
     },
     {
       "Category": "data",
-      "DefaultValue": "The logo image",
-      "Description": "The logo image tooltip",
+      "DefaultValue": "La imagen del logotipo",
+      "Description": "La información sobre herramientas de la imagen del logotipo",
       "DescriptionResourceString": "LogoTooltip_Desc_Key",
-      "DisplayName": "Tooltip",
+      "DisplayName": "Información sobre herramientas",
       "DisplayNameResourceString": "LogoTooltip_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -684,9 +684,9 @@
     {
       "Category": "data",
       "DefaultValue": "70",
-      "Description": "The logo image",
+      "Description": "La imagen del logotipo",
       "DescriptionResourceString": "LogoMaxHeight_Desc_Key",
-      "DisplayName": "Logo max height",
+      "DisplayName": "Altura máxima del logotipo",
       "DisplayNameResourceString": "LogoMaxHeight_Display_Key",
       "EnumValues": [],
       "HelperUI": "",
@@ -711,10 +711,10 @@
     },
     {
       "Category": "data",
-      "DefaultValue": "Header Title",
-      "Description": "The title text of the header",
+      "DefaultValue": "Título de encabezado",
+      "Description": "El texto del título del encabezado",
       "DescriptionResourceString": "Title_Desc_Key",
-      "DisplayName": "Title",
+      "DisplayName": "Título",
       "DisplayNameResourceString": "Title_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -740,9 +740,9 @@
     {
       "Category": "data",
       "DefaultValue": "true",
-      "Description": "Toggles displaying the title",
+      "Description": "Alterna la visualización del título",
       "DescriptionResourceString": "IsTitleVisible_Desc_Key",
-      "DisplayName": "Show title",
+      "DisplayName": "Visible",
       "DisplayNameResourceString": "IsTitleVisible_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -768,9 +768,9 @@
     {
       "Category": "data",
       "DefaultValue": "20",
-      "Description": "The title's font size",
+      "Description": "El tamaño de fuente del título",
       "DescriptionResourceString": "TitleFontSize_Desc_Key",
-      "DisplayName": "Font size",
+      "DisplayName": "Tamaño de fuente",
       "DisplayNameResourceString": "TitleFontSize_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -796,9 +796,9 @@
     {
       "Category": "data",
       "DefaultValue": "true",
-      "Description": "Toggles displaying the profile picture",
+      "Description": "Alterna la visualización de la imagen del perfil",
       "DescriptionResourceString": "IsProfilePictureVisible_Desc_Key",
-      "DisplayName": "Profile picture",
+      "DisplayName": "Imagen de perfil",
       "DisplayNameResourceString": "IsProfilePictureVisible_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -824,9 +824,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The user's profile picture image",
+      "Description": "La imagen del perfil del usuario",
       "DescriptionResourceString": "UserImage_Desc_Key",
-      "DisplayName": "User image",
+      "DisplayName": "Imagen de usuario",
       "DisplayNameResourceString": "UserImage_Display_Key",
       "EnumValues": [],
       "HelperUI": "",
@@ -852,9 +852,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The user's full name",
+      "Description": "El nombre completo del usuario",
       "DescriptionResourceString": "UserName_Desc_Key",
-      "DisplayName": "User name",
+      "DisplayName": "Nombre de usuario",
       "DisplayNameResourceString": "UserName_Display_Key",
       "EnumValues": [],
       "HelperUI": "",
@@ -880,9 +880,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The user email address",
+      "Description": "La dirección de correo electrónico del usuario",
       "DescriptionResourceString": "UserEmail_Desc_Key",
-      "DisplayName": "User email",
+      "DisplayName": "Correo electrónico del usuario",
       "DisplayNameResourceString": "UserEmail_Display_Key",
       "EnumValues": [],
       "HelperUI": "",
@@ -1044,7 +1044,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.Header\",\"CustomControlId\":\"PowerApps.Header\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Style\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Primary\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Logo\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"IsLogoVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"LogoTooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"The logo image\"},\"LogoMaxHeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"70\"},\"Title\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Header Title\"},\"IsTitleVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"TitleFontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"20\"},\"IsProfilePictureVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"UserImage\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"UserName\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"UserEmail\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":{\"OnSelectLogo\":{\"EventName\":\"OnSelectLogo\"}},\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.Header\",\"CustomControlId\":\"PowerApps.Header\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Style\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Primary\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Logo\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"IsLogoVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"LogoTooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"La imagen del logotipo\"},\"LogoMaxHeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"70\"},\"Title\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Título de encabezado\"},\"IsTitleVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"TitleFontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"20\"},\"IsProfilePictureVisible\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"UserImage\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"UserName\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"UserEmail\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":{\"OnSelectLogo\":{\"EventName\":\"OnSelectLogo\"}},\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
@@ -1394,7 +1394,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Header_Display_Key\":\"Header\",\"Header_Desc_Key\":\"The controls that compose the header\",\"Title_Display_Key\":\"Title\",\"Title_Desc_Key\":\"The title text of the header\",\"Default_Title\":\"Header Title\",\"IsTitleVisible_Display_Key\":\"Show title\",\"IsTitleVisible_Desc_Key\":\"Toggles displaying the title\",\"TitleFontSize_Display_Key\":\"Font size\",\"TitleFontSize_Desc_Key\":\"The title's font size\",\"Logo_Display_Key\":\"Logo\",\"Logo_Desc_Key\":\"The control's logo image\",\"IsLogoVisible_Display_Key\":\"Show logo\",\"IsLogoVisible_Desc_Key\":\"Toggles displaying the logo\",\"LogoTooltip_Display_Key\":\"Tooltip\",\"LogoTooltip_Desc_Key\":\"The logo image tooltip\",\"Default_LogoTooltip\":\"The logo image\",\"LogoMaxHeight_Display_Key\":\"Logo max height\",\"LogoMaxHeight_Desc_Key\":\"The logo image\",\"OnSelectLogo_Display_Key\":\"On select logo\",\"OnSelectLogo_Desc_Key\":\"The event to trigger when the logo is selected\",\"UserName_Display_Key\":\"User name\",\"UserName_Desc_Key\":\"The user's full name\",\"UserEmail_Display_Key\":\"User email\",\"UserEmail_Desc_Key\":\"The user email address\",\"IsProfilePictureVisible_Display_Key\":\"Profile picture\",\"IsProfilePictureVisible_Desc_Key\":\"Toggles displaying the profile picture\",\"UserImage_Display_Key\":\"User image\",\"UserImage_Desc_Key\":\"The user's profile picture image\",\"Style_Display_Key\":\"Style\",\"Style_Desc_Key\":\"The header background style\",\"Style_Neutral\":\"Neutral\",\"Style_Primary\":\"Primary\",\"Style_Light\":\"Light\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Header_Display_Key\":\"Encabezado\",\"Header_Desc_Key\":\"Los controles que componen el encabezado\",\"Title_Display_Key\":\"Título\",\"Title_Desc_Key\":\"El texto del título del encabezado\",\"Default_Title\":\"Título de encabezado\",\"IsTitleVisible_Display_Key\":\"Visible\",\"IsTitleVisible_Desc_Key\":\"Alterna la visualización del título\",\"TitleFontSize_Display_Key\":\"Tamaño de fuente\",\"TitleFontSize_Desc_Key\":\"El tamaño de fuente del título\",\"Logo_Display_Key\":\"Logotipo\",\"Logo_Desc_Key\":\"La imagen del logotipo del control\",\"IsLogoVisible_Display_Key\":\"Visible\",\"IsLogoVisible_Desc_Key\":\"Alterna la visualización del logotipo\",\"LogoTooltip_Display_Key\":\"Información sobre herramientas\",\"LogoTooltip_Desc_Key\":\"La información sobre herramientas de la imagen del logotipo\",\"Default_LogoTooltip\":\"La imagen del logotipo\",\"LogoMaxHeight_Display_Key\":\"Altura máxima del logotipo\",\"LogoMaxHeight_Desc_Key\":\"La imagen del logotipo\",\"OnSelectLogo_Display_Key\":\"Al seleccionar logotipo\",\"OnSelectLogo_Desc_Key\":\"El evento que se desencadenará cuando se seleccione el logotipo\",\"UserName_Display_Key\":\"Nombre de usuario\",\"UserName_Desc_Key\":\"El nombre completo del usuario\",\"UserEmail_Display_Key\":\"Correo electrónico del usuario\",\"UserEmail_Desc_Key\":\"La dirección de correo electrónico del usuario\",\"IsProfilePictureVisible_Display_Key\":\"Imagen de perfil\",\"IsProfilePictureVisible_Desc_Key\":\"Alterna la visualización de la imagen del perfil\",\"UserImage_Display_Key\":\"Imagen de usuario\",\"UserImage_Desc_Key\":\"La imagen del perfil del usuario\",\"Style_Display_Key\":\"Estilo\",\"Style_Desc_Key\":\"El estilo de fondo del encabezado\",\"Style_Neutral\":\"Neutro\",\"Style_Primary\":\"Principal\",\"Style_Light\":\"Claro\",\"Base_Palette_Color\":\"Color base de la paleta\",\"Base_Palette_Color_description\":\"Puede proporcionar una paleta de colores diferente para el elemento seleccionado si especifica un color base de la paleta. Este color genera un conjunto de colores similares que se aplicarán después a diferentes aspectos del elemento, siendo los más habituales: relleno, borde y estados de interacción. Un valor en blanco indica que el elemento usará la paleta de colores del tema de la aplicación.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\"}}}",
       "Type": 3
     },
     {

@@ -13,6 +13,21 @@
     "OverridableProperties": {},
     "Version": "2.2.1"
   },
+  "Alternancia": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_Toggle",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_Toggle",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Alternancia",
+    "Version": "1.0.35"
+  },
   "appinfo": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -27,7 +42,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Button": {
+  "Botón": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_ButtonCanvas",
@@ -39,7 +54,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Button",
+    "TemplateDisplayName": "Botón",
     "Version": "0.0.41"
   },
   "circle": {
@@ -56,7 +71,7 @@
     "OverridableProperties": {},
     "Version": "2.3.0"
   },
-  "Combobox": {
+  "Cuadro combinado": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_ComboboxCanvas",
@@ -68,23 +83,38 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Combobox",
+    "TemplateDisplayName": "Cuadro combinado",
     "Version": "0.0.38"
   },
-  "Date picker": {
+  "Encabezado": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_DatePickerCanvas",
+    "Id": "http://microsoft.com/appmagic/powercontrol/Header",
     "IsComponentTemplate": false,
     "IsCustomGroupControlTemplate": false,
     "IsPcfControl": true,
     "IsPremiumPcfControl": false,
     "IsWidgetTemplate": false,
     "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_DatePickerCanvas",
+    "Name": "Header",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Date picker",
-    "Version": "0.0.31"
+    "TemplateDisplayName": "Encabezado",
+    "Version": "0.0.29"
+  },
+  "Entrada de texto": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextInputCanvas",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TextInputCanvas",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Entrada de texto",
+    "Version": "0.0.37"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -141,21 +171,6 @@
     "Name": "groupContainer",
     "OverridableProperties": {},
     "Version": "1.3.0"
-  },
-  "Header": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/Header",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "Header",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Header",
-    "Version": "0.0.29"
   },
   "Host": {
     "CustomGroupControlTemplateName": "",
@@ -214,6 +229,21 @@
     "OverridableProperties": {},
     "Version": "2.5.1"
   },
+  "Lista de pestañas": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TabList",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TabList",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Lista de pestañas",
+    "Version": "2.2.26"
+  },
   "rectangle": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -242,22 +272,22 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Tab list": {
+  "Selector de fecha": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TabList",
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_DatePickerCanvas",
     "IsComponentTemplate": false,
     "IsCustomGroupControlTemplate": false,
     "IsPcfControl": true,
     "IsPremiumPcfControl": false,
     "IsWidgetTemplate": false,
     "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_TabList",
+    "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Tab list",
-    "Version": "2.2.26"
+    "TemplateDisplayName": "Selector de fecha",
+    "Version": "0.0.31"
   },
-  "Text": {
+  "Texto": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextCanvas",
@@ -269,22 +299,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Text",
-    "Version": "0.0.37"
-  },
-  "Text input": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextInputCanvas",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_TextInputCanvas",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Text input",
+    "TemplateDisplayName": "Texto",
     "Version": "0.0.37"
   },
   "timer": {
@@ -300,21 +315,6 @@
     "Name": "timer",
     "OverridableProperties": {},
     "Version": "2.1.0"
-  },
-  "Toggle": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_Toggle",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": true,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "PowerApps_CoreControls_Toggle",
-    "OverridableProperties": {},
-    "TemplateDisplayName": "Toggle",
-    "Version": "1.0.35"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",

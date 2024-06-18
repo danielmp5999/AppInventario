@@ -438,14 +438,14 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Toggle",
+  "Name": "Alternancia",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "To set Toggle checked state",
+      "Description": "Para establecer el estado de activación del control de alternancia",
       "DescriptionResourceString": "Toggle_Checked_Desc_Key",
-      "DisplayName": "Checked",
+      "DisplayName": "Activado",
       "DisplayNameResourceString": "Toggle_Checked_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -471,9 +471,9 @@
     {
       "Category": "data",
       "DefaultValue": "Label",
-      "Description": "Label for Toggle",
+      "Description": "Etiqueta de alternancia",
       "DescriptionResourceString": "Toggle_Label_Desc_Key",
-      "DisplayName": "Label",
+      "DisplayName": "Etiqueta",
       "DisplayNameResourceString": "Toggle_Label_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -499,9 +499,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Accessibility Label for Toggle component",
+      "Description": "Etiqueta de accesibilidad para el componente de alternancia",
       "DescriptionResourceString": "Toggle_AccessibleLabel_Desc_Key",
-      "DisplayName": "Accessibility Label",
+      "DisplayName": "Etiqueta de accesibilidad",
       "DisplayNameResourceString": "Toggle_AccessibleLabel_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
@@ -527,28 +527,28 @@
     {
       "Category": "data",
       "DefaultValue": "After",
-      "Description": "Define position for the label around the Toggle",
+      "Description": "Defina la posición de la etiqueta alrededor del control de alternancia",
       "DescriptionResourceString": "Toggle_LabelPosition_Desc_Key",
-      "DisplayName": "Label Position",
+      "DisplayName": "Posición de la etiqueta",
       "DisplayNameResourceString": "Toggle_LabelPosition_Display_Key",
       "EnumValues": [
         {
-          "Description": "Before",
-          "DisplayName": "Before",
+          "Description": "Delante",
+          "DisplayName": "Delante",
           "IsDefaultValue": false,
           "Name": "Before",
           "Value": "Before"
         },
         {
-          "Description": "After",
-          "DisplayName": "After",
+          "Description": "Detrás",
+          "DisplayName": "Detrás",
           "IsDefaultValue": true,
           "Name": "After",
           "Value": "After"
         },
         {
-          "Description": "Above",
-          "DisplayName": "Above",
+          "Description": "Encima",
+          "DisplayName": "Encima",
           "IsDefaultValue": false,
           "Name": "Above",
           "Value": "Above"
@@ -577,9 +577,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Choose a color palette that's different from the theme.",
+      "Description": "Elija una paleta de colores que sea diferente del tema.",
       "DescriptionResourceString": "Base_Palette_Color_description",
-      "DisplayName": "Color palette",
+      "DisplayName": "Paleta de colores",
       "DisplayNameResourceString": "Base_Palette_Color",
       "EnumValues": [],
       "HelperUI": null,
@@ -605,9 +605,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The name of the family of fonts in which text appears",
+      "Description": "El nombre de la familia de fuentes en la que aparece el texto",
       "DescriptionResourceString": "Font_description",
-      "DisplayName": "Font",
+      "DisplayName": "Fuente",
       "DisplayNameResourceString": "Font",
       "EnumValues": [],
       "HelperUI": null,
@@ -633,9 +633,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Set the font size for displayed text.",
+      "Description": "Establezca el tamaño de fuente para el texto mostrado.",
       "DescriptionResourceString": "Font_Size_description",
-      "DisplayName": "Font size",
+      "DisplayName": "Tamaño de fuente",
       "DisplayNameResourceString": "Font_Size",
       "EnumValues": [],
       "HelperUI": null,
@@ -661,9 +661,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The color of text in the control",
+      "Description": "El color del texto del control",
       "DescriptionResourceString": "Font_Color_description",
-      "DisplayName": "Font color",
+      "DisplayName": "Color de fuente",
       "DisplayNameResourceString": "Font_Color",
       "EnumValues": [],
       "HelperUI": "color",
@@ -689,9 +689,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "The weight of the text in a control",
+      "Description": "El grosor del texto de un control",
       "DescriptionResourceString": "Font_Weight_description",
-      "DisplayName": "Font weight",
+      "DisplayName": "Espesor de la fuente",
       "DisplayNameResourceString": "Font_Weight",
       "EnumValues": [],
       "HelperUI": null,
@@ -717,9 +717,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Italic",
+      "Description": "Cursiva",
       "DescriptionResourceString": "Italic",
-      "DisplayName": "Italic",
+      "DisplayName": "Cursiva",
       "DisplayNameResourceString": "Italic",
       "EnumValues": [],
       "HelperUI": null,
@@ -745,9 +745,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Underline",
+      "Description": "Subrayado",
       "DescriptionResourceString": "Underline",
-      "DisplayName": "Underline",
+      "DisplayName": "Subrayado",
       "DisplayNameResourceString": "Underline",
       "EnumValues": [],
       "HelperUI": null,
@@ -773,9 +773,9 @@
     {
       "Category": "data",
       "DefaultValue": "false",
-      "Description": "Strikethrough",
+      "Description": "Tachado",
       "DescriptionResourceString": "Strikethrough",
-      "DisplayName": "Strikethrough",
+      "DisplayName": "Tachado",
       "DisplayNameResourceString": "Strikethrough",
       "EnumValues": [],
       "HelperUI": null,
@@ -1287,7 +1287,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Toggle_Display_Key\":\"Toggle\",\"Toggle_Desc_Key\":\"Let users visualise Toggle control\",\"Toggle_Label_Display_Key\":\"Label\",\"Toggle_Label_Desc_Key\":\"Label for Toggle\",\"Toggle_AccessibleLabel_Display_Key\":\"Accessibility Label\",\"Toggle_AccessibleLabel_Desc_Key\":\"Accessibility Label for Toggle component\",\"Toggle_LabelPosition_Display_Key\":\"Label Position\",\"Toggle_LabelPosition_Desc_Key\":\"Define position for the label around the Toggle\",\"Toggle_LabelPosition_Before\":\"Before\",\"Toggle_LabelPosition_After\":\"After\",\"Toggle_LabelPosition_Above\":\"Above\",\"Toggle_Checked_Display_Key\":\"Checked\",\"Toggle_Checked_Desc_Key\":\"To set Toggle checked state\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Toggle_Display_Key\":\"Alternancia\",\"Toggle_Desc_Key\":\"Permite a los usuarios visualizar el control de alternancia\",\"Toggle_Label_Display_Key\":\"Etiqueta\",\"Toggle_Label_Desc_Key\":\"Etiqueta de alternancia\",\"Toggle_AccessibleLabel_Display_Key\":\"Etiqueta de accesibilidad\",\"Toggle_AccessibleLabel_Desc_Key\":\"Etiqueta de accesibilidad para el componente de alternancia\",\"Toggle_LabelPosition_Display_Key\":\"Posición de la etiqueta\",\"Toggle_LabelPosition_Desc_Key\":\"Defina la posición de la etiqueta alrededor del control de alternancia\",\"Toggle_LabelPosition_Before\":\"Delante\",\"Toggle_LabelPosition_After\":\"Detrás\",\"Toggle_LabelPosition_Above\":\"Encima\",\"Toggle_Checked_Display_Key\":\"Activado\",\"Toggle_Checked_Desc_Key\":\"Para establecer el estado de activación del control de alternancia\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\"}}}",
       "Type": 3
     },
     {
