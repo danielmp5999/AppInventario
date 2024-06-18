@@ -462,7 +462,7 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue4.SelectedDate
-                    Width: =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,530, Asignaciones_Equipos.Size = ScreenSize.Medium, 600 , 350)
+                    Width: =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 800, Asignaciones_Equipos.Size = ScreenSize.Large,330, Asignaciones_Equipos.Size = ScreenSize.Medium, 300 , 350)
                     X: =0
                     Y: =0
                     ZIndex: =2
