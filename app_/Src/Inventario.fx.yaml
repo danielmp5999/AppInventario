@@ -48,7 +48,7 @@
                 Width: =50
                 ZIndex: =1
 
-            Header4 As Encabezado:
+            Header4 As Header:
                 DisplayMode: =DisplayMode.Edit
                 Height: =75
                 LayoutMinHeight: =75
@@ -169,7 +169,7 @@
                         Width: =Parent.Width
                         ZIndex: =9
 
-                        TitleText2 As Texto:
+                        TitleText2 As Text:
                             DisplayMode: =DisplayMode.Edit
                             Height: =30
                             LayoutMinHeight: =32
@@ -183,7 +183,7 @@
                             Y: =0
                             ZIndex: =10
 
-                        DescriptionText3 As Texto:
+                        DescriptionText3 As Text:
                             DisplayMode: =DisplayMode.Edit
                             Height: =45
                             LayoutMinHeight: =32
@@ -231,7 +231,7 @@
                         Width: =Parent.Width
                         ZIndex: =12
 
-                        Button2 As Botón:
+                        Button2 As Button:
                             AccessibleLabel: ="Featured item button"
                             AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary

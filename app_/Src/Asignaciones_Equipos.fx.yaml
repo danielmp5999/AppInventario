@@ -52,7 +52,7 @@
                 Width: =35
                 ZIndex: =1
 
-            TextCanvas1 As Texto:
+            TextCanvas1 As Text:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =false
@@ -92,7 +92,7 @@
                 Y: =0
                 ZIndex: =2
 
-            "TabList1 As 'Lista de pestañas'.pcfdataset":
+            "TabList1 As 'Tab list'.pcfdataset":
                 AlignInContainer: =AlignInContainer.Center
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
@@ -146,7 +146,7 @@
                 Width: =35
                 ZIndex: =1
 
-            "TextInputCanvas2 As 'Entrada de texto'":
+            "TextInputCanvas2 As 'Text input'":
                 AccessibleLabel: =""
                 Appearance: ="FilledDarker"
                 BasePaletteColor: =
