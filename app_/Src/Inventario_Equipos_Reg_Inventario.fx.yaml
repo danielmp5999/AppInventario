@@ -1,4 +1,4 @@
-"Reg_Inventario As screen.'autoLayout_HeaderFooter_ver1.0'":
+"Inventario_Equipos_Reg_Inventario As screen.'autoLayout_HeaderFooter_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
