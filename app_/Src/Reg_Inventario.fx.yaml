@@ -266,10 +266,10 @@
                     DataField: ="CodBAMXP"
                     Default: =ThisItem.Cod_BAMXP
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,CodBAMXP)
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Cod_BAMXP)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, CodBAMXP)
+                    MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Cod_BAMXP)
                     Required: =false
                     Update: =DataCardValue11.Value
                     Width: =444
@@ -329,7 +329,7 @@
                     DataField: ="Fotodeldispositivo"
                     Default: =ThisItem.'Foto del dispositivo'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Fotodeldispositivo)
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,'Foto del dispositivo')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -463,7 +463,7 @@
                     DataField: ="NumSerie"
                     Default: =ThisItem.Num_Serie
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,NumSerie)
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =false
