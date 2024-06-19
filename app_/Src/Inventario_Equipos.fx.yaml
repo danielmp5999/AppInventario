@@ -153,7 +153,8 @@
                 LayoutMinWidth: =96
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos_Reg_Inventario)
+                    Navigate(Inventario_Equipos_Reg_Inventario);
+                    NewForm(Form1);
                 PaddingLeft: =
                 PaddingRight: =
                 Text: ="Registrar equipo"
