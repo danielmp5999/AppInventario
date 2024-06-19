@@ -151,7 +151,7 @@
                         ShowScrollbar: =false
                         TemplateSize: =Min(440, Self.Height - 60)
                         Transition: =Transition.Pop
-                        Width: =Inventario_Equipos_Reg_Inventario.Width - Image6.Width/2
+                        Width: =667
                         ZIndex: =1
 
                         Image6 As image:
