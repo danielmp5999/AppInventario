@@ -27,6 +27,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -88,6 +89,20 @@
                     "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
+                OnSelect: |-
+                    =If(TabList2.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                        Set(varFiltro,"Activo"),
+                        TabList2.Selected.Value = "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                        Set(varFiltro,"Inactivo"),
+                        Set(varFiltro,"En revision")
+                    )
+                    
+                    /*
+                    ["Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                    "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                    "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
+                    
+                    */
                 Width: =300
                 X: =0
                 Y: =0
