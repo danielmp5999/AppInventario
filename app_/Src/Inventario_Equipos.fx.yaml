@@ -113,6 +113,7 @@
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =50
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -197,7 +198,6 @@
             "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
-                DisplayMode: =DisplayMode.View
                 Items: |-
                     =//FiltroDispositivos
                     SortByColumns(
@@ -215,6 +215,9 @@
                 LayoutMinHeight: =35
                 LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =Navigate(Inventario_Equipos_Reg_Inventario);
+                    EditForm(Form1);
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 3, Inventario_Equipos.Size = ScreenSize.Large, 2 , 2)
                 ZIndex: =1
@@ -253,7 +256,8 @@
                             ImagePosition.Fill
                         )
                         */
-                    OnSelect: =Select(Parent)
+                    OnSelect: |
+                        =Select(Parent)
                     PaddingLeft: |
                         =
                     PaddingTop: |
@@ -319,7 +323,8 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     Fill: =RGBA(0, 0, 0, 0.4)
                     Height: =108
-                    OnSelect: =Select(Parent)
+                    OnSelect: |
+                        =Select(Parent)
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - 108
                     ZIndex: =2
@@ -373,5 +378,5 @@
                     Width: =Parent.TemplateWidth - Label3.X
                     X: =Subtitle3.X - 5
                     Y: =Subtitle3.Y+Subtitle3.Height/1.8
-                    ZIndex: =6
+                    ZIndex: =5
 

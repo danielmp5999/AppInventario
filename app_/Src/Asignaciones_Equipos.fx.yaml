@@ -195,6 +195,10 @@
                 LayoutMinHeight: =35
                 LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =//false
+                    Navigate(Inventario_Equipos_Reg_Inventario);
+                    EditForm(Form1);
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: |
                     =

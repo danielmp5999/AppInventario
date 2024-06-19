@@ -44,7 +44,7 @@
                 IsProfilePictureVisible: =true
                 LayoutMinHeight: =75
                 LayoutMinWidth: =Parent.Width
-                Logo: ='bamx-1024x414'
+                Logo: =inventario
                 OnSelectLogo: =false
                 Style: ='Header.Style'.Light
                 Title: ="Bienvenido"
@@ -167,7 +167,21 @@
                             );
                             
                             Set (CantidadRegistrosAsignada, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "ASIGNADA")));
-                            Set (CantidadRegistrosUtilitaria, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "UTILITARIA")))
+                            Set (CantidadRegistrosUtilitaria, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "UTILITARIA")));
+                            /*
+                            //Navigate(Inventario,ScreenTransition.CoverRight);
+                            ClearCollect(
+                                FiltroDispositivos,
+                                Filter(
+                                    [@Dispositivos],
+                                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                )
+                            );
+                            Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                            Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                            Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                            
+                            */
                         Text: ="Asignaciones"
                         VerticalAlign: =""
                         Width: =Parent.Width
