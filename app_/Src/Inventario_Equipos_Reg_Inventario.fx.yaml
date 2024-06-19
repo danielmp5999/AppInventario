@@ -145,7 +145,7 @@
                         Items: =Gallery5.Selected.Attachments
                         LoadingSpinner: =LoadingSpinner.Data
                         OnSelect: |-
-                            =Set(varUrlImage, ThisItem.AbsoluteUri);
+                            =Set(varUrlImage, ThisItem.Value);
                             Set(VarImageZoom,true)
                         ShowNavigation: =true
                         ShowScrollbar: =false

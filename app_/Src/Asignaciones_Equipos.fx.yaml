@@ -185,8 +185,8 @@
                             //[@Lista]
                             FiltroUtilitaria
                             ,
-                            ASIGNACIÓN.Value=varFiltro,DEPTO.Value=Categorias.Selected.CategoryName,
-                            StartsWith(RESPONSABLE,TextInputCanvas2.Value)
+                            ASIGNACIÓN.Value=varFiltro,DEPTO.Value=Categorias.Selected.CategoryName
+                            //,StartsWith(RESPONSABLE,TextInputCanvas2.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
                         ,"Codigo_BAMXP",SortOrder.Ascending

@@ -239,7 +239,9 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            OnSelect: =Navigate(Inventario_Equipos)
+                            OnSelect: |-
+                                =Navigate(Inventario_Equipos);
+                                Set(varFiltro,"Activo")
                             Text: ="Ver detalles"
                             Width: =110
                             X: =0

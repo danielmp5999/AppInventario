@@ -205,8 +205,8 @@
                             //[@Dispositivos]
                             FiltroDispositivos
                             ,
-                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName,
-                            StartsWith(ID,TextInputCanvas1.Value)
+                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName
+                            //,StartsWith(ID,TextInputCanvas1.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
                         ,"CodBAMXP",SortOrder.Ascending
