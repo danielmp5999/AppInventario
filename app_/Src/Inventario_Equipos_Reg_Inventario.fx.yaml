@@ -126,88 +126,6 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
-                DataCard1 As typedDataCard.blankCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DisplayMode: =DisplayMode.Edit
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =200
-                    Visible: =false
-                    Width: =667
-                    WidthFit: =false
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
-                    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
-                        BorderColor: =App.Theme.Colors.Darker40
-                        DelayItemLoading: =true
-                        Height: =Parent.Height
-                        Items: =Gallery5.Selected.Attachments
-                        LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: |-
-                            =Set(varUrlImage, ThisItem.Value);
-                            Set(VarImageZoom,true)
-                        ShowNavigation: =true
-                        ShowScrollbar: =false
-                        TemplateSize: =Min(440, Self.Height - 60)
-                        Transition: =Transition.Pop
-                        Width: =667
-                        ZIndex: =1
-
-                        Image6 As image:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Height: =Parent.Height -8
-                            Image: =ThisItem.Value
-                            ImagePosition: =ImagePosition.Fill
-                            OnSelect: =Select(Parent)
-                            RadiusBottomLeft: =8
-                            RadiusBottomRight: =8
-                            RadiusTopLeft: =8
-                            RadiusTopRight: =8
-                            Width: =Parent.TemplateWidth 
-                            X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
-                            ZIndex: =1
-
-                        Title1 As label:
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                            Height: =Self.Size * 1.8
-                            OnSelect: =Select(Parent)
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =ThisItem.DisplayName
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =Parent.TemplateWidth - 64
-                            X: =32
-                            Y: =195.8
-                            ZIndex: =2
-
-                        Subtitle1 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                            Height: =Self.Size * 1.8
-                            OnSelect: =Select(Parent)
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =12
-                            Text: =ThisItem.Id
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =Title1.Width
-                            X: =Title1.X
-                            Y: =199.4
-                            ZIndex: =3
-
                 Donador_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -223,7 +141,7 @@
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
                     X: =1
-                    Y: =0
+                    Y: =1
                     ZIndex: =1
 
                     DataCardKey12 As Text:
@@ -285,8 +203,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =2
+                    X: =0
+                    Y: =3
                     ZIndex: =1
 
                     DataCardKey15 As Text:
@@ -348,7 +266,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =3
                     ZIndex: =1
 
@@ -412,8 +330,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =3
+                    X: =0
+                    Y: =4
                     ZIndex: =1
 
                     DataCardKey11 As Text:
@@ -479,7 +397,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =6
                     ZIndex: =1
 
@@ -546,8 +464,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =7
+                    X: =0
+                    Y: =8
                     ZIndex: =1
 
                     DataCardKey1 As label:
@@ -638,7 +556,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =8
                     ZIndex: =1
 
@@ -683,6 +601,21 @@
                             DataCard2.Height/2-BarcodeReader2.Height/2
                         ZIndex: =2
 
+                GaleriaForm As typedDataCard.blankCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =200
+                    Visible: =true
+                    Width: |-
+                        =//667
+                        Form1.Width
+                    WidthFit: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
                 Num_Serie_DataCard1 As typedDataCard.fluentV9NumberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -698,7 +631,7 @@
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
                     X: =0
-                    Y: =1
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey2 As Text:
@@ -759,7 +692,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
+                    X: =0
                     Y: =1
                     ZIndex: =2
 
@@ -823,7 +756,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =2
                     ZIndex: =2
 
@@ -887,7 +820,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =4
                     ZIndex: =2
 
@@ -951,8 +884,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =4
+                    X: =0
+                    Y: =5
                     ZIndex: =2
 
                     DataCardKey8 As Text:
@@ -1014,7 +947,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =5
                     ZIndex: =2
 
@@ -1077,8 +1010,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =5
+                    X: =0
+                    Y: =6
                     ZIndex: =2
 
                     DataCardKey9 As Text:
@@ -1140,8 +1073,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =6
+                    X: =0
+                    Y: =7
                     ZIndex: =2
 
                     DataCardKey6 As Text:
@@ -1204,7 +1137,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =7
                     ZIndex: =2
 
