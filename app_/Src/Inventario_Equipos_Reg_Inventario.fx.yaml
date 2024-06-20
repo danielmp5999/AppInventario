@@ -115,7 +115,9 @@
             Form1 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =Dispositivos
-                DefaultMode: =FormMode.New
+                DefaultMode: |-
+                    =//FormMode.New
+                    If(IsBlank(Form1),FormMode.New,FormMode.Edit)
                 Item: |-
                     =If(Form1.Mode = FormMode.Edit,
                         Gallery5.Selected
@@ -134,7 +136,7 @@
                     Height: =200
                     Visible: |-
                         =//true
-                        If(FormMode.Edit,false,true)
+                        If(Form1.Mode=FormMode.New,false,true)
                     Width: |-
                         =//667
                         Form1.Width
@@ -197,7 +199,9 @@
                     DataCardKey12 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Donador:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -260,7 +264,9 @@
                     DataCardKey15 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Modelo:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -323,7 +329,9 @@
                     DataCardKey16 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "El tipo de dispositivo que registra:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -387,7 +395,9 @@
                     DataCardKey11 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Código BAMXP:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -454,7 +464,9 @@
                     DataCardKey14 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Código de barras: "
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -472,7 +484,7 @@
                         Value: |-
                             =//Parent.Default
                             //First(BarcodeReader2.Barcodes).Value
-                            If(FormMode.New, First(BarcodeReader2.Barcodes).Value, Parent.Default)
+                            If(Form1.Mode=FormMode.Edit, Parent.Default, First(BarcodeReader2.Barcodes).Value)
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey14.Y + DataCardKey14.Height + 4
@@ -606,7 +618,7 @@
                         //Attachments_DataCard1.Height
                     Visible: |-
                         =//true
-                        If(FormMode.Edit,false)
+                        If(Form1.Mode=FormMode.New,true, false)
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
@@ -641,7 +653,7 @@
                         TextColor: =RGBA(0, 0, 0, 1)
                         Visible: |-
                             =//true
-                            If(FormMode.Edit,false)
+                            If(FormMode.New,true,false)
                         Width: =280
                         X: =0
                         Y: |
@@ -658,7 +670,7 @@
                         VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                         Visible: |-
                             =//true
-                            If(FormMode.Edit,false)
+                            If(FormMode.New,true, false)
                         Width: =250
                         X: =280
                         Y: |-
@@ -687,7 +699,9 @@
                     DataCardKey4 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Fecha de llegada:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -751,7 +765,9 @@
                     DataCardKey2 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |
+                            =//Parent.DisplayName
+                            "Número de serie:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -813,7 +829,9 @@
                     DataCardKey10 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Marca:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -877,7 +895,9 @@
                     DataCardKey3 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Cracterísticas o requerimientos:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -941,7 +961,9 @@
                     DataCardKey8 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Diagnóstico Inicial:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -1004,7 +1026,9 @@
                     DataCardKey5 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Estatus del dispositivo:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
@@ -1067,7 +1091,9 @@
                     DataCardKey9 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Categoría a la que pertenece:"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width - 48
                         Wrap: =false
