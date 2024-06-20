@@ -126,6 +126,21 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
+                GaleriaForm As typedDataCard.blankCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =200
+                    Visible: =true
+                    Width: |-
+                        =//667
+                        Form1.Width
+                    WidthFit: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
                 Donador_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -600,21 +615,6 @@
                             =//7
                             DataCard2.Height/2-BarcodeReader2.Height/2
                         ZIndex: =2
-
-                GaleriaForm As typedDataCard.blankCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DisplayMode: =DisplayMode.Edit
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =200
-                    Visible: =true
-                    Width: |-
-                        =//667
-                        Form1.Width
-                    WidthFit: =false
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
 
                 Num_Serie_DataCard1 As typedDataCard.fluentV9NumberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
