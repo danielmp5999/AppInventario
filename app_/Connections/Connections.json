@@ -14,6 +14,9 @@
     "datasets": {
       "https://bamxp.sharepoint.com/sites/AppsTiComunicacin": {
         "dataSources": {
+          "Asignaciones_1": {
+            "tableName": "bdc1d774-292d-48f8-b9cb-2534261eb8c6"
+          },
           "Datos": {
             "tableName": "41d1ec12-f651-4493-8294-7b19afe8c68f"
           },
@@ -33,7 +36,8 @@
       "Datos",
       "Lista",
       "Dispositivos",
-      "Donadores"
+      "Donadores",
+      "Asignaciones_1"
     ],
     "dependencies": {},
     "dependents": [],

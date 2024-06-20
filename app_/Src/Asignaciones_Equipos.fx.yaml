@@ -99,7 +99,7 @@
                 Height: =55
                 Items: |-
                     =//["Asignados", "Disponibles"]
-                    ["Asignados "&CountRows(Filter(FiltroDispositivos,Asignado = true,Categorias.Value=Category_gallery.Selected.CategoryName)), "Disponibles "&CountRows(Filter(FiltroDispositivos,Asignado = false,Categorias.Value=Category_gallery.Selected.CategoryName))]
+                    [ "Disponibles "&CountRows(Filter(FiltroDispositivos,Asignado = false,Categorias.Value=Category_gallery.Selected.CategoryName)),"Asignados "&CountRows(Filter(FiltroDispositivos,Asignado = true,Categorias.Value=Category_gallery.Selected.CategoryName))]
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
                 OnSelect: |-
@@ -197,8 +197,14 @@
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos_Reg_Inventario);
-                    EditForm(Form1);
+                    Navigate(Asignaciones_Equipos_Detalle);
+                    //EditForm(Form1);
+                    Set(VarIDDisp, ThisItem.ID);
+                    //Set(VarIDDispositivo,LookUp(Asignaciones_1,Id_Disp.Id=ThisItem.ID));
+                    
+                    ClearCollect(FiltroAsignaciones, Asignaciones_1);
+                    
+                    Set(VarDispositivo,LookUp(FiltroAsignaciones,Id_Disp.Id=ThisItem.ID));
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: |
                     =

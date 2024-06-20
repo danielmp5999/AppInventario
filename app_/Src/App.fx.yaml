@@ -1,7 +1,9 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |
-        =Set(_Usuario,Office365Users.MyProfileV2());
+        =//[LookUp(Choices([@Vacaciones].VacacionesSolicitante), Id = PersonalID)]
+        
+        Set(_Usuario,Office365Users.MyProfileV2());
         
         Collect(
             ProductList,Table(
