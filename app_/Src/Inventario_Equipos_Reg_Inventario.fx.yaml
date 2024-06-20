@@ -132,7 +132,9 @@
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =200
-                    Visible: =true
+                    Visible: |-
+                        =//true
+                        If(FormMode.New,false,true)
                     Width: |-
                         =//667
                         Form1.Width
@@ -466,7 +468,8 @@
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: |-
                             =//Parent.Default
-                            First(BarcodeReader2.Barcodes).Value
+                            //First(BarcodeReader2.Barcodes).Value
+                            If(FormMode.New, First(BarcodeReader2.Barcodes).Value, Parent.Default)
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey14.Y + DataCardKey14.Height + 4
@@ -598,6 +601,9 @@
                     Height: |-
                         =100
                         //Attachments_DataCard1.Height
+                    Visible: |-
+                        =//true
+                        If(FormMode.Edit,false)
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
@@ -1105,6 +1111,7 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue6.Checked
+                    Visible: =false
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
@@ -1169,6 +1176,7 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValue7.Checked
+                    Visible: =false
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
