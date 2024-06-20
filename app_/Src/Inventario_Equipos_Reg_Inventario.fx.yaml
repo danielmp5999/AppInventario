@@ -214,6 +214,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Selecciona al donador..."
                         Items: =Choices([@Dispositivos].Donador)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -279,6 +280,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Selecciona el modelo..."
                         Items: =Choices([@Dispositivos].Modelo)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -344,6 +346,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Seleccionar el tipo de dispositivo..."
                         Items: =Choices([@Dispositivos].TipoDisp)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -538,7 +541,9 @@
                         Font: =App.Theme.Font
                         Height: =34
                         Size: =11
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Fotos del equipo:"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -563,6 +568,7 @@
                         ItemHoverColor: =RGBA(0, 0, 0, 1)
                         ItemHoverFill: =App.Theme.Colors.Lighter70
                         Items: =Parent.Default
+                        NoAttachmentsText: ="Aún no se ha cargado ninguna foto..."
                         PaddingBottom: =5
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PaddingRight: =5
@@ -633,6 +639,7 @@
                         DisabledFillColor: =RGBA(244, 244, 244, 1)
                         DisplayMode: =DisplayMode.Edit
                         FillColor: =RGBA(0, 0, 0, 0)
+                        FontSize: =16
                         Height: |-
                             =//70
                             TextCanvas5.Height
@@ -644,7 +651,7 @@
                             =//false
                             Collect(
                                 colScannedItems,
-                                {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
+                                {ScannedItem: First(BarcodeReader2.Barcodes).Value, ScannedTime: Now()}
                             )
                         PressedBorderColor: =RGBA(56, 96, 178, 1)
                         PressedContentColor: =RGBA(56, 96, 178, 1)
@@ -654,25 +661,30 @@
                         Visible: |-
                             =//true
                             If(FormMode.New,true,false)
-                        Width: =280
-                        X: =0
+                        Width: =200
+                        X: =10
                         Y: |
                             =//4
                             DataCard2.Height/2-BarcodeReader2.Height/2
                         ZIndex: =1
 
                     TextCanvas5 As Text:
+                        Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =50
-                        PaddingLeft: =10
+                        PaddingLeft: =
+                        Size: =16
                         Text: |-
-                            ="El escaneo es: "&First(BarcodeReader2.Barcodes).Value
+                            ="El escaneo es: "& Char(10) &First(BarcodeReader2.Barcodes).Value
                         VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                         Visible: |-
                             =//true
                             If(FormMode.New,true, false)
-                        Width: =250
-                        X: =280
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =150
+                        X: |
+                            =//280
+                            BarcodeReader2.Width+20
                         Y: |-
                             =//7
                             DataCard2.Height/2-BarcodeReader2.Height/2
@@ -714,6 +726,7 @@
                         DisplayMode: =Parent.DisplayMode
                         EndDate: =Date(Year(Today())+100, 12, 31)
                         Height: =32
+                        Placeholder: ="Indica la fecha de registro..."
                         SelectedDate: =Parent.Default
                         StartDate: =Date(1900, 1, 1)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -844,6 +857,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Selecciona la marca..."
                         Items: =Choices([@Dispositivos].Marca)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -976,6 +990,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Seleccione las condiciones del dispositivo..."
                         Items: =Choices([@Dispositivos].Diag_Inicial)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -1041,6 +1056,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        InputTextPlaceholder: ="Seleccione el estado del dispositivo..."
                         Items: =Choices([@Dispositivos].Estatus)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
@@ -1264,49 +1280,6 @@
                         X: =0
                         Y: =DataCardKey7.Y
                         ZIndex: =4
-
-            "BarcodeReader1 As 'Barcode Reader'":
-                BorderFillColor: =RGBA(47, 81, 151, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledContentColor: =RGBA(166, 166, 166, 1)
-                DisabledFillColor: =RGBA(244, 244, 244, 1)
-                DisplayMode: =DisplayMode.Edit
-                FillColor: =RGBA(0, 0, 0, 0)
-                Height: =70
-                HoverBorderColor: =RGBA(71, 158, 245, 1)
-                HoverContentColor: =RGBA(255, 255, 255, 1)
-                HoverFillColor: =RGBA(71, 158, 245, 1)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnCancel: =false
-                OnScan: |-
-                    =Collect(
-                        colScannedItems,
-                        {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
-                    )
-                PressedBorderColor: =RGBA(180, 214, 250, 1)
-                PressedContentColor: =RGBA(56, 96, 178, 1)
-                PressedFillColor: =RGBA(255, 255, 255, 1)
-                Text: ="Lector de barras"
-                TextColor: =RGBA(0, 0, 0, 1)
-                Visible: =false
-                Width: =280
-                X: =0
-                Y: =0
-                ZIndex: =2
-
-            TextCanvas4 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                Text: |-
-                    ="El escaneo es: "&First(BarcodeReader1.Barcodes).Value
-                Visible: =false
-                Width: =300
-                X: =0
-                Y: =0
-                ZIndex: =3
 
     Container4 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
