@@ -133,7 +133,9 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =200
                     Visible: =true
-                    Width: =667
+                    Width: |-
+                        =//667
+                        Form1.Width
                     WidthFit: =false
                     X: =0
                     Y: =0
@@ -287,8 +289,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =2
+                    X: =0
+                    Y: =3
                     ZIndex: =1
 
                     DataCardKey15 As Text:
@@ -350,7 +352,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =3
                     ZIndex: =1
 
@@ -414,8 +416,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =3
+                    X: =0
+                    Y: =4
                     ZIndex: =1
 
                     DataCardKey11 As Text:
@@ -481,7 +483,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =6
                     ZIndex: =1
 
@@ -548,8 +550,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =7
+                    X: =0
+                    Y: =8
                     ZIndex: =1
 
                     DataCardKey1 As label:
@@ -640,7 +642,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =8
                     ZIndex: =1
 
@@ -699,8 +701,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =0
+                    X: =0
+                    Y: =1
                     ZIndex: =2
 
                     DataCardKey4 As Text:
@@ -764,7 +766,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =4
                     ZIndex: =2
 
@@ -828,8 +830,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =4
+                    X: =0
+                    Y: =5
                     ZIndex: =2
 
                     DataCardKey8 As Text:
@@ -891,7 +893,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =5
                     ZIndex: =2
 
@@ -954,8 +956,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =5
+                    X: =0
+                    Y: =6
                     ZIndex: =2
 
                     DataCardKey9 As Text:
@@ -1017,8 +1019,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =6
+                    X: =0
+                    Y: =7
                     ZIndex: =2
 
                     DataCardKey6 As Text:
@@ -1081,7 +1083,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =7
                     ZIndex: =2
 
@@ -1146,7 +1148,7 @@
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
                     X: =0
-                    Y: =1
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey2 As Text:
@@ -1207,7 +1209,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =2
                     ZIndex: =2
 
