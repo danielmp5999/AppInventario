@@ -82,7 +82,7 @@
             Width: =1000
             ZIndex: =3
 
-            Categorias As gallery.galleryVertical:
+            Category_gallery As gallery.galleryVertical:
                 AccessibleLabel: ="Items gallery"
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
@@ -203,16 +203,16 @@
                                 Text(
                                     CountRows(
                                         Filter(
-                                            FiltroUtilitaria,
-                                            ASIGNACIÓN.Value = "UTILITARIA" &&
-                                            DEPTO.Value = ThisItem.CategoryName
+                                            FiltroDispositivos,
+                                            Asignado = false &&
+                                            Categorias.Value = ThisItem.CategoryName
                                         )
                                     ),
                                     "[$-es-ES]0"
                                 )
                                 
                                 &"               Asignados:"&
-                                CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=ThisItem.CategoryName))
+                                CountRows(Filter(FiltroDispositivos,Asignado = true,Categorias.Value = ThisItem.CategoryName))
                                 //CountRows(Filter([@Lista],ASIGNACIÓN.Value="UTILITARIA",DEPTO.Value=ThisItem.CategoryName))
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Width: =Parent.Width - TitleContainer2.PaddingLeft

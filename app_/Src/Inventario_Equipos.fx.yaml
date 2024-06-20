@@ -245,7 +245,7 @@
                         )
                     Image: |-
                         =If(First(ThisItem.Attachments).Value = Blank(),
-                            Categorias.Selected.Imagen_App,
+                            Category_gallery.Selected.Imagen_App,
                             First(ThisItem.Attachments).Value
                         )
                     ImagePosition: |-

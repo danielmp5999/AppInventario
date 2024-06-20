@@ -80,7 +80,7 @@
                         10
                     )
                 Text: |-
-                    =Categorias.Selected.CategoryName
+                    =Category_gallery.Selected.CategoryName
                     //CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName))
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
@@ -99,13 +99,13 @@
                 Height: =55
                 Items: |-
                     =//["Asignados", "Disponibles"]
-                    ["Asignados "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName)), "Disponibles "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="UTILITARIA",DEPTO.Value=Categorias.Selected.CategoryName))]
+                    ["Asignados "&CountRows(Filter(FiltroDispositivos,Asignado = true,Categorias.Value=Category_gallery.Selected.CategoryName)), "Disponibles "&CountRows(Filter(FiltroDispositivos,Asignado = false,Categorias.Value=Category_gallery.Selected.CategoryName))]
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =If(TabList1.Selected.Value = "Asignados "&CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value="ASIGNADA",DEPTO.Value=Categorias.Selected.CategoryName)),
-                        Set(varFiltro,"ASIGNADA"),
-                        Set(varFiltro,"UTILITARIA")
+                    =If(TabList1.Selected.Value = "Asignados "&CountRows(Filter(FiltroDispositivos,Asignado=true,Categorias.Value=Category_gallery.Selected.CategoryName)),
+                        Set(varFiltroB,true),
+                        Set(varFiltroB,false)
                     )
                 Size: |
                     =//'TabList.Size'.Small
@@ -183,13 +183,13 @@
                     =SortByColumns(
                         Filter(
                             //[@Lista]
-                            FiltroUtilitaria
+                            FiltroDispositivos
                             ,
-                            ASIGNACIÓN.Value=varFiltro,DEPTO.Value=Categorias.Selected.CategoryName
+                            Asignado=varFiltroB,Categorias.Value=Category_gallery.Selected.CategoryName
                             //,StartsWith(RESPONSABLE,TextInputCanvas2.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
-                        ,"Codigo_BAMXP",SortOrder.Ascending
+                        ,"Caracteristicas" ,SortOrder.Ascending
                     )
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =35
@@ -228,7 +228,7 @@
                         )
                     Image: |-
                         =If(First(ThisItem.Attachments).Value = Blank(),
-                            Categorias.Selected.Imagen_App,
+                            Category_gallery.Selected.Imagen_App,
                             First(ThisItem.Attachments).Value
                         )
                     ImagePosition: |-
@@ -322,7 +322,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =ThisItem.Codigo_BAMXP
+                    Text: =ThisItem.TipoDisp.Value
                     Width: =Parent.TemplateWidth - 64
                     X: =10
                     Y: =Overlay2.Y + 5
@@ -339,7 +339,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =15
-                    Text: =ThisItem.TIPO
+                    Text: =ThisItem.Marca.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title5.Width
                     X: =Title5.X
@@ -355,7 +355,7 @@
                     Height: =51
                     OnSelect: =Select(Parent)
                     Size: =11
-                    Text: =ThisItem.RESPONSABLE
+                    Text: =ThisItem.Caracteristicas
                     Width: =Parent.TemplateWidth - Label1.X
                     X: =Subtitle5.X - 5
                     Y: =Subtitle5.Y+Subtitle5.Height/1.8
