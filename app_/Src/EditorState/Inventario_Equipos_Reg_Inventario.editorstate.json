@@ -620,7 +620,14 @@
           "NameMapSourceSchema": "?"
         },
         "DisplayMode",
-        "OnScan",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnScan",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "OnCancel",
         "ZIndex",
         {
@@ -744,7 +751,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnScan",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Behavior",

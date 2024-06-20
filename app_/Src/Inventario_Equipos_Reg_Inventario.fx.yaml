@@ -589,7 +589,12 @@
                         HoverContentColor: =RGBA(255, 255, 255, 1)
                         HoverFillColor: =RGBA(47, 81, 151, 1)
                         OnCancel: =false
-                        OnScan: =false
+                        OnScan: |-
+                            =//false
+                            Collect(
+                                colScannedItems,
+                                {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
+                            )
                         PressedBorderColor: =RGBA(56, 96, 178, 1)
                         PressedContentColor: =RGBA(56, 96, 178, 1)
                         PressedFillColor: =RGBA(255, 255, 255, 1)
