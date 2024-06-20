@@ -141,6 +141,36 @@
                     Y: =0
                     ZIndex: =1
 
+                    "Gallery2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageOverlayVariant_ver5.0'":
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Height: =Parent.Height
+                        Items: =ThisItem.Attachments
+                        LoadingSpinner: =LoadingSpinner.Data
+                        OnSelect: =Set(varUrlImage,ThisItem.Value);Set(VarImageZoom,true)
+                        ShowNavigation: =true
+                        TemplatePadding: =0
+                        TemplateSize: =Min(440, Self.Height - 60)
+                        Width: =Parent.Width-40
+                        ZIndex: =1
+
+                        Image11 As image:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =Parent.TemplateHeight - 32
+                            Image: =ThisItem.Value
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =Parent.TemplateWidth - 32
+                            X: =16
+                            Y: =16
+                            ZIndex: =1
+
                 Donador_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -436,7 +466,7 @@
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: |-
                             =//Parent.Default
-                            First(BarcodeReader1.Barcodes).Value
+                            First(BarcodeReader2.Barcodes).Value
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey14.Y + DataCardKey14.Height + 4
@@ -621,68 +651,6 @@
                             DataCard2.Height/2-BarcodeReader2.Height/2
                         ZIndex: =2
 
-                Num_Serie_DataCard1 As typedDataCard.fluentV9NumberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="NumSerie"
-                    Default: =ThisItem.Num_Serie
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Update: =Value(DataCardValue2.Value)
-                    Width: |
-                        =//667
-                        If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey2 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue2 As 'Text input'":
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage2 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue2.Y + DataCardValue2.Height
-                        ZIndex: =3
-
-                    StarVisible2 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey2.Y
-                        ZIndex: =4
-
                 Fecha_Llegada_DataCard1 As typedDataCard.fluentV9DateEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -745,6 +713,68 @@
                         Width: =30
                         X: =0
                         Y: =DataCardKey4.Y
+                        ZIndex: =4
+
+                Num_Serie_DataCard1 As typedDataCard.fluentV9NumberEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="NumSerie"
+                    Default: =ThisItem.Num_Serie
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =Value(DataCardValue2.Value)
+                    Width: |
+                        =//667
+                        If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
+                    X: =0
+                    Y: =2
+                    ZIndex: =2
+
+                    DataCardKey2 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue2 As 'Text input'":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage2 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue2.Y + DataCardValue2.Height
+                        ZIndex: =3
+
+                    StarVisible2 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey2.Y
                         ZIndex: =4
 
                 Marca_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
