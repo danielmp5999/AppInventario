@@ -134,7 +134,7 @@
                     Height: =200
                     Visible: |-
                         =//true
-                        If(FormMode.New,false,true)
+                        If(FormMode.Edit,false,true)
                     Width: |-
                         =//667
                         Form1.Width
@@ -153,6 +153,9 @@
                         ShowNavigation: =true
                         TemplatePadding: =0
                         TemplateSize: =Min(440, Self.Height - 60)
+                        Visible: |-
+                            =//true
+                            If(FormMode.Edit,true)
                         Width: =Parent.Width-40
                         ZIndex: =1
 
@@ -636,6 +639,9 @@
                         PressedFillColor: =RGBA(255, 255, 255, 1)
                         Text: ="Lector de barras"
                         TextColor: =RGBA(0, 0, 0, 1)
+                        Visible: |-
+                            =//true
+                            If(FormMode.Edit,false)
                         Width: =280
                         X: =0
                         Y: |
@@ -650,6 +656,9 @@
                         Text: |-
                             ="El escaneo es: "&First(BarcodeReader2.Barcodes).Value
                         VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                        Visible: |-
+                            =//true
+                            If(FormMode.Edit,false)
                         Width: =250
                         X: =280
                         Y: |-
