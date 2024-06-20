@@ -26,6 +26,8 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -69,6 +71,7 @@
                     =SubmitForm(Form2);
                     Navigate(Asignaciones_Equipos)
                 Text: ="Asignar"
+                Visible: =true
                 Width: =96
                 X: =0
                 Y: =0
@@ -328,10 +331,13 @@
                     Y: =1
                     ZIndex: =1
 
-                    PenInput1 As inkControl:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Width: =Parent.Width -1
-                        X: =1
+                    btn_reg_firma As Button:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        OnSelect: =Set(varisFrimaVisible, true)
+                        Text: ="Registrar firma"
+                        Width: =120
+                        X: =40
                         Y: =40
                         ZIndex: =1
 
@@ -414,4 +420,66 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Image: =PenInput1.Image
                 ZIndex: =2
+
+    Container6 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Asignaciones_Equipos_Detalle.Height-1
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varisFrimaVisible
+        Width: =Asignaciones_Equipos_Detalle.Width-1
+        X: =1
+        Y: =1
+        ZIndex: =2
+
+        Container7 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =30
+            PaddingRight: =30
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =1
+
+            Icon10 As icon.ArrowLeft:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =App.Theme.Colors.Darker30
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =40
+                Icon: =Icon.ArrowLeft
+                OnSelect: =Set(varisFrimaVisible,false)
+                Width: =40
+                ZIndex: =1
+
+            Icon10_1 As icon.ArrowLeft:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =App.Theme.Colors.Darker30
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =40
+                Icon: =Icon.Check
+                OnSelect: =Set(varisFrimaVisible,false)
+                Width: =40
+                ZIndex: =2
+
+        PenInput1 As inkControl:
+            BorderColor: =App.Theme.Colors.Darker40
+            FillPortions: =1
+            ZIndex: =2
 
