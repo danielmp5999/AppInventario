@@ -144,7 +144,8 @@
                 Placeholder: ="Buscar por ID del dispositivo"
                 Width: |-
                     =//Container2.Width-Icon4.Width-Icon4.Width
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1140, Inventario_Equipos.Size = ScreenSize.Large,850, Inventario_Equipos.Size = ScreenSize.Medium, 450 , 170)
+                    //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,800, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
                 X: |-
                     =//0
                     35
@@ -152,18 +153,14 @@
                 ZIndex: =2
 
             ButtonCanvas1 As Button:
-                Align: =Align.Center
+                Align: =Align.Justify
                 AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 FontSize: |-
-                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
-                        15,
-                        Inventario_Equipos.Size = ScreenSize.Large,
-                        13,
-                        Inventario_Equipos.Size = ScreenSize.Medium,
-                        11,
-                        10
-                    )
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 18, 
+                    Inventario_Equipos.Size = ScreenSize.Large,13, 
+                    Inventario_Equipos.Size = ScreenSize.Medium, 12 ,
+                     9)
                 Height: =40
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
@@ -174,9 +171,16 @@
                 PaddingLeft: =
                 PaddingRight: =
                 Text: ="Registrar equipo"
-                Width: |
-                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 150, Inventario_Equipos.Size = ScreenSize.Large,135, Inventario_Equipos.Size = ScreenSize.Medium, 120 , 100)
-                X: =0
+                Width: |-
+                    =//If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 130, Inventario_Equipos.Size = ScreenSize.Large,115, Inventario_Equipos.Size = ScreenSize.Medium, 100 , 80)
+                    
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, Container2.Width-Icon4.Width-TextInputCanvas1.Width-240, 
+                    Inventario_Equipos.Size = ScreenSize.Large,Container2.Width-Icon4.Width-TextInputCanvas1.Width-80, 
+                    Inventario_Equipos.Size = ScreenSize.Medium, Container2.Width-Icon4.Width-TextInputCanvas1.Width-20 , 
+                    100)
+                X: |
+                    =//0
+                    TextInputCanvas1.X+TextInputCanvas1.Width
                 Y: =0
                 ZIndex: =3
 

@@ -45,7 +45,8 @@
                 Icon: =Icon.ArrowLeft
                 OnSelect: =Navigate(Principal)
                 PaddingLeft: =10
-                Width: =50
+                Width: |
+                    =50
                 ZIndex: =1
 
             Header4 As Header:
@@ -54,6 +55,7 @@
                 LayoutMinHeight: =75
                 LayoutMinWidth: =Parent.Width
                 Logo: ='bamx-1024x414'
+                LogoMaxHeight: =70
                 OnSelectLogo: =false
                 Style: ='Header.Style'.Light
                 Title: ="Inventario"

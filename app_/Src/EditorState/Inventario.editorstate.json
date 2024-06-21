@@ -987,7 +987,8 @@
           "InvariantPropertyName": "Logo",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "LogoMaxHeight"
       ],
       "DynamicProperties": [
         {
@@ -1072,6 +1073,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "LogoMaxHeight",
+          "RuleProviderType": "User"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -1089,7 +1095,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1494,7 +1500,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

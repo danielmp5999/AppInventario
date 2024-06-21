@@ -74,7 +74,8 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    HeaderContainer8.Width-Icon7.Width-200
+                    //HeaderContainer8.Width-Icon7.Width-200
+                    If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, 1150, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,900, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, 500 , 180)
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -83,6 +84,7 @@
                 Align: =Align.Justify
                 AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, 18, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,13, Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, 12 , 9)
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
@@ -94,8 +96,14 @@
                 Text: ="Registrar Dispositivo"
                 Width: |-
                     =//96
-                    180
-                X: =0
+                    //HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30
+                    
+                    If(Inventario_Equipos_Reg_Inventario.Size = ScreenSize.ExtraLarge, HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30, 
+                    Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Large,HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30, 
+                    Inventario_Equipos_Reg_Inventario.Size = ScreenSize.Medium, HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-20 , 
+                    100)
+                X: |
+                    =0
                 Y: =0
                 ZIndex: =3
 
