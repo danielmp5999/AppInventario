@@ -67,9 +67,33 @@
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
-                OnSelect: |
-                    =SubmitForm(Form2);
-                    Navigate(Asignaciones_Equipos)
+                OnSelect: |-
+                    =If(Form2.Mode = FormMode.New,
+                        If(SubmitForm(Form2),
+                            Notify("Asignado con éxito",NotificationType.Success);
+                            Navigate(Asignaciones_Equipos);
+                            Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
+                                {
+                                    Asignado:true
+                                }
+                            );
+                            varisUpdateColFiltroDisp
+                        )
+                        
+                        ,
+                    
+                        If(EditForm(Form2),   
+                            Notify("Actualizado con éxito", NotificationType.Success);
+                            Navigate(Asignaciones_Equipos);
+                            Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
+                                {
+                                    Asignado:true
+                                }
+                            );
+                            varisUpdateColFiltroDisp
+                        )
+                        
+                    )
                 Text: ="Asignar"
                 Visible: =true
                 Width: =96
@@ -182,7 +206,7 @@
                     DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,Fecha_Asignacion)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue17.SelectedDate
                     Width: =444
                     X: =1
@@ -244,7 +268,7 @@
                     DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,Responsable)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue18.Selected
                     Width: =444
                     X: =2
