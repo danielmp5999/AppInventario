@@ -1,5 +1,27 @@
 App As appinfo:
     BackEnabled: =true
+    Formulas: |
+        =/*
+        
+        Set(varisUpdateColFiltroDisp,
+            ClearCollect(
+                FiltroDispositivos,
+                Filter(
+                    [@Dispositivos],
+                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                )
+            );
+            Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+            Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+            Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+        
+        )*/
+        /*
+        Multiplicar(
+            Numero1:Number, 
+            Numero2:Number
+        ):Number = Numero1 * Numero2;
+        */
     OnStart: |
         =//[LookUp(Choices([@Vacaciones].VacacionesSolicitante), Id = PersonalID)]
         

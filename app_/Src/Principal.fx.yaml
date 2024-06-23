@@ -182,19 +182,6 @@
                             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                             
                             
-                            Set(varisUpdateColFiltroDisp,
-                                ClearCollect(
-                                    FiltroDispositivos,
-                                    Filter(
-                                        [@Dispositivos],
-                                        Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
-                                    )
-                                );
-                                Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
-                                Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
-                                Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
-                            
-                            )
                             
                             
                         Text: ="Asignaciones"
@@ -213,7 +200,9 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
                         Size: =16
-                        Text: ="Asigna un equipo a un colaborador"
+                        Text: |-
+                            ="Asigna un equipo a un colaborador"
+                            //Multiplicar(2,3)
                         VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                         Width: =Parent.Width
                         X: =0
