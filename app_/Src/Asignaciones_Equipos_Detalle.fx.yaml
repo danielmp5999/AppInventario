@@ -132,7 +132,10 @@
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     OnSelect: |-
-                        =RemoveIf(Asignaciones_1,ID=ID);
+                        =
+                        
+                        //PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
+                        RemoveIf(Asignaciones_1,ID=ID);
                         Notify("Eliminado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
