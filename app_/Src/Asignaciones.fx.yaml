@@ -256,7 +256,7 @@
                             LayoutMinWidth: =96
                             OnSelect: |
                                 =Navigate(Asignaciones_Equipos,ScreenTransition.UnCover);
-                                Set(varFiltro,false)
+                                Set(varFiltroB,false);
                             Text: ="Ver detalles"
                             VerticalAlign: =""
                             Width: =110

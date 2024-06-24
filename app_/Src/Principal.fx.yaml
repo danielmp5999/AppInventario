@@ -300,6 +300,19 @@
                             Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
                             Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                            
+                            Set(actualiza,
+                                ClearCollect(
+                                    FiltroDispositivos,
+                                    Filter(
+                                        [@Dispositivos],
+                                        Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                    )
+                                );
+                                Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                                Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                                Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                            )
                         Text: ="Inventario"
                         VerticalAlign: =""
                         Width: =Parent.Width

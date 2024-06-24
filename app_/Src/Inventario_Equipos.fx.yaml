@@ -362,7 +362,10 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =15
-                    Text: =//ThisItem.TIPO
+                    Text: |-
+                        =//ThisItem.TIPO
+                        //LookUp(Marcas, ID = ThisItem.Marca.Id,Marca)
+                        ThisItem.Marca.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title3.Width
                     X: =Title3.X

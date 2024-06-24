@@ -93,7 +93,19 @@
                     SubmitForm(Form1);
                     Navigate(Inventario);
                     ResetForm(Form1);
-                Text: ="Registrar Dispositivo"
+                    
+                    
+                    ClearCollect(
+                        FiltroDispositivos,
+                        Filter(
+                            [@Dispositivos],
+                            Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                        )
+                    );
+                    Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                    Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                    Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                Text: =If(Form1.Mode=FormMode.New,"Registrar Equipo","Actualizar Equipo")
                 Width: |-
                     =//96
                     //HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30

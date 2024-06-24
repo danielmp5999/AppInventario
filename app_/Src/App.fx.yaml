@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    Formulas: |
+    Formulas: |-
         =/*
         
         Set(varisUpdateColFiltroDisp,
@@ -16,6 +16,7 @@ App As appinfo:
             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
         
         )*/
+        
         /*
         Multiplicar(
             Numero1:Number, 

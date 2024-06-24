@@ -28,6 +28,9 @@
           },
           "Lista": {
             "tableName": "52d4f25f-a319-4ef8-a308-2e2ed4ca8835"
+          },
+          "Marcas": {
+            "tableName": "8a67f702-bc22-4036-bc60-0271cc540c15"
           }
         }
       }
@@ -37,7 +40,8 @@
       "Lista",
       "Dispositivos",
       "Donadores",
-      "Asignaciones_1"
+      "Asignaciones_1",
+      "Marcas"
     ],
     "dependencies": {},
     "dependents": [],

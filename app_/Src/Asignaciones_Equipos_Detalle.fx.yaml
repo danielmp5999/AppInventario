@@ -192,43 +192,6 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
-                Identifier_DataCard1 As typedDataCard.fluentV9TextualViewCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="{Identifier}"
-                    Default: =ThisItem.Identifier
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,'{Identifier}')
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Width: =444
-                    X: =1
-                    Y: =2
-                    ZIndex: =1
-
-                    DataCardKey26 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue25 As 'Text input'":
-                        DisplayMode: =DisplayMode.View
-                        Height: =32
-                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey26.Y + DataCardKey26.Height + 4
-                        ZIndex: =2
-
                 Id_Disp_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -661,6 +624,43 @@
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey25.Y + DataCardKey25.Height + 4
+                        ZIndex: =2
+
+                Identifier_DataCard1 As typedDataCard.fluentV9TextualViewCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Identifier}"
+                    Default: =ThisItem.Identifier
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,'{Identifier}')
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =444
+                    X: =1
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey26 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue25 As 'Text input'":
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey26.Y + DataCardKey26.Height + 4
                         ZIndex: =2
 
             Image4 As image:
