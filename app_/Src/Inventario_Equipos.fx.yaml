@@ -166,7 +166,7 @@
                 LayoutMinWidth: =96
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos_Reg_Inventario);
+                    Navigate(Inventario_Equipos_Detalles);
                     NewForm(Form1);
                 PaddingLeft: =
                 PaddingRight: =
@@ -220,7 +220,7 @@
                 LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
-                    =Navigate(Inventario_Equipos_Reg_Inventario);
+                    =Navigate(Inventario_Equipos_Detalles);
                     EditForm(Form1);
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 3, Inventario_Equipos.Size = ScreenSize.Large, 2 , 2)
@@ -345,7 +345,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =ThisItem.Cod_BAMXP
+                    Text: =ThisItem.TipoDisp.Value
                     Width: =Parent.TemplateWidth - 64
                     X: =10
                     Y: =Overlay3.Y + 5
@@ -365,7 +365,7 @@
                     Text: |-
                         =//ThisItem.TIPO
                         //LookUp(Marcas, ID = ThisItem.Marca.Id,Marca)
-                        ThisItem.Marca.Value
+                        ThisItem.Modelo.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title3.Width
                     X: =Title3.X
@@ -381,7 +381,9 @@
                     Height: =51
                     OnSelect: =Select(Parent)
                     Size: =11
-                    Text: =//ThisItem.RESPONSABLE
+                    Text: |-
+                        =//ThisItem.RESPONSABLE
+                        ThisItem.Donador.Value
                     Width: =Parent.TemplateWidth - Label3.X
                     X: =Subtitle3.X - 5
                     Y: =Subtitle3.Y+Subtitle3.Height/1.8

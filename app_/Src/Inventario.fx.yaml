@@ -205,7 +205,7 @@
                                 )
                                 
                                 &"    Inactivos:"&
-                                CountRows(Filter(FiltroDispositivos,Estatus.Value="Incativo",Categorias.Value=ThisItem.CategoryName))
+                                CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=ThisItem.CategoryName))
                                 &"    En Revisión:"&
                                 CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=ThisItem.CategoryName))
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
