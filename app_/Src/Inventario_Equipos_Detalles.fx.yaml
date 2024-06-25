@@ -70,7 +70,7 @@
                         14,
                         10
                     )
-                Text: ="REGISTRAR EQUIPO NUEVO"
+                Text: =If(Form1.Mode=FormMode.New,"REGISTRAR EQUIPO NUEVO","EDITAR DETALLES DE EQUIPO")
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96

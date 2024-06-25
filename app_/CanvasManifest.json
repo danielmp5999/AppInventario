@@ -141,6 +141,8 @@
     "Asignaciones_Equipos_Detalle",
     "Inventario",
     "Inventario_Equipos",
-    "Inventario_Equipos_Detalles"
+    "Inventario_Equipos_Detalles",
+    "Telefonia",
+    "Telefonia_Equipos_Detalles"
   ]
 }

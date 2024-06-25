@@ -26,11 +26,29 @@
           "Donadores": {
             "tableName": "78ae258e-52c1-478b-83e0-258db3a17eb4"
           },
+          "Equipos_Telefonia": {
+            "tableName": "897ec908-70e7-4679-a1f1-f545d7f53d56"
+          },
+          "Lineas_Telefonia": {
+            "tableName": "0b12c1d8-abb9-4b1e-ad13-22648db60c33"
+          },
           "Lista": {
             "tableName": "52d4f25f-a319-4ef8-a308-2e2ed4ca8835"
           },
           "Marcas": {
             "tableName": "8a67f702-bc22-4036-bc60-0271cc540c15"
+          },
+          "Modelo": {
+            "tableName": "9f435b0d-ad01-4da8-865c-0c0dde043b1d"
+          },
+          "Prestamos": {
+            "tableName": "c10ae2b3-4c5e-4167-938b-c92ae835254a"
+          },
+          "Tipos_Dispositivos": {
+            "tableName": "d1d6c6b3-4d7b-428c-a831-8f315ad367c1"
+          },
+          "Ventas": {
+            "tableName": "b2fdcfc7-de86-4ef4-9028-984f797e1be5"
           }
         }
       }
@@ -41,7 +59,13 @@
       "Dispositivos",
       "Donadores",
       "Asignaciones_1",
-      "Marcas"
+      "Marcas",
+      "Equipos_Telefonia",
+      "Lineas_Telefonia",
+      "Modelo",
+      "Prestamos",
+      "Tipos_Dispositivos",
+      "Ventas"
     ],
     "dependencies": {},
     "dependents": [],
