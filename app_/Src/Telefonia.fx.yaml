@@ -28,7 +28,7 @@
             FillPortions: =0
             Height: =75
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -65,7 +65,7 @@
                         18,
                         Telefonia.Size = ScreenSize.Medium,
                         14,
-                        10
+                        9
                     )
                 Text: ="TELEFONÍA"
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
@@ -78,8 +78,9 @@
                 ZIndex: =2
 
             "TabList2_1 As 'Tab list'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =If(Telefonia.Size = ScreenSize.ExtraLarge, 12, Telefonia.Size = ScreenSize.Large, 10 , 8)
+                FontSize: =If(Telefonia.Size = ScreenSize.ExtraLarge, 12, Telefonia.Size = ScreenSize.Large, 10 , 6)
                 Height: =55
                 Items: |
                     =["Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
@@ -101,7 +102,9 @@
                     "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
                     
                     */
-                Width: =360
+                Width: |-
+                    =//360
+                    If(Telefonia.Size = ScreenSize.ExtraLarge, 360, Telefonia.Size = ScreenSize.Large, 290 , 250)
                 X: =0
                 Y: =0
                 ZIndex: =3
@@ -162,8 +165,8 @@
                 LayoutMinWidth: =96
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos_Detalles);
-                    NewForm(Form1);
+                    Navigate(Telefonia_Equipos_Detalles);
+                    NewForm(FormT);
                 PaddingLeft: =
                 PaddingRight: =
                 Text: ="Registrar equipo"

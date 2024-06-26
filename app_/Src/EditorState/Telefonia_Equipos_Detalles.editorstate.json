@@ -78,7 +78,7 @@
       "MetaDataIDKey": "",
       "Name": "Area_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -905,7 +905,7 @@
       "MetaDataIDKey": "",
       "Name": "Correo_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2863,7 +2863,7 @@
       "MetaDataIDKey": "",
       "Name": "Departamento_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5504,7 +5504,7 @@
       "MetaDataIDKey": "",
       "Name": "Modelo_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5667,7 +5667,7 @@
       "MetaDataIDKey": "",
       "Name": "Numero_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5835,7 +5835,7 @@
       "MetaDataIDKey": "",
       "Name": "Responsable_DataCard2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
