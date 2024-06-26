@@ -22,11 +22,15 @@
         ZIndex: =1
 
         HeaderContainer6_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
             Height: =75
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
@@ -51,6 +55,8 @@
                 Align: ='TextCanvas.Align'.Center
                 DisplayMode: =DisplayMode.Edit
                 Height: =TabList1.Height/1.5
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
                 Size: |
                     =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
                         24,
@@ -65,7 +71,7 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 80)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 750, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 80)
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -78,6 +84,8 @@
                     =["Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
                     "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
                     "Reparacion "&CountRows(Filter(FiltroTelefonos,Estatus.Value="En reparacion"))]
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
                 OnSelect: |-
                     =If(TabList2_2.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
                         Set(varFiltro,"Activo"),
@@ -92,7 +100,9 @@
                     "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
                     
                     */
-                Width: =300
+                Width: |-
+                    =//300
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 400, Inventario_Equipos.Size = ScreenSize.Large,390, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 300)
                 X: =0
                 Y: =0
                 ZIndex: =3

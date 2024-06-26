@@ -45,7 +45,7 @@
                 Icon: =Icon.ArrowLeft
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos)
+                    Navigate(Telefonia)
                 PaddingLeft: =10
                 Width: =45
                 ZIndex: =1
