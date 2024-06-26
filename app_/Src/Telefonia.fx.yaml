@@ -21,16 +21,12 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainerT As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+        HeaderContainer6_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
-            FillPortions: =0
             Height: =75
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
@@ -38,60 +34,54 @@
             RadiusTopRight: =8
             ZIndex: =1
 
-            Icon6_1 As icon.ChevronLeft:
+            Icon6_2 As icon.ChevronLeft:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =App.Theme.Colors.Darker30
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Icon: =Icon.ChevronLeft
-                LayoutMinWidth: =35
                 OnSelect: |-
                     =Navigate(Principal);
                     Reset(TextInputCanvasT)
                 Width: =35
                 ZIndex: =1
 
-            TextCanvas2_1 As Text:
+            TextCanvas2_2 As Text:
                 Align: ='TextCanvas.Align'.Center
                 DisplayMode: =DisplayMode.Edit
                 Height: =TabList1.Height/1.5
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
                 Size: |
-                    =If(Telefonia.Size = ScreenSize.ExtraLarge,
+                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
                         24,
-                        Telefonia.Size = ScreenSize.Large,
+                        Inventario_Equipos.Size = ScreenSize.Large,
                         18,
-                        Telefonia.Size = ScreenSize.Medium,
+                        Inventario_Equipos.Size = ScreenSize.Medium,
                         14,
-                        9
+                        10
                     )
                 Text: ="TELEFONÍA"
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Telefonia.Size = ScreenSize.ExtraLarge, 900, Telefonia.Size = ScreenSize.Large,750, Telefonia.Size = ScreenSize.Medium, 400 , 100)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 80)
                 X: =0
                 Y: =0
                 ZIndex: =2
 
-            "TabList2_1 As 'Tab list'.pcfdataset":
-                AlignInContainer: =AlignInContainer.Center
+            "TabList2_2 As 'Tab list'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =If(Telefonia.Size = ScreenSize.ExtraLarge, 12, Telefonia.Size = ScreenSize.Large, 10 , 6)
+                FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
                 Height: =55
                 Items: |
                     =["Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
                     "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
-                    "En reparacion "&CountRows(Filter(FiltroTelefonos,Estatus.Value="En reparacion"))]
-                LayoutMinHeight: =55
-                LayoutMinWidth: =280
+                    "Reparacion "&CountRows(Filter(FiltroTelefonos,Estatus.Value="En reparacion"))]
                 OnSelect: |-
-                    =If(TabList2_1.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                    =If(TabList2_2.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
                         Set(varFiltro,"Activo"),
-                        TabList2_1.Selected.Value = "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
+                        TabList2_2.Selected.Value = "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
                         Set(varFiltro,"Inactivo"),
                         Set(varFiltro,"En revision")
                     )
@@ -102,9 +92,7 @@
                     "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
                     
                     */
-                Width: |-
-                    =//360
-                    If(Telefonia.Size = ScreenSize.ExtraLarge, 360, Telefonia.Size = ScreenSize.Large, 290 , 250)
+                Width: =300
                 X: =0
                 Y: =0
                 ZIndex: =3
@@ -123,7 +111,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =2
+            ZIndex: =3
 
             Icon4_1 As icon.Search:
                 BorderColor: =App.Theme.Colors.Darker40
@@ -196,7 +184,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            ZIndex: =3
+            ZIndex: =4
 
             "GaleriaET As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -208,8 +196,8 @@
                 LayoutMinWidth: =35
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
-                    =Navigate(Inventario_Equipos_Detalles);
-                    EditForm(Form1);
+                    =Navigate(Telefonia_Equipos_Detalles);
+                    EditForm(FormT);
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: =If(Telefonia.Size = ScreenSize.ExtraLarge, 3, Telefonia.Size = ScreenSize.Large, 2 , 2)
                 ZIndex: =1

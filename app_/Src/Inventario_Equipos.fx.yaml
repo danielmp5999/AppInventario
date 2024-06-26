@@ -27,6 +27,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -38,7 +39,6 @@
             ZIndex: =1
 
             Icon6 As icon.ChevronLeft:
-                AlignInContainer: =AlignInContainer.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =App.Theme.Colors.Darker30
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -54,7 +54,6 @@
 
             TextCanvas2 As Text:
                 Align: ='TextCanvas.Align'.Center
-                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 Height: =TabList1.Height/1.5
                 LayoutMinHeight: =32
@@ -79,7 +78,6 @@
                 ZIndex: =2
 
             "TabList2 As 'Tab list'.pcfdataset":
-                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
                 Height: =55
