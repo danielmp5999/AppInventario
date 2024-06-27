@@ -378,7 +378,7 @@
                     Text: |-
                         =//ThisItem.RESPONSABLE
                         //ThisItem.Responsable
-                        LookUp(Colaboradores,ID=ThisItem.ID).InfoColaborador.Email
+                        LookUp(Colaboradores,ID=ThisItem.Id_Colaborador.Id).Nombre
                     Width: =Parent.TemplateWidth - Label3_1.X
                     X: =Subtitle3_1.X - 5
                     Y: =Subtitle3_1.Y+Subtitle3_1.Height/1.8
