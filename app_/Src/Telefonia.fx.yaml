@@ -102,7 +102,7 @@
                     */
                 Width: |-
                     =//300
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 400, Inventario_Equipos.Size = ScreenSize.Large,390, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 300)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 400, Inventario_Equipos.Size = ScreenSize.Large,390, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 250)
                 X: =0
                 Y: =0
                 ZIndex: =3
