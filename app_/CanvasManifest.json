@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 14,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -143,6 +143,7 @@
     "Inventario_Equipos",
     "Inventario_Equipos_Detalles",
     "Telefonia",
-    "Telefonia_Equipos_Detalles"
+    "Telefonia_Equipos_Detalles",
+    "Screen2"
   ]
 }

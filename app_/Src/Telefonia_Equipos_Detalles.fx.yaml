@@ -187,6 +187,193 @@
                         Y: =DataCardKey37.Y + DataCardKey37.Height + 4
                         ZIndex: =2
 
+                ResponsableN_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ResponsableN"
+                    Default: =ThisItem.ResponsableN
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,ResponsableN)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue22.Selected
+                    Width: =667
+                    X: =0
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey23 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Colaborador Responsable"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue22 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Equipos_Telefonia].ResponsableN)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey23.Y + DataCardKey23.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage23 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue22.Y + DataCardValue22.Height
+                        ZIndex: =3
+
+                    StarVisible23 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey23.Y
+                        ZIndex: =4
+
+                Id_Colaborador_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Id_Colaborador"
+                    Default: =ThisItem.Id_Colaborador
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Id_Colaborador)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue19.Selected
+                    Width: =667
+                    X: =1
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey20 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: |-
+                            =//Parent.DisplayName
+                            "ID Colaborador"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue19 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Equipos_Telefonia].Id_Colaborador)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey20.Y + DataCardKey20.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage20 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue19.Y + DataCardValue19.Height
+                        ZIndex: =3
+
+                    StarVisible20 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey20.Y
+                        ZIndex: =4
+
+                Puesto_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Puesto"
+                    Default: =ThisItem.Puesto
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Puesto)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue20.Selected
+                    Width: =667
+                    X: =0
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey21 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue20 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Equipos_Telefonia].Puesto)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey21.Y + DataCardKey21.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage22 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue20.Y + DataCardValue20.Height
+                        ZIndex: =3
+
+                    StarVisible22 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey21.Y
+                        ZIndex: =4
+
                 Marca_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -376,136 +563,6 @@
                         Y: =DataCardKey30.Y
                         ZIndex: =4
 
-                Responsable_DataCard2 As typedDataCard.fluentV9TextualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Responsable"
-                    Default: =ThisItem.Responsable
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Responsable)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    MaxLength: =DataSourceInfo([@Equipos_Telefonia], DataSourceInfo.MaxLength, Responsable)
-                    Required: =false
-                    Update: =DataCardValue30.Value
-                    Width: |-
-                        =//400
-                        If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
-                    X: =0
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey31 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue30 As 'Text input'":
-                        AccessibleLabel: =Parent.DisplayName
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                        Required: =Parent.Required
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey31.Y + DataCardKey31.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage29 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue30.Y + DataCardValue30.Height
-                        ZIndex: =3
-
-                    StarVisible29 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey31.Y
-                        ZIndex: =4
-
-                Correo_DataCard1 As typedDataCard.fluentV9TextualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Correo"
-                    Default: =ThisItem.Correo
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Correo)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    MaxLength: =DataSourceInfo([@Equipos_Telefonia], DataSourceInfo.MaxLength, Correo)
-                    Required: =false
-                    Update: =DataCardValue31.Value
-                    Width: |-
-                        =//400
-                        If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
-                    X: =1
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey32 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue31 As 'Text input'":
-                        AccessibleLabel: =Parent.DisplayName
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                        Required: =Parent.Required
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey32.Y + DataCardKey32.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage30 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue31.Y + DataCardValue31.Height
-                        ZIndex: =3
-
-                    StarVisible30 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey32.Y
-                        ZIndex: =4
-
                 Departamento_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -520,7 +577,7 @@
                     Width: |-
                         =//400
                         If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
-                    X: =0
+                    X: =1
                     Y: =3
                     ZIndex: =2
 
@@ -569,69 +626,6 @@
                         Y: =DataCardKey33.Y
                         ZIndex: =4
 
-                Area_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Area"
-                    Default: =ThisItem.Area
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Area)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =false
-                    Update: =DataCardValue33.Selected
-                    Width: |-
-                        =//400
-                        If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
-                    X: =1
-                    Y: =3
-                    ZIndex: =2
-
-                    DataCardKey34 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue33 As Combobox.pcfdataset:
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        Items: =Choices([@Equipos_Telefonia].Area)
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey34.Y + DataCardKey34.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage32 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue33.Y + DataCardValue33.Height
-                        ZIndex: =3
-
-                    StarVisible32 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =20
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey34.Y
-                        ZIndex: =4
-
                 Estatus_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -646,7 +640,7 @@
                     Width: |
                         =//400
                         If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
-                    X: =0
+                    X: =1
                     Y: =4
                     ZIndex: =2
 
@@ -693,6 +687,69 @@
                         Width: =30
                         X: =0
                         Y: =DataCardKey35.Y
+                        ZIndex: =4
+
+                Area_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Area"
+                    Default: =ThisItem.Area
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Equipos_Telefonia],DataSourceInfo.DisplayName,Area)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue33.Selected
+                    Width: |-
+                        =//400
+                        If(Telefonia_Equipos_Detalles.Size = ScreenSize.ExtraLarge, FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Large,FormT.Width/2, Telefonia_Equipos_Detalles.Size = ScreenSize.Medium, FormT.Width , FormT.Width-20)
+                    X: =0
+                    Y: =4
+                    ZIndex: =2
+
+                    DataCardKey34 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue33 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Equipos_Telefonia].Area)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey34.Y + DataCardKey34.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage32 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue33.Y + DataCardValue33.Height
+                        ZIndex: =3
+
+                    StarVisible32 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey34.Y
                         ZIndex: =4
 
     Container4_1 As groupContainer.verticalAutoLayoutContainer:
