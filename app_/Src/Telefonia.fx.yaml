@@ -200,7 +200,19 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
-                Items: =Equipos_Telefonia
+                Items: |-
+                    =Equipos_Telefonia
+                    /*SortByColumns(
+                        Filter(
+                            //[@Dispositivos]
+                            FiltroTelefonos
+                            ,
+                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName
+                            //,StartsWith(ID,TextInputCanvas1.Value)
+                        //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
+                        )
+                        ,"CodBAMXP",SortOrder.Ascending
+                    )*/
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =35
                 LayoutMinWidth: =35
@@ -365,7 +377,8 @@
                     Size: =11
                     Text: |-
                         =//ThisItem.RESPONSABLE
-                        ThisItem.Responsable
+                        //ThisItem.Responsable
+                        LookUp(Colaboradores,ID=ThisItem.ID).InfoColaborador.Email
                     Width: =Parent.TemplateWidth - Label3_1.X
                     X: =Subtitle3_1.X - 5
                     Y: =Subtitle3_1.Y+Subtitle3_1.Height/1.8

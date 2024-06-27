@@ -17,6 +17,9 @@
           "Asignaciones_1": {
             "tableName": "bdc1d774-292d-48f8-b9cb-2534261eb8c6"
           },
+          "Colaboradores": {
+            "tableName": "5b05afe7-a4bd-4d8a-8774-17c1343679d2"
+          },
           "Datos": {
             "tableName": "41d1ec12-f651-4493-8294-7b19afe8c68f"
           },
@@ -65,7 +68,8 @@
       "Modelo",
       "Prestamos",
       "Tipos_Dispositivos",
-      "Ventas"
+      "Ventas",
+      "Colaboradores"
     ],
     "dependencies": {},
     "dependents": [],
