@@ -49,6 +49,8 @@
       "Puesto#Id": "Puesto Id",
       "ResponsableN": "ResponsableN",
       "ResponsableN#Id": "ResponsableN Id",
+      "ResponsableN_x003a__x0020_ID": "ID_RESP",
+      "ResponsableN_x003a__x0020_ID#Id": "ID_RESP Id",
       "Title": "Title"
     },
     "DatasetName": "https://bamxp.sharepoint.com/sites/AppsTiComunicacin",

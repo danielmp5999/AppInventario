@@ -28,6 +28,7 @@
       "ComplianceAssetId": "Compliance Asset Id",
       "Correo": "InfoColaborador",
       "Correo#Claims": "InfoColaborador Claims",
+      "CorreoResp": "CorreoResp",
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
