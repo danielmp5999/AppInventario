@@ -57,7 +57,6 @@
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
                 FontColor: =
                 Height: =TabList1.Height/1.5
                 LayoutMinHeight: =32
@@ -77,7 +76,7 @@
                         18,
                         Asignaciones_Equipos.Size = ScreenSize.Medium,
                         14,
-                        10
+                        12
                     )
                 Text: |-
                     =Category_gallery.Selected.CategoryName
@@ -86,7 +85,7 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 1000, Asignaciones_Equipos.Size = ScreenSize.Large,750, Asignaciones_Equipos.Size = ScreenSize.Medium, 400 , 100)
+                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 900, Asignaciones_Equipos.Size = ScreenSize.Large,750, Asignaciones_Equipos.Size = ScreenSize.Medium, 400 , 90)
                 Wrap: =true
                 X: =0
                 Y: =0
@@ -96,6 +95,7 @@
                 AlignInContainer: =AlignInContainer.Center
                 Alignment: ='TabList.Alignment'.Horizontal
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 14, Asignaciones_Equipos.Size = ScreenSize.Large,12, Asignaciones_Equipos.Size = ScreenSize.Medium, 10 , 10)
                 Height: =55
                 Items: |-
                     =//["Asignados", "Disponibles"]
@@ -116,7 +116,9 @@
                         'TabList.Size'.Medium,
                         'TabList.Size'.Small
                     )
-                Width: =300
+                Width: |-
+                    =//300
+                    If(Asignaciones_Equipos.Size = ScreenSize.ExtraLarge, 300, Asignaciones_Equipos.Size = ScreenSize.Large,300, Asignaciones_Equipos.Size = ScreenSize.Medium, 250 , 200)
                 X: =0
                 Y: =0
                 ZIndex: =4

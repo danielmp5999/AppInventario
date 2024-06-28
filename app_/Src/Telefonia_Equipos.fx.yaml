@@ -58,11 +58,11 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 Size: |
-                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
+                    =If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge,
                         24,
-                        Inventario_Equipos.Size = ScreenSize.Large,
+                        Telefonia_Equipos.Size = ScreenSize.Large,
                         18,
-                        Inventario_Equipos.Size = ScreenSize.Medium,
+                        Telefonia_Equipos.Size = ScreenSize.Medium,
                         14,
                         10
                     )
@@ -71,7 +71,7 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 750, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 80)
+                    If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, 750, Telefonia_Equipos.Size = ScreenSize.Large,750, Telefonia_Equipos.Size = ScreenSize.Medium, 350 , 80)
                 X: =0
                 Y: =0
                 ZIndex: =2

@@ -2233,6 +2233,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Telefonia_Lineas.ScreenContainer10.HeaderContainer11.TabList3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Telefonia_Lineas.ScreenContainer10.HeaderContainer11.TabList3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Telefonia_Lineas",
+                "type": "Telefonia_Lineas.ScreenContainer10.HeaderContainer11.TabList3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App._Usuario"
                 }
               ],
@@ -2473,6 +2503,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.CantidadInactivoL"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.CantidadInactivoL",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "CantidadInactivoL",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.CantidadDisponible"
                 }
               ],
@@ -2514,6 +2574,66 @@
               },
               "properties": {
                 "member": "CantidadEnReparacion",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varFiltroL"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varFiltroL",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varFiltroL",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.CantidadActivoL"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.CantidadActivoL",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "CantidadActivoL",
                 "module": "App",
                 "type": "App"
               }
@@ -3013,36 +3133,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "Telefonia_Equipos",
-                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Height"
                 }
               ],
@@ -3054,36 +3144,6 @@
               },
               "properties": {
                 "member": "Height",
-                "module": "Telefonia_Equipos",
-                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
                 "module": "Telefonia_Equipos",
                 "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
               }

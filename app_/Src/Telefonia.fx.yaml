@@ -200,7 +200,20 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
                             OnSelect: |-
-                                =Navigate(Telefonia_Equipos);
+                                =/*Navigate(Telefonia_Equipos);
+                                Set(varFiltroT,"Entregado")*/
+                                
+                                Navigate(Telefonia_Equipos,ScreenTransition.CoverRight);
+                                ClearCollect(
+                                    FiltroTelefonos,
+                                    Filter(
+                                        [@Equipos_Telefonia],
+                                        Or(Estatus.Value = "Entregado", Estatus.Value = "Disponible", Estatus.Value = "En reparacion")
+                                    )
+                                );
+                                Set(CantidadEntregado, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Entregado")));
+                                Set(CantidadDisponible, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Disponible")));
+                                Set(CantidadEnReparacion, CountRows(Filter(FiltroTelefonos, Estatus.Value = "En reparacion")));
                                 Set(varFiltroT,"Entregado")
                             Text: ="Equipos"
                             Width: |-
@@ -340,6 +353,19 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
+                            OnSelect: |-
+                                =//false
+                                Navigate(Telefonia_Lineas,ScreenTransition.CoverRight);
+                                ClearCollect(
+                                    FiltroLineas,
+                                    Filter(
+                                        [@Lineas_Telefonia],
+                                        Or( Estatus.Value= "Activo", Estatus.Value = "Inactivo")
+                                    )
+                                );
+                                Set(CantidadActivoL, CountRows(Filter(FiltroLineas, Estatus.Value = "Activo")));
+                                Set(CantidadInactivoL, CountRows(Filter(FiltroLineas, Estatus.Value = "Inactivo")));
+                                Set(varFiltroL,"Activo")
                             Text: ="Lineas"
                             Width: =Parent.Width
                             X: =0

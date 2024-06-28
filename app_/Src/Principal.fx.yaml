@@ -725,7 +725,7 @@
                         OnSelect: |-
                             =//false
                             Navigate(Telefonia,ScreenTransition.CoverRight);
-                            ClearCollect(
+                            /*ClearCollect(
                                 FiltroTelefonos,
                                 Filter(
                                     [@Equipos_Telefonia],
@@ -734,7 +734,7 @@
                             );
                             Set(CantidadEntregado, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Entregado")));
                             Set(CantidadDisponible, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Disponible")));
-                            Set(CantidadEnReparacion, CountRows(Filter(FiltroTelefonos, Estatus.Value = "En reparacion")));
+                            Set(CantidadEnReparacion, CountRows(Filter(FiltroTelefonos, Estatus.Value = "En reparacion")));*/
                         Text: ="Télefonos"
                         VerticalAlign: =""
                         Width: =Parent.Width

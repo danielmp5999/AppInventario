@@ -43,10 +43,62 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ArrowLeft
-                OnSelect: =//false
+                OnSelect: |-
+                    =//false
+                    Navigate(Telefonia)
                 PaddingLeft: =10
                 Width: =50
                 ZIndex: =1
+
+            TextCanvas6 As Text:
+                Align: ='TextCanvas.Align'.Center
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: |-
+                    =//32
+                    Icon14.Height
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: |-
+                    =//14
+                    If(Telefonia_Lineas.Size = ScreenSize.ExtraLarge,
+                        24,
+                        Telefonia_Lineas.Size = ScreenSize.Large,
+                        18,
+                        Telefonia_Lineas.Size = ScreenSize.Medium,
+                        14,
+                        12
+                    )
+                Text: ="LINEAS DE TELEFONIA"
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: |
+                    =//96
+                    If(Telefonia_Lineas.Size = ScreenSize.ExtraLarge, 1000, Telefonia_Lineas.Size = ScreenSize.Large,900, Telefonia_Lineas.Size = ScreenSize.Medium, 500 , 150)
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            "TabList3 As 'Tab list'.pcfdataset":
+                Alignment: ='TabList.Alignment'.Horizontal
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =If(Telefonia_Lineas.Size = ScreenSize.ExtraLarge, 14, Telefonia_Lineas.Size = ScreenSize.Large,12, Telefonia_Lineas.Size = ScreenSize.Medium, 10 , 10)
+                Height: =55
+                Items: |-
+                    =["Activo "&CountRows(Filter(FiltroLineas,Estatus.Value="Activo")),
+                    "Inactivo "&CountRows(Filter(FiltroLineas,Estatus.Value="Inactivo"))]
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =//false
+                    If(TabList3.Selected.Value = "Activo "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Activo")),
+                        Set(varFiltroL,"Activo"),
+                        TabList3.Selected.Value = "Inactivo "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Inactivo")),
+                        Set(varFiltroL,"Inactivo")
+                    )
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =3
 
         MainContainer11 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
