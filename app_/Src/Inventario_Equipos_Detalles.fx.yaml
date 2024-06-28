@@ -75,7 +75,7 @@
                 Width: |-
                     =//96
                     //HeaderContainer8.Width-Icon7.Width-200
-                    If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 1150, Inventario_Equipos_Detalles.Size = ScreenSize.Large,900, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 500 , 180)
+                    If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 1150, Inventario_Equipos_Detalles.Size = ScreenSize.Large,850, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 500 , 180)
                 X: =0
                 Y: =0
                 ZIndex: =2

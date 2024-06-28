@@ -72,7 +72,7 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 100)
+                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,700, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 100)
                 X: =0
                 Y: =0
                 ZIndex: =2

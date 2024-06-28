@@ -80,18 +80,20 @@
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
                 Height: =55
-                Items: |
+                Items: |+
                     =["Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
                     "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
                     "Reparacion "&CountRows(Filter(FiltroTelefonos,Estatus.Value="En reparacion"))]
+                    
+                    
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =If(TabList2_2.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                        Set(varFiltro,"Activo"),
-                        TabList2_2.Selected.Value = "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                        Set(varFiltro,"Inactivo"),
-                        Set(varFiltro,"En revision")
+                    =If(TabList2_2.Selected.Value = "Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
+                        Set(varFiltro,"Entregado"),
+                        TabList2_2.Selected.Value = "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
+                        Set(varFiltro,"Disponible"),
+                        Set(varFiltro,"Reparacion")
                     )
                     
                     /*
@@ -201,18 +203,17 @@
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Items: |-
-                    =Equipos_Telefonia
-                    /*SortByColumns(
+                    =//Equipos_Telefonia
+                    SortByColumns(
                         Filter(
-                            //[@Dispositivos]
+                            //[@Equipos_Telefonia]
                             FiltroTelefonos
                             ,
-                            Estatus.Value=varFiltroT,Categorias.Value=CatInventario.Selected.CategoryName
-                            //,StartsWith(ID,TextInputCanvas1.Value)
-                        //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
+                            Estatus.Value=varFiltroT
+                            
                         )
-                        ,"CodBAMXP",SortOrder.Ascending
-                    )*/
+                        ,"ID",SortOrder.Ascending
+                    )
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =35
                 LayoutMinWidth: =35

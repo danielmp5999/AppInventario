@@ -201,7 +201,7 @@
                             LayoutMinWidth: =Parent.Width
                             OnSelect: |-
                                 =Navigate(Telefonia_Equipos);
-                                Set(varFiltroT,"Activo")
+                                Set(varFiltroT,"Entregado")
                             Text: ="Equipos"
                             Width: |-
                                 =//If(Telefonia.Size = ScreenSize.Small, TitleContainer4_1.Width/2, TitleContainer4_1.Width)

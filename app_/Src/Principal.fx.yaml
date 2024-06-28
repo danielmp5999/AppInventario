@@ -415,7 +415,7 @@
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
-                        OnSelect: =Navigate(Colab)
+                        OnSelect: =Navigate(Colaborador)
                         Text: ="Colaboradores"
                         VerticalAlign: =""
                         Width: =Parent.Width

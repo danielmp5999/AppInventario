@@ -1,0 +1,258 @@
+"Colaborador_Detalles As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ScreenContainer7 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer9 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            Icon13 As icon.ArrowLeft:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =App.Theme.Colors.Darker30
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =50
+                Icon: =Icon.ArrowLeft
+                OnSelect: |-
+                    =//false
+                    Navigate(Colaborador)
+                PaddingLeft: =10
+                Width: =50
+                ZIndex: =1
+
+            TextCanvas4 As Text:
+                Align: ='TextCanvas.Align'.Center
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =Icon13.Height
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: |-
+                    =//14
+                    If(Colaborador_Detalles.Size = ScreenSize.ExtraLarge,
+                        26
+                        ,
+                        Colaborador_Detalles.Size = ScreenSize.Large,
+                        18,
+                        Colaborador_Detalles.Size = ScreenSize.Medium,
+                        14,
+                        10
+                    )
+                Text: =If(Form1.Mode=FormMode.New,"REGISTRAR UN NUEVO COLABORADOR","EDITAR DATOS DE COLABORADOR")
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: |-
+                    =//96
+                    If(Colaborador_Detalles.Size = ScreenSize.ExtraLarge, 1150, Colaborador_Detalles.Size = ScreenSize.Large,700, Colaborador_Detalles.Size = ScreenSize.Medium, 500 , 180)
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            ButtonCanvas3 As Button:
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =If(Colaborador_Detalles.Size = ScreenSize.ExtraLarge, 18, Colaborador_Detalles.Size = ScreenSize.Large,13, Colaborador_Detalles.Size = ScreenSize.Medium, 12 , 9)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: =If(Form1.Mode=FormMode.New,"Registrar Colaborador","Actualizar Datos")
+                Width: |-
+                    =//96
+                    If(Colaborador_Detalles.Size = ScreenSize.ExtraLarge, HeaderContainer9.Width-Icon13.Width-TextCanvas4.Width-30, 
+                    Colaborador_Detalles.Size = ScreenSize.Large,HeaderContainer9.Width-Icon13.Width-TextCanvas4.Width-30, 
+                    Colaborador_Detalles.Size = ScreenSize.Medium, HeaderContainer9.Width-Icon13.Width-TextCanvas4.Width-20 , 
+                    100)
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        MainContainer9 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =3
+
+            Form3 As form.PowerApps_CoreControls_Form:
+                BorderColor: =App.Theme.Colors.Darker40
+                DataSource: =Colaboradores
+                DefaultMode: |-
+                    =//FormMode.New
+                    If(IsBlank(Form3),FormMode.New,FormMode.Edit)
+                Item: |-
+                    =If(Form3.Mode = FormMode.Edit,
+                        GalleryColab.Selected
+                    )
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
+                UseFluentV9Cards: =true
+                ZIndex: =1
+
+                Nombre_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Nombre"
+                    Default: =ThisItem.Nombre
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Colaboradores],DataSourceInfo.DisplayName,Nombre)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@Colaboradores], DataSourceInfo.MaxLength, Nombre)
+                    Required: =false
+                    Update: =DataCardValue26.Value
+                    Width: |-
+                        =//444
+                        Colaborador_Detalles.Width-50
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey27 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue26 As 'Text input'":
+                        AccessibleLabel: =Parent.DisplayName
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey27.Y + DataCardKey27.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage25 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue26.Y + DataCardValue26.Height
+                        ZIndex: =3
+
+                    StarVisible25 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey27.Y
+                        ZIndex: =4
+
+                CorreoResp_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="CorreoResp"
+                    Default: =ThisItem.CorreoResp
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Colaboradores],DataSourceInfo.DisplayName,CorreoResp)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@Colaboradores], DataSourceInfo.MaxLength, CorreoResp)
+                    Required: =false
+                    Update: =DataCardValue31.Value
+                    Width: |-
+                        =//444
+                        Colaborador_Detalles.Width-50
+                    X: =1
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey32 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Correo de contacto"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue31 As 'Text input'":
+                        AccessibleLabel: =Parent.DisplayName
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey32.Y + DataCardKey32.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage30 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue31.Y + DataCardValue31.Height
+                        ZIndex: =3
+
+                    StarVisible30 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey32.Y
+                        ZIndex: =4
+
