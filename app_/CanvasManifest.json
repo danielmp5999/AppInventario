@@ -142,8 +142,9 @@
     "Inventario",
     "Inventario_Equipos",
     "Inventario_Equipos_Detalles",
-    "Telefonia",
+    "Telefonia_Equipos",
     "Telefonia_Equipos_Detalles",
-    "Screen2"
+    "Telefonia",
+    "Screen3"
   ]
 }

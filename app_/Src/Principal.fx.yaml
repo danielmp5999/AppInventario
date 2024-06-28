@@ -723,7 +723,7 @@
                         LayoutMinWidth: =Parent.Width
                         OnSelect: |-
                             =//false
-                            Navigate(Telefonia,ScreenTransition.CoverRight);
+                            Navigate(Telefonia_Equipos,ScreenTransition.CoverRight);
                             ClearCollect(
                                 FiltroTelefonos,
                                 Filter(

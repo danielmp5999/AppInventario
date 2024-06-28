@@ -1333,19 +1333,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2"
               }
             }
           ],
@@ -1363,19 +1363,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2"
               }
             }
           ],
@@ -1393,19 +1393,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2.TabIndex"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2.TabIndex",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.Icon6_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.Icon6_2"
               }
             }
           ],
@@ -1423,19 +1423,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.ContainerT.ButtonCanvas1_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1"
               }
             }
           ],
@@ -1453,19 +1453,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.ContainerT.TextInputCanvasT"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT"
               }
             }
           ],
@@ -1483,19 +1483,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET"
               }
             }
           ],
@@ -1513,19 +1513,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.TabIndex"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.TabIndex",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET"
               }
             }
           ],
@@ -1543,19 +1543,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
               }
             }
           ],
@@ -1573,19 +1573,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.TabIndex"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.TabIndex",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
               }
             }
           ],
@@ -1603,19 +1603,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1"
               }
             }
           ],
@@ -1633,19 +1633,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.TabIndex"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.TabIndex",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Overlay3_1"
               }
             }
           ],
@@ -1843,18 +1843,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen2"
+                  "fullyQualifiedName": "Screen3"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen2",
+                  "fullyQualifiedName": "Screen3",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Screen2",
-                "type": "Screen2"
+                "module": "Screen3",
+                "type": "Screen3"
               }
             }
           ],
@@ -2172,36 +2172,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.mensaje"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.mensaje",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "mensaje",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Asignaciones_Equipos.ScreenContainer3.MainContainer3.Gallery3.galleryTemplate3.OnSelect"
                 }
               ],
@@ -2225,7 +2195,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2255,7 +2225,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2285,7 +2255,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2315,7 +2285,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2345,7 +2315,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2375,7 +2345,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2405,7 +2375,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2435,7 +2405,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2465,7 +2435,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2495,7 +2465,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2525,7 +2495,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2555,7 +2525,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2585,7 +2555,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2615,7 +2585,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2645,7 +2615,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2675,7 +2645,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2705,26 +2675,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.FontSize"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.FontSize"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.FontSize",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.FontSize",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FontSize",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2"
               }
             }
           ],
@@ -2735,26 +2705,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.Width"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2.Width",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TabList2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TabList2_2"
               }
             }
           ],
@@ -2765,26 +2735,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Size",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Size",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
               }
             }
           ],
@@ -2795,26 +2765,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Height"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Height",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Height",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
               }
             }
           ],
@@ -2825,26 +2795,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.HeaderContainer6_1.TextCanvas2_2"
               }
             }
           ],
@@ -2855,26 +2825,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Width"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Width",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
               }
             }
           ],
@@ -2885,26 +2855,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Height"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Height",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Height",
-                "module": "Telefonia",
-                "type": "Telefonia.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.MainContainerT.GaleriaET.Image5_1"
               }
             }
           ],
@@ -2915,7 +2885,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2945,7 +2915,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2975,7 +2945,67 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Telefonia.ScreenContainer9.BottomContainer1.SidebarContainer1.Container9_1.LayoutMinWidth"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Telefonia.ScreenContainer9.BottomContainer1.SidebarContainer1.Container9_1.LayoutMinWidth",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "LayoutMinWidth",
+                "module": "Telefonia",
+                "type": "Telefonia.ScreenContainer9.BottomContainer1.SidebarContainer1.Container9_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Telefonia.ScreenContainer9.BottomContainer1.MainContainer7.Container9_2.LayoutMinWidth"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Telefonia.ScreenContainer9.BottomContainer1.MainContainer7.Container9_2.LayoutMinWidth",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "LayoutMinWidth",
+                "module": "Telefonia",
+                "type": "Telefonia.ScreenContainer9.BottomContainer1.MainContainer7.Container9_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
         }
       ],
       "tool": {
@@ -3066,23 +3096,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
-              }
-            },
-            {
-              "id": "app-UnusedMediaResources",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unused media files"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove the unused media file in the Media pane."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "This media file is not referenced by any control formulas so it is not needed. Removing it will improve performance."
               }
             },
             {

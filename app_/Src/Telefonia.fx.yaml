@@ -1,8 +1,8 @@
-"Telefonia As screen.'autoLayout_HeaderFooter_ver1.0'":
+"Telefonia As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ScreenContainerT As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer9 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -21,14 +21,11 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer6_1 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+        HeaderContainer7 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =BA.Colors.Lighter80
             FillPortions: =0
             Height: =75
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -36,351 +33,304 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            ZIndex: =1
+            ZIndex: =2
 
-            Icon6_2 As icon.ChevronLeft:
+            Icon11 As icon.ArrowLeft:
+                AlignInContainer: =AlignInContainer.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =App.Theme.Colors.Darker30
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =35
-                Icon: =Icon.ChevronLeft
-                OnSelect: |-
-                    =Navigate(Principal);
-                    Reset(TextInputCanvasT)
-                Width: =35
+                Height: =50
+                Icon: =Icon.ArrowLeft
+                PaddingLeft: =10
+                Width: =50
                 ZIndex: =1
 
-            TextCanvas2_2 As Text:
-                Align: ='TextCanvas.Align'.Center
+            Header3 As Header:
                 DisplayMode: =DisplayMode.Edit
-                Height: =TabList1.Height/1.5
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                Size: |
-                    =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge,
-                        24,
-                        Inventario_Equipos.Size = ScreenSize.Large,
-                        18,
-                        Inventario_Equipos.Size = ScreenSize.Medium,
-                        14,
-                        10
-                    )
-                Text: ="TELEFONÍA"
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
-                Weight: ='TextCanvas.Weight'.Bold
-                Width: |-
-                    =//96
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 750, Inventario_Equipos.Size = ScreenSize.Large,750, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 80)
+                Height: =75
+                LayoutMinHeight: =75
+                LayoutMinWidth: =Parent.Width
+                Logo: ='bamx-1024x414'
+                OnSelectLogo: =false
+                Style: ='Header.Style'.Light
+                Title: ="Telefonia"
+                UserEmail: =User().Email
+                UserImage: =User().Image
+                UserName: =User().FullName
+                Width: =Parent.Width-Icon11.Width
                 X: =0
                 Y: =0
                 ZIndex: =2
 
-            "TabList2_2 As 'Tab list'.pcfdataset":
-                DisplayMode: =DisplayMode.Edit
-                FontSize: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 12, Inventario_Equipos.Size = ScreenSize.Large, 10 , 8)
-                Height: =55
-                Items: |
-                    =["Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
-                    "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
-                    "Reparacion "&CountRows(Filter(FiltroTelefonos,Estatus.Value="En reparacion"))]
-                LayoutMinHeight: =55
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =If(TabList2_2.Selected.Value = "Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                        Set(varFiltro,"Activo"),
-                        TabList2_2.Selected.Value = "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                        Set(varFiltro,"Inactivo"),
-                        Set(varFiltro,"En revision")
-                    )
-                    
-                    /*
-                    ["Activos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Activo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                    "Inactivos "&CountRows(Filter(FiltroDispositivos,Estatus.Value="Inactivo",Categorias.Value=CatInventario.Selected.CategoryName)),
-                    "En revison "&CountRows(Filter(FiltroDispositivos,Estatus.Value="En revision",Categorias.Value=CatInventario.Selected.CategoryName))]
-                    
-                    */
-                Width: |-
-                    =//300
-                    If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 400, Inventario_Equipos.Size = ScreenSize.Large,390, Inventario_Equipos.Size = ScreenSize.Medium, 350 , 250)
-                X: =0
-                Y: =0
-                ZIndex: =3
-
-        ContainerT As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =50
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.Center
+        BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =16
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             ZIndex: =3
 
-            Icon4_1 As icon.Search:
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =App.Theme.Colors.Darker30
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =35
-                Icon: =Icon.Search
-                PaddingLeft: =6
-                Width: =35
-                ZIndex: =1
+            SidebarContainer1 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =5
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =4
 
-            "TextInputCanvasT As 'Text input'":
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =320
-                Placeholder: ="Buscar por ID del dispositivo"
-                Width: |-
-                    =//Container2.Width-Icon4.Width-Icon4.Width
-                    //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
-                    If(Telefonia.Size = ScreenSize.ExtraLarge, 1000, Telefonia.Size = ScreenSize.Large,800, Telefonia.Size = ScreenSize.Medium, 400 , 150)
-                X: |-
-                    =//0
-                    35
-                Y: =0
-                ZIndex: =2
-
-            ButtonCanvas1_1 As Button:
-                Align: =Align.Justify
-                DisplayMode: =DisplayMode.Edit
-                FontSize: |-
-                    =If(Telefonia.Size = ScreenSize.ExtraLarge, 18, 
-                    Telefonia.Size = ScreenSize.Large,13, 
-                    Telefonia.Size = ScreenSize.Medium, 12 ,
-                     9)
-                Height: =40
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                OnSelect: |-
-                    =//false
-                    Navigate(Telefonia_Equipos_Detalles);
-                    NewForm(FormT);
-                PaddingLeft: =
-                PaddingRight: =
-                Text: ="Registrar equipo"
-                Width: |-
-                    =//If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 130, Inventario_Equipos.Size = ScreenSize.Large,115, Inventario_Equipos.Size = ScreenSize.Medium, 100 , 80)
-                    
-                    If(Telefonia.Size = ScreenSize.ExtraLarge, ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-240, 
-                    Telefonia.Size = ScreenSize.Large,ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-80, 
-                    Telefonia.Size = ScreenSize.Medium, ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-20 , 
-                    100)
-                X: |
-                    =//0
-                    TextInputCanvasT.X+TextInputCanvasT.Width
-                Y: =0
-                ZIndex: =3
-
-        MainContainerT As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
-            LayoutAlignItems: =LayoutAlignItems.Stretch
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            ZIndex: =4
-
-            "GaleriaET As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
-                AlignInContainer: =AlignInContainer.SetByContainer
-                BorderColor: =App.Theme.Colors.Darker40
-                DelayItemLoading: =true
-                Items: |-
-                    =Equipos_Telefonia
-                    /*SortByColumns(
-                        Filter(
-                            //[@Dispositivos]
-                            FiltroTelefonos
-                            ,
-                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName
-                            //,StartsWith(ID,TextInputCanvas1.Value)
-                        //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
-                        )
-                        ,"CodBAMXP",SortOrder.Ascending
-                    )*/
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =35
-                LayoutMinWidth: =35
-                LoadingSpinner: =LoadingSpinner.Data
-                OnSelect: |-
-                    =Navigate(Telefonia_Equipos_Detalles);
-                    EditForm(FormT);
-                TemplateSize: =Min(320, Self.Height - 60)
-                WrapCount: =If(Telefonia.Size = ScreenSize.ExtraLarge, 3, Telefonia.Size = ScreenSize.Large, 2 , 2)
-                ZIndex: =1
-
-                Image5_1 As image:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Height: |-
-                        =//Parent.TemplateHeight
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            50;
-                            Parent.TemplateWidth
-                        )
-                        */
-                        If(First(ThisItem.Attachments).Value = Blank(),
-                            If(Asignaciones.Size = ScreenSize.ExtraLarge , 
-                                170, 
-                                Asignaciones.Size = ScreenSize.Large, 
-                                130, 
-                                100
-                            ),
-                            Parent.TemplateHeight
-                        )
-                    Image: =cel
-                    ImagePosition: |-
-                        =ImagePosition.Fill
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            ImagePosition.Fit;
-                            ImagePosition.Fill
-                        )
-                        */
-                    OnSelect: |
-                        =Select(Parent)
-                    PaddingLeft: |
-                        =
-                    PaddingTop: |
-                        =//0
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            ImagePosition.Fit;
-                            ImagePosition.Fill
-                        )
-                        */
-                        0
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Width: |-
-                        =//Parent.TemplateWidth
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            Categorias.Selected.Imagen_App;
-                            First(ThisItem.'Datos adjuntos').Value
-                        )
-                        */
-                        If(First(ThisItem.Attachments).Value = Blank(),
-                            If(Asignaciones.Size = ScreenSize.ExtraLarge , 
-                                170, 
-                                Asignaciones.Size = ScreenSize.Large, 
-                                130, 
-                                100
-                            )
-                            ,
-                            Parent.TemplateWidth
-                        )
-                    X: |-
-                        =//0
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            Categorias.Selected.Imagen_App;
-                            First(ThisItem.'Datos adjuntos').Value
-                        )
-                        */
-                        
-                        If(First(ThisItem.Attachments).Value = Blank(),
-                            Parent.TemplateWidth /2 - Image5_1.Width/2,
-                            0
-                        )
-                        
-                        
-                        /*
-                        If(First(ThisItem.'Datos adjuntos').Value = Blank();
-                            //Si ;
-                            0
-                        )
-                        */
-                    Y: |-
-                        =If(First(ThisItem.Attachments).Value = Blank(),
-                            Parent.TemplateHeight /2 - Image5_1.Height/2 - Image5_1.Height/4 ,
-                            0
-                        )
+                Container9_1 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =If(Screen3.Size = ScreenSize.Small, Parent.Width, 400)
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    PaddingBottom: =10
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =10
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
                     ZIndex: =1
 
-                Overlay3_1 As rectangle:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Fill: =RGBA(0, 0, 0, 0.4)
-                    Height: =108
-                    OnSelect: |
-                        =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - 108
-                    ZIndex: =2
+                    ImageContainer4_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        FillPortions: =1.5
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Container9_1.Width
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =6
 
-                Title3_1 As label:
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Height: =Self.Size * 1.8
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =16
-                    Text: =ThisItem.Area.Value
-                    Width: =Parent.TemplateWidth - 64
-                    X: =10
-                    Y: =Overlay3_1.Y + 5
-                    ZIndex: =3
+                        Image6_1 As image:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: |-
+                                =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Large, 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Medium,
+                                    150,
+                                    100
+                                )
+                            Image: =cel
+                            ImagePosition: =ImagePosition.Fill
+                            RadiusBottomLeft: =90
+                            RadiusBottomRight: =90
+                            RadiusTopLeft: =90
+                            RadiusTopRight: =90
+                            Width: |-
+                                =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Large, 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Medium,
+                                    150,
+                                    100
+                                )
+                            ZIndex: =7
 
-                Subtitle3_1 As label:
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Height: =Self.Size * 1.8
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =15
-                    Text: |-
-                        =//ThisItem.TIPO
-                        //LookUp(Marcas, ID = ThisItem.Marca.Id,Marca)
-                        ThisItem.Departamento.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =Title3_1.Width
-                    X: =Title3_1.X
-                    Y: =Title3_1.Y + Title3_1.Height + 1
-                    ZIndex: =4
+                    TitleContainer4_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Container9_1.Width
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =8
 
-                Label3_1 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Height: =51
-                    OnSelect: =Select(Parent)
-                    Size: =11
-                    Text: |-
-                        =//ThisItem.RESPONSABLE
-                        //ThisItem.Responsable
-                        LookUp(Colaboradores,ID=ThisItem.Id_Colaborador.Id).Nombre
-                    Width: =Parent.TemplateWidth - Label3_1.X
-                    X: =Subtitle3_1.X - 5
-                    Y: =Subtitle3_1.Y+Subtitle3_1.Height/1.8
-                    ZIndex: =5
+                        FeatureItemButton2_1 As Button:
+                            AccessibleLabel: ="Featured item button"
+                            Appearance: ='ButtonCanvas.Appearance'.Transparent
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =20
+                            FontWeight: =FontWeight.Bold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =Parent.Width
+                            Text: ="Featured item"
+                            Width: =If(Telefonia.Size = ScreenSize.Small, TitleContainer4_1.Width/2, TitleContainer4_1.Width)
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+                        DescriptionText4_1 As Text:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =Parent.Width
+                            Size: =16
+                            Text: ="Short description or engaging message"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
+            MainContainer7 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =5
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =5
+
+                Container9_2 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =If(Screen3.Size = ScreenSize.Small, Parent.Width, 400)
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    PaddingBottom: =10
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =10
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    ImageContainer4_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        FillPortions: =1.5
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Container9_2.Width
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =6
+
+                        Image6_2 As image:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: |-
+                                =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Large, 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Medium,
+                                    150,
+                                    100
+                                )
+                            Image: =mensaje
+                            ImagePosition: =ImagePosition.Fill
+                            RadiusBottomLeft: =90
+                            RadiusBottomRight: =90
+                            RadiusTopLeft: =90
+                            RadiusTopRight: =90
+                            Width: |-
+                                =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Large, 
+                                    300, 
+                                    Telefonia.Size = ScreenSize.Medium,
+                                    150,
+                                    100
+                                )
+                            ZIndex: =7
+
+                    TitleContainer4_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Container9_2.Width
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =8
+
+                        FeatureItemButton2_2 As Button:
+                            AccessibleLabel: ="Featured item button"
+                            Appearance: ='ButtonCanvas.Appearance'.Transparent
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =20
+                            FontWeight: =FontWeight.Bold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =Parent.Width
+                            Text: ="Featured item"
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+                        DescriptionText4_2 As Text:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =Parent.Width
+                            Size: =16
+                            Text: ="Short description or engaging message"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
 

@@ -45,7 +45,7 @@
                 Icon: =Icon.ArrowLeft
                 OnSelect: |-
                     =//false
-                    Navigate(Telefonia)
+                    Navigate(Telefonia_Equipos)
                 PaddingLeft: =10
                 Width: =45
                 ZIndex: =1
@@ -91,7 +91,7 @@
                 OnSelect: |-
                     =//false
                     SubmitForm(FormT);
-                    Navigate(Telefonia);
+                    Navigate(Telefonia_Equipos);
                     ResetForm(FormT);
                     
                     
