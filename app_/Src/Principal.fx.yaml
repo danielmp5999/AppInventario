@@ -415,6 +415,7 @@
                         Layout: ="Icon before"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
+                        OnSelect: =Navigate(Colab)
                         Text: ="Colaboradores"
                         VerticalAlign: =""
                         Width: =Parent.Width
@@ -723,7 +724,7 @@
                         LayoutMinWidth: =Parent.Width
                         OnSelect: |-
                             =//false
-                            Navigate(Telefonia_Equipos,ScreenTransition.CoverRight);
+                            Navigate(Telefonia,ScreenTransition.CoverRight);
                             ClearCollect(
                                 FiltroTelefonos,
                                 Filter(

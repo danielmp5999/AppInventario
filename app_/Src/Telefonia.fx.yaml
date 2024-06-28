@@ -43,6 +43,7 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ArrowLeft
+                OnSelect: =Navigate(Principal)
                 PaddingLeft: =10
                 Width: =50
                 ZIndex: =1
@@ -104,7 +105,7 @@
                     LayoutGap: =5
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =300
-                    LayoutMinWidth: =If(Screen3.Size = ScreenSize.Small, Parent.Width, 400)
+                    LayoutMinWidth: =If(Telefonia.Size = ScreenSize.Small, Parent.Width, 400)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =10
@@ -119,7 +120,16 @@
 
                     ImageContainer4_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
-                        FillPortions: =1.5
+                        FillPortions: =0
+                        Height: |-
+                            =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                300, 
+                                Telefonia.Size = ScreenSize.Large, 
+                                300, 
+                                Telefonia.Size = ScreenSize.Medium,
+                                150,
+                                100
+                            )
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =5
@@ -166,6 +176,8 @@
 
                     TitleContainer4_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
+                        FillPortions: =0
+                        Height: =100
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutMinHeight: =100
                         LayoutMinWidth: =Container9_1.Width
@@ -187,8 +199,13 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
-                            Text: ="Featured item"
-                            Width: =If(Telefonia.Size = ScreenSize.Small, TitleContainer4_1.Width/2, TitleContainer4_1.Width)
+                            OnSelect: |-
+                                =Navigate(Telefonia_Equipos);
+                                Set(varFiltroT,"Activo")
+                            Text: ="Equipos"
+                            Width: |-
+                                =//If(Telefonia.Size = ScreenSize.Small, TitleContainer4_1.Width/2, TitleContainer4_1.Width)
+                                Parent.Width
                             X: =0
                             Y: =0
                             ZIndex: =9
@@ -196,12 +213,11 @@
                         DescriptionText4_1 As Text:
                             Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
-                            FillPortions: =1
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
                             Size: =16
-                            Text: ="Short description or engaging message"
+                            Text: ="Vsializa los equipos de telefonia "
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Width: =Parent.Width
                             X: =0
@@ -230,7 +246,7 @@
                     LayoutGap: =5
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =300
-                    LayoutMinWidth: =If(Screen3.Size = ScreenSize.Small, Parent.Width, 400)
+                    LayoutMinWidth: =If(Telefonia.Size = ScreenSize.Small, Parent.Width, 400)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =10
@@ -245,7 +261,16 @@
 
                     ImageContainer4_2 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
-                        FillPortions: =1.5
+                        FillPortions: =0
+                        Height: |-
+                            =If(Telefonia.Size = ScreenSize.ExtraLarge , 
+                                300, 
+                                Telefonia.Size = ScreenSize.Large, 
+                                300, 
+                                Telefonia.Size = ScreenSize.Medium,
+                                150,
+                                100
+                            )
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =5
@@ -292,6 +317,8 @@
 
                     TitleContainer4_2 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
+                        FillPortions: =0
+                        Height: =100
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutMinHeight: =100
                         LayoutMinWidth: =Container9_2.Width
@@ -313,7 +340,7 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
-                            Text: ="Featured item"
+                            Text: ="Lineas"
                             Width: =Parent.Width
                             X: =0
                             Y: =0
@@ -322,12 +349,11 @@
                         DescriptionText4_2 As Text:
                             Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
-                            FillPortions: =1
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
                             Size: =16
-                            Text: ="Short description or engaging message"
+                            Text: ="Visualiza las lineas contratadas"
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Width: =Parent.Width
                             X: =0

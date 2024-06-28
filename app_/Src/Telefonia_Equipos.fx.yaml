@@ -46,7 +46,7 @@
                 Height: =35
                 Icon: =Icon.ChevronLeft
                 OnSelect: |-
-                    =Navigate(Principal);
+                    =Navigate(Telefonia);
                     Reset(TextInputCanvasT)
                 Width: =35
                 ZIndex: =1
@@ -207,7 +207,7 @@
                             //[@Dispositivos]
                             FiltroTelefonos
                             ,
-                            Estatus.Value=varFiltro,Categorias.Value=CatInventario.Selected.CategoryName
+                            Estatus.Value=varFiltroT,Categorias.Value=CatInventario.Selected.CategoryName
                             //,StartsWith(ID,TextInputCanvas1.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
