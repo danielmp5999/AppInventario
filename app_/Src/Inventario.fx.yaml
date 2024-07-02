@@ -93,7 +93,7 @@
                 TabIndex: =0
                 TemplatePadding: =0
                 Transition: =Transition.Pop
-                WrapCount: =If(Inventario.Size = ScreenSize.ExtraLarge , 3, Inventario.Size = ScreenSize.Large, 2, 1)
+                WrapCount: =If(Inventario.Size = ScreenSize.ExtraLarge ,3 , Inventario.Size = ScreenSize.Large, 2, 1)
                 ZIndex: =5
 
                 GalleryContainer2 As groupContainer.verticalAutoLayoutContainer:
