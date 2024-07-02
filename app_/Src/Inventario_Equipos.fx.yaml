@@ -54,6 +54,7 @@
 
             TextCanvas2 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =TabList1.Height/1.5
                 LayoutMinHeight: =32
@@ -135,6 +136,7 @@
 
             "TextInputCanvas1 As 'Text input'":
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 LayoutMinHeight: =32
@@ -153,6 +155,7 @@
             ButtonCanvas1 As Button:
                 Align: =Align.Justify
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: |-
                     =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 18, 

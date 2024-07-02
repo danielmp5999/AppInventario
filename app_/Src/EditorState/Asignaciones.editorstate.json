@@ -117,7 +117,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -231,6 +232,11 @@
         {
           "Category": "Data",
           "PropertyName": "IconStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -860,7 +866,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -932,6 +939,11 @@
         {
           "Category": "Data",
           "PropertyName": "FontColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1294,7 +1306,7 @@
       "MetaDataIDKey": "%Header.ID%",
       "Name": "Header2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1701,7 +1713,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3087,7 +3099,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -3164,6 +3177,11 @@
         {
           "Category": "Data",
           "PropertyName": "FontColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {

@@ -172,6 +172,7 @@
                         ZIndex: =9
 
                         TitleText2 As Text:
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             Height: =30
                             LayoutMinHeight: =32
@@ -186,6 +187,7 @@
                             ZIndex: =10
 
                         DescriptionText3 As Text:
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             Height: =45
                             LayoutMinHeight: =32
@@ -237,6 +239,7 @@
                             AccessibleLabel: ="Featured item button"
                             AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinHeight: =32

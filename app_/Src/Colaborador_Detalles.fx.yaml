@@ -53,6 +53,7 @@
             TextCanvas4 As Text:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =Icon13.Height
                 LayoutMinHeight: =32
@@ -80,6 +81,7 @@
 
             ButtonCanvas3 As Button:
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =If(Colaborador_Detalles.Size = ScreenSize.ExtraLarge, 18, Colaborador_Detalles.Size = ScreenSize.Large,13, Colaborador_Detalles.Size = ScreenSize.Medium, 12 , 9)
                 Height: =32
@@ -124,6 +126,189 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
+                Departamento_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Departamento"
+                    Default: =ThisItem.Departamento
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Colaboradores],DataSourceInfo.DisplayName,Departamento)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue23.Selected
+                    Width: =444
+                    X: =2
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardKey24 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue23 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Colaboradores].Departamento)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey24.Y + DataCardKey24.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage24 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue23.Y + DataCardValue23.Height
+                        ZIndex: =3
+
+                    StarVisible24 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey24.Y
+                        ZIndex: =4
+
+                Area_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Area"
+                    Default: =ThisItem.Area
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Colaboradores],DataSourceInfo.DisplayName,Area)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue30.Selected
+                    Width: =444
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey31 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue30 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Colaboradores].Area)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey31.Y + DataCardKey31.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage29 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue30.Y + DataCardValue30.Height
+                        ZIndex: =3
+
+                    StarVisible29 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey31.Y
+                        ZIndex: =4
+
+                Puesto_DataCard2 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Puesto"
+                    Default: =ThisItem.Puesto
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Colaboradores],DataSourceInfo.DisplayName,Puesto)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue35.Selected
+                    Width: =444
+                    X: =1
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey36 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue35 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Colaboradores].Puesto)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey36.Y + DataCardKey36.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage34 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue35.Y + DataCardValue35.Height
+                        ZIndex: =3
+
+                    StarVisible34 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey36.Y
+                        ZIndex: =4
+
                 Nombre_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -144,6 +329,7 @@
                     ZIndex: =2
 
                     DataCardKey27 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -156,6 +342,7 @@
 
                     "DataCardValue26 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -168,6 +355,7 @@
                         ZIndex: =2
 
                     ErrorMessage25 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -180,6 +368,7 @@
 
                     StarVisible25 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -209,6 +398,7 @@
                     ZIndex: =2
 
                     DataCardKey32 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -223,6 +413,7 @@
 
                     "DataCardValue31 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -235,6 +426,7 @@
                         ZIndex: =2
 
                     ErrorMessage30 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -247,6 +439,7 @@
 
                     StarVisible30 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"

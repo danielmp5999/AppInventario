@@ -53,6 +53,7 @@
             TextCanvas6 As Text:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: |-
                     =//32

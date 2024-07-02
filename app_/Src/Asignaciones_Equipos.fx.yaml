@@ -56,6 +56,7 @@
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =false
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 Height: =TabList1.Height/1.5
@@ -152,6 +153,7 @@
                 AccessibleLabel: =""
                 Appearance: ="FilledDarker"
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 Height: =32

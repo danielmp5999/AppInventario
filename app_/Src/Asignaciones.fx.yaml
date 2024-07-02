@@ -176,6 +176,7 @@
                         ZIndex: =9
 
                         TitleText1 As Text:
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =
                             Height: =30
@@ -191,6 +192,7 @@
                             ZIndex: =10
 
                         DescriptionText2 As Text:
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =
                             Height: =45
@@ -245,6 +247,7 @@
                             AlignInContainer: =AlignInContainer.End
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
                             BasePaletteColor: =
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =
                             Height: =32

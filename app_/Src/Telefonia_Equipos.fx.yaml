@@ -53,6 +53,7 @@
 
             TextCanvas2_2 As Text:
                 Align: ='TextCanvas.Align'.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =TabList1.Height/1.5
                 LayoutMinHeight: =32
@@ -90,10 +91,10 @@
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =If(TabList2_2.Selected.Value = "Entregado "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Entregado")),
-                        Set(varFiltro,"Entregado"),
+                        Set(varFiltroT,"Entregado"),
                         TabList2_2.Selected.Value = "Disponible "&CountRows(Filter(FiltroTelefonos,Estatus.Value="Disponible")),
-                        Set(varFiltro,"Disponible"),
-                        Set(varFiltro,"Reparacion")
+                        Set(varFiltroT,"Disponible"),
+                        Set(varFiltroT,"En reparacion")
                     )
                     
                     /*
@@ -137,6 +138,7 @@
                 ZIndex: =1
 
             "TextInputCanvasT As 'Text input'":
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 LayoutMinHeight: =32
@@ -154,6 +156,7 @@
 
             ButtonCanvas1_1 As Button:
                 Align: =Align.Justify
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: |-
                     =If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, 18, 
@@ -340,7 +343,8 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =ThisItem.Area.Value
+                    Text: |
+                        =ThisItem.ResponsableN.Value
                     Width: =Parent.TemplateWidth - 64
                     X: =10
                     Y: =Overlay3_1.Y + 5
@@ -357,10 +361,11 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =15
-                    Text: |-
+                    Text: |+
                         =//ThisItem.TIPO
-                        //LookUp(Marcas, ID = ThisItem.Marca.Id,Marca)
-                        ThisItem.Departamento.Value
+                        //LookUp(Colaboradores, ID = ThisItem.Colaboradores.Id)Departamneto
+                        LookUp(Colaboradores,ID=ThisItem.ResponsableN.Id).Departamento.Value
+                        
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title3_1.Width
                     X: =Title3_1.X
@@ -378,8 +383,8 @@
                     Size: =11
                     Text: |-
                         =//ThisItem.RESPONSABLE
-                        //ThisItem.Responsable
-                        LookUp(Colaboradores,ID=ThisItem.Id_Colaborador.Id).Nombre
+                        //ThisItem.ResponsableN.Value
+                        ThisItem.Numero
                     Width: =Parent.TemplateWidth - Label3_1.X
                     X: =Subtitle3_1.X - 5
                     Y: =Subtitle3_1.Y+Subtitle3_1.Height/1.8

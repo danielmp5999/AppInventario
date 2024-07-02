@@ -53,6 +53,7 @@
             TextCanvas3 As Text:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontItalic: =false
                 FontStrikethrough: =false
@@ -83,6 +84,7 @@
             ButtonCanvas2 As Button:
                 Align: =Align.Justify
                 AlignInContainer: =AlignInContainer.Center
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 18, Inventario_Equipos_Detalles.Size = ScreenSize.Large,13, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 12 , 9)
                 Height: =32
@@ -217,6 +219,7 @@
                     ZIndex: =1
 
                     DataCardKey12 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -231,6 +234,7 @@
 
                     DataCardValue12 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -243,6 +247,7 @@
                         ZIndex: =2
 
                     ErrorMessage12 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -255,6 +260,7 @@
 
                     StarVisible12 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -283,6 +289,7 @@
                     ZIndex: =1
 
                     DataCardKey15 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -297,6 +304,7 @@
 
                     DataCardValue14 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -309,6 +317,7 @@
                         ZIndex: =2
 
                     ErrorMessage14 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -321,6 +330,7 @@
 
                     StarVisible14 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -349,6 +359,7 @@
                     ZIndex: =1
 
                     DataCardKey16 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -363,6 +374,7 @@
 
                     DataCardValue15 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -375,6 +387,7 @@
                         ZIndex: =2
 
                     ErrorMessage15 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -387,6 +400,7 @@
 
                     StarVisible15 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -416,6 +430,7 @@
                     ZIndex: =1
 
                     DataCardKey11 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -430,6 +445,7 @@
 
                     "DataCardValue11 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -444,6 +460,7 @@
                         ZIndex: =2
 
                     ErrorMessage11 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -456,6 +473,7 @@
 
                     StarVisible11 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -485,6 +503,7 @@
                     ZIndex: =1
 
                     DataCardKey14 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -499,6 +518,7 @@
 
                     "DataCardValue13 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -514,6 +534,7 @@
                         ZIndex: =2
 
                     ErrorMessage16 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -526,6 +547,7 @@
 
                     StarVisible16 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -690,6 +712,7 @@
 
                     TextCanvas5 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =50
                         PaddingLeft: =
@@ -729,6 +752,7 @@
                     ZIndex: =2
 
                     DataCardKey4 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -743,6 +767,7 @@
 
                     "DataCardValue4 As 'Date picker'":
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         EndDate: =Date(Year(Today())+100, 12, 31)
                         Height: =32
@@ -756,6 +781,7 @@
                         ZIndex: =2
 
                     ErrorMessage4 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -768,6 +794,7 @@
 
                     StarVisible4 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -796,6 +823,7 @@
                     ZIndex: =2
 
                     DataCardKey2 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |
@@ -810,6 +838,7 @@
 
                     "DataCardValue2 As 'Text input'":
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -820,6 +849,7 @@
                         ZIndex: =2
 
                     ErrorMessage2 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -832,6 +862,7 @@
 
                     StarVisible2 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -860,6 +891,7 @@
                     ZIndex: =2
 
                     DataCardKey10 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -874,6 +906,7 @@
 
                     DataCardValue10 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -886,6 +919,7 @@
                         ZIndex: =2
 
                     ErrorMessage10 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -898,6 +932,7 @@
 
                     StarVisible10 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -927,6 +962,7 @@
                     ZIndex: =2
 
                     DataCardKey3 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -941,6 +977,7 @@
 
                     "DataCardValue3 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -953,6 +990,7 @@
                         ZIndex: =2
 
                     ErrorMessage3 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -965,6 +1003,7 @@
 
                     StarVisible3 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -993,6 +1032,7 @@
                     ZIndex: =2
 
                     DataCardKey8 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -1007,6 +1047,7 @@
 
                     DataCardValue8 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -1019,6 +1060,7 @@
                         ZIndex: =2
 
                     ErrorMessage8 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -1031,6 +1073,7 @@
 
                     StarVisible8 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -1059,6 +1102,7 @@
                     ZIndex: =2
 
                     DataCardKey5 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -1073,6 +1117,7 @@
 
                     DataCardValue5 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -1085,6 +1130,7 @@
                         ZIndex: =2
 
                     ErrorMessage5 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -1097,6 +1143,7 @@
 
                     StarVisible5 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -1125,6 +1172,7 @@
                     ZIndex: =2
 
                     DataCardKey9 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: |-
@@ -1139,6 +1187,7 @@
 
                     DataCardValue9 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BorderStyle: =""
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -1150,6 +1199,7 @@
                         ZIndex: =2
 
                     ErrorMessage9 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -1162,6 +1212,7 @@
 
                     StarVisible9 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
                         Text: ="*"
@@ -1191,6 +1242,7 @@
                     ZIndex: =2
 
                     DataCardKey6 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -1215,6 +1267,7 @@
                         ZIndex: =2
 
                     ErrorMessage6 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -1227,6 +1280,7 @@
 
                     StarVisible6 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"
@@ -1256,6 +1310,7 @@
                     ZIndex: =2
 
                     DataCardKey7 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -1280,6 +1335,7 @@
                         ZIndex: =2
 
                     ErrorMessage7 As Text:
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -1292,6 +1348,7 @@
 
                     StarVisible7 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: ="*"

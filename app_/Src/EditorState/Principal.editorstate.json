@@ -1373,7 +1373,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -1453,6 +1454,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
@@ -1527,7 +1533,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -1607,6 +1614,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
@@ -1681,7 +1693,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -1761,6 +1774,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
@@ -1835,7 +1853,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -1915,6 +1934,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
@@ -1989,7 +2013,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -2069,6 +2094,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
@@ -2143,7 +2173,8 @@
         "Width",
         "DisplayMode",
         "ZIndex",
-        "FontColor"
+        "FontColor",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -2220,6 +2251,11 @@
         {
           "Category": "Data",
           "PropertyName": "FontColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2320,7 +2356,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -2440,6 +2477,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -2542,7 +2584,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -2662,6 +2705,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -2764,7 +2812,8 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -2884,6 +2933,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -2978,7 +3032,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -3098,6 +3153,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -3187,7 +3247,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -3307,6 +3368,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -3404,7 +3470,8 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -3521,6 +3588,11 @@
         {
           "Category": "Data",
           "PropertyName": "IconStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {

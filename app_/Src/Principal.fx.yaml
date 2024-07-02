@@ -144,6 +144,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -193,6 +194,7 @@
 
                     DescriptionText1 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -277,6 +279,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -322,6 +325,7 @@
 
                     DescriptionText21 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -404,6 +408,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -425,6 +430,7 @@
 
                     DescriptionText31 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -507,6 +513,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -527,6 +534,7 @@
 
                     DescriptionText41 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -609,6 +617,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -629,6 +638,7 @@
 
                     DescriptionText51 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =
@@ -711,6 +721,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Transparent
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =20
@@ -744,6 +755,7 @@
 
                     DescriptionText61 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FillPortions: =1
                         FontColor: =

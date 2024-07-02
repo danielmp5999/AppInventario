@@ -193,6 +193,7 @@
                         FeatureItemButton2_1 As Button:
                             AccessibleLabel: ="Featured item button"
                             Appearance: ='ButtonCanvas.Appearance'.Transparent
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =20
                             FontWeight: =FontWeight.Bold
@@ -225,6 +226,7 @@
 
                         DescriptionText4_1 As Text:
                             Align: ='TextCanvas.Align'.Center
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinHeight: =32
@@ -347,6 +349,7 @@
                         FeatureItemButton2_2 As Button:
                             AccessibleLabel: ="Featured item button"
                             Appearance: ='ButtonCanvas.Appearance'.Transparent
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =20
                             FontWeight: =FontWeight.Bold
@@ -374,6 +377,7 @@
 
                         DescriptionText4_2 As Text:
                             Align: ='TextCanvas.Align'.Center
+                            BorderStyle: =""
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinHeight: =32
