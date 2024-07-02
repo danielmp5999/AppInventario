@@ -746,6 +746,21 @@
                             Set(CantidadEntregado, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Entregado")));
                             Set(CantidadDisponible, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Disponible")));
                             Set(CantidadEnReparacion, CountRows(Filter(FiltroTelefonos, Estatus.Value = "En reparacion")));*/
+                            
+                            ClearCollect(ColTelefonos,
+                                {
+                                    Id:1,
+                                    Img:"https://i.ibb.co/mR5m8CZ/cel.png",
+                                    tipo:"Equipos",
+                                    Descripcion:"Visualiza los equipos"
+                                },
+                                {
+                                    Id:2,
+                                    Img:"https://i.ibb.co/LQWjw6D/mensaje.png",
+                                    tipo:"Lineas",
+                                    Descripcion:"Visualiza las lineas"
+                                }
+                            )
                         Text: ="Télefonos"
                         VerticalAlign: =""
                         Width: =Parent.Width
