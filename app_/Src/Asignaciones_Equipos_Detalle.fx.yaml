@@ -80,14 +80,15 @@
                                     Fecha_Asignacion: DataCardValueFechaAsig.SelectedDate,
                                     Firma: ImageFirma.Image,
                                     ResponsableP: {
-                                        'odata.type': "Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser", 
-                                        Claims: "i:#.f|membership|" & Lower(ComboBoxResp.Selected.Email), 
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser", 
+                                        Claims: "i:0#.f|membership|" & Lower(ComboBoxResp.Selected.Email), 
                                         Department:ComboBoxResp.Selected.Department, 
                                         DisplayName:ComboBoxResp.Selected.DisplayName,
                                         Email: ComboBoxResp.Selected.Email, 
                                         JobTitle:ComboBoxResp.Selected.JobTitle, 
                                         Picture:ComboBoxResp.Selected.Picture
-                                    },
+                                    }
+                                    ,
                                     ResponsableT: ComboBoxResp.Selected.DisplayName
                                 }
                             );
@@ -110,7 +111,7 @@
                             Notify("Asignado con éxito",NotificationType.Success);
                             Navigate(Asignaciones_Equipos);
                             //NewForm(Form2)
-                            ,
+                           /* ,
                             If(EditForm(Form2),   
                                 Notify("Actualizado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
@@ -130,7 +131,7 @@
                                 Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                                 Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                             );
-                            NewForm(Form2)
+                            NewForm(Form2)*/
                         )
                     Text: |-
                         =If(Form2.Mode = FormMode.New,
@@ -470,7 +471,7 @@
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayFields: =["Claims"]
+                        DisplayFields: =["DisplayName"]
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
@@ -479,7 +480,7 @@
                             Choices([@Asignaciones_1].ResponsableP)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
-                        SearchFields: =["Claims"]
+                        SearchFields: =["DisplayName"]
                         SearchItems: =Choices(Asignaciones_1.ResponsableP,ComboBoxResp.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
