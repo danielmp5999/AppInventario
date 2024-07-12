@@ -89,7 +89,8 @@
                                         Picture:ComboBoxResp.Selected.Picture
                                     }
                                     ,
-                                    ResponsableT: ComboBoxResp.Selected.DisplayName
+                                    ResponsableT: ComboBoxResp.Selected.DisplayName, 
+                                    Activa: true
                                 }
                             );
                             //If(SubmitForm(Form2),
@@ -111,10 +112,29 @@
                             Notify("Asignado con éxito",NotificationType.Success);
                             Navigate(Asignaciones_Equipos);
                             //NewForm(Form2)
-                           /* ,
-                            If(EditForm(Form2),   
-                                Notify("Actualizado con éxito", NotificationType.Success);
-                                Navigate(Asignaciones_Equipos);
+                           ,
+                            If(EditForm(Form2),  
+                        
+                                Patch(
+                                    Asignaciones_1,
+                                    Defaults(Asignaciones_1),
+                                    {
+                                        Id_Disp: DataCardValueIDDisp.Selected,
+                                        Fecha_Asignacion: DataCardValueFechaAsig.SelectedDate,
+                                        Firma: ImageFirma.Image,
+                                        ResponsableP: {
+                                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser", 
+                                            Claims: "i:0#.f|membership|" & Lower(ComboBoxResp.Selected.Email), 
+                                            Department:ComboBoxResp.Selected.Department, 
+                                            DisplayName:ComboBoxResp.Selected.DisplayName,
+                                            Email: ComboBoxResp.Selected.Email, 
+                                            JobTitle:ComboBoxResp.Selected.JobTitle, 
+                                            Picture:ComboBoxResp.Selected.Picture
+                                        }
+                                        ,
+                                        ResponsableT: ComboBoxResp.Selected.DisplayName
+                                    }
+                                ); 
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
                                         Asignado:true
@@ -127,13 +147,15 @@
                                         Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
                                     )
                                 );
+                                Notify("Actualizado con éxito", NotificationType.Success);
+                                Navigate(Asignaciones_Equipos);
                                 Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
                                 Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                                 Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                             );
-                            NewForm(Form2)*/
+                            NewForm(Form2)
                         )
-                    Text: |-
+                    Text: |
                         =If(Form2.Mode = FormMode.New,
                             "Asignar",
                             "Reasignar"
@@ -152,17 +174,24 @@
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     OnSelect: |-
-                        =
-                        
-                        //PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
-                        RemoveIf(Asignaciones_1,ID=ID);
-                        Notify("Eliminado con éxito", NotificationType.Success);
-                                Navigate(Asignaciones_Equipos);
+                        =//PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
+                        //RemoveIf(Asignaciones_1,ID=ID);
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
-                                        Asignado:true
+                                        Asignado:false
                                     }
                                 );
+                        
+                                Patch(Asignaciones_1,
+                                    LookUp(Asignaciones_1, And(Id_Disp.Id = VarDispositivo.Id_Disp.Id, Activa = true)), 
+                                    {
+                                        Activa: false
+                                    }
+                                );
+                        
+                                Notify("Eliminado con éxito", NotificationType.Success);
+                                Navigate(Asignaciones_Equipos);
+                        
                                 ClearCollect(
                                     FiltroDispositivos,
                                     Filter(
@@ -176,6 +205,12 @@
                             
                             NewForm(Form2)
                     Text: ="Desasignar"
+                    Visible: |-
+                        =//Comprueba que alguien tenga asignado este dispositivo
+                        If( VarDispositivo.Activa = true,
+                            true,
+                            false
+                        )
                     Width: =96
                     X: =0
                     Y: =0
@@ -197,11 +232,18 @@
             Form2 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =Asignaciones_1
-                DefaultMode: |
+                DefaultMode: |-
                     =//FormMode.Edit
-                    If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
+                    /*If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
                         FormMode.New,
                         FormMode.Edit
+                    )*/
+                    
+                    If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
+                        FormMode.New, 
+                        If(IsBlank(LookUp(FiltroAsignaciones, And(Id_Disp.Id=VarIDDisp, Activa = true))), 
+                        FormMode.New,   
+                        FormMode.Edit)
                     )
                 Item: |-
                     =//LookUp(Asignaciones_1,ID=2)
@@ -403,7 +445,9 @@
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
                         Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                        Image: |-
+                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                            //Parent.Default
                         Tooltip: =Parent.DisplayName
                         Width: =AddPicture1.Width
                         X: =AddPicture1.X
@@ -468,6 +512,7 @@
                         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                         ChevronHoverBackground: =App.Theme.Colors.Darker10
                         ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        DefaultSelectedItems: =Parent.Default
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)

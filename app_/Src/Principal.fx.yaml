@@ -157,8 +157,9 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
                         OnSelect: |+
-                            =Navigate(Asignaciones,ScreenTransition.CoverRight);
-                            ClearCollect(
+                            =Refresh(Asignaciones_1);
+                            Navigate(Asignaciones,ScreenTransition.CoverRight);
+                            /*ClearCollect(
                                 FiltroUtilitaria,
                                 Filter(
                                     [@Lista],
@@ -168,7 +169,7 @@
                             );
                             
                             Set (CantidadRegistrosAsignada, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "ASIGNADA")));
-                            Set (CantidadRegistrosUtilitaria, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "UTILITARIA")));
+                            Set (CantidadRegistrosUtilitaria, CountRows(Filter(FiltroUtilitaria,ASIGNACIÓN.Value = "UTILITARIA")));*/
                             
                             //Navigate(Inventario,ScreenTransition.CoverRight);
                             ClearCollect(
