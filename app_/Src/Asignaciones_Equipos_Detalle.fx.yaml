@@ -110,6 +110,7 @@
                             Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                             Notify("Asignado con éxito",NotificationType.Success);
+                            Reset(PenInput1);
                             Navigate(Asignaciones_Equipos);
                             //NewForm(Form2)
                            ,
