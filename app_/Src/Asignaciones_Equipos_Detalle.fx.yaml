@@ -476,13 +476,14 @@
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
+                        IsSearchable: =false
                         Items: |-
                             =//Office365Users.SearchUser({searchTerm:ComboBoxResp.SearchText}).DisplayName
                             Choices([@Asignaciones_1].ResponsableP)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Asignaciones_1.ResponsableP,ComboBoxResp.SearchText)
+                        SearchItems: =[]
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13

@@ -3142,7 +3142,8 @@
           "NameMapSourceSchema": "?"
         },
         "Appearance",
-        "BorderStyle"
+        "BorderStyle",
+        "TriggerOutput"
       ],
       "DynamicProperties": [
         {
@@ -3196,6 +3197,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "TriggerOutput",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "BasePaletteColor",

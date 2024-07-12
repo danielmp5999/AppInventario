@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2024-06-06T22:09:45.5440000Z",
+      "LastChangedTimeString": "2024-07-05T16:35:17.6400000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -37,7 +37,10 @@
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Responsable": "Responsable",
-      "Responsable#Claims": "Responsable Claims",
+      "Responsable#Id": "Responsable Id",
+      "ResponsableP": "ResponsableP",
+      "ResponsableP#Claims": "ResponsableP Claims",
+      "ResponsableT": "ResponsableT",
       "Title": "Title"
     },
     "DatasetName": "https://bamxp.sharepoint.com/sites/AppsTiComunicacin",

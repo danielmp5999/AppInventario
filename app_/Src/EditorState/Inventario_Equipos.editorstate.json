@@ -3294,7 +3294,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BorderStyle"
+        "BorderStyle",
+        "TriggerOutput"
       ],
       "DynamicProperties": [
         {
@@ -3355,6 +3356,11 @@
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "TriggerOutput",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "Placeholder",
