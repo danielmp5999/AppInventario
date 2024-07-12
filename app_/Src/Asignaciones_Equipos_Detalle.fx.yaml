@@ -462,39 +462,6 @@
                     Y: =1
                     ZIndex: =1
 
-                    DataCardKey18 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    ErrorMessage18 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =ComboBoxResp.Y + ComboBoxResp.Height
-                        ZIndex: =3
-
-                    StarVisible18 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =20
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey18.Y
-                        ZIndex: =4
-
                     ComboBoxResp As combobox:
                         BorderColor: =App.Theme.Colors.Darker40
                         ChevronBackground: =App.Theme.Colors.Primary

@@ -747,6 +747,7 @@
                             Set(CantidadDisponible, CountRows(Filter(FiltroTelefonos, Estatus.Value = "Disponible")));
                             Set(CantidadEnReparacion, CountRows(Filter(FiltroTelefonos, Estatus.Value = "En reparacion")));*/
                             
+                            /*
                             ClearCollect(ColTelefonos,
                                 {
                                     Id:1,
@@ -761,6 +762,7 @@
                                     Descripcion:"Visualiza las lineas"
                                 }
                             )
+                            */
                         Text: ="Télefonos"
                         VerticalAlign: =""
                         Width: =Parent.Width
