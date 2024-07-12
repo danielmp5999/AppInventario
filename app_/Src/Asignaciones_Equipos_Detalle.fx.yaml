@@ -232,9 +232,7 @@
                     
                     If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
                         FormMode.New,
-                        If(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp).Activa = false,
-                        FormMode.New,
-                        FormMode.Edit)
+                        FormMode.Edit
                     )
                 Item: |-
                     =//LookUp(Asignaciones_1,ID=2)
