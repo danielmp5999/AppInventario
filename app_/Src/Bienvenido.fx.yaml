@@ -70,15 +70,16 @@ Bienvenido As screen:
         Y: =iconCircle1.Y+iconCircle1.Height*2
         ZIndex: =4
 
-    Image2 As image:
-        BorderColor: =App.Theme.Colors.Darker40
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        Height: =50
-        Image: |-
-            ="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif"
-        Width: =50
-        X: =Bienvenido.Width/2 - Image2.Width/2
+    "Progress1 As 'Progress Bar'":
+        BasePaletteColor: =RGBA(145, 163, 3, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =45
+        Indeterminate: =true
+        ProgressColor: ='Progress.ProgressColor'.Brand
+        Shape: ='Progress.Shape'.Rounded
+        Thickness: ='Progress.Thickness'.Large
+        Width: =Bienvenido.Width /2
+        X: =Bienvenido.Width/2 - Progress1.Width/2
         Y: =LblSuccessMsg1.Y + LblSuccessMsg1.Height +10
-        ZIndex: =5
+        ZIndex: =6
 
