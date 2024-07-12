@@ -157,7 +157,8 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =Parent.Width
                         OnSelect: |+
-                            =Navigate(Asignaciones,ScreenTransition.CoverRight);
+                            =Refresh(Asignaciones_1);
+                            Navigate(Asignaciones,ScreenTransition.CoverRight);
                             /*ClearCollect(
                                 FiltroUtilitaria,
                                 Filter(

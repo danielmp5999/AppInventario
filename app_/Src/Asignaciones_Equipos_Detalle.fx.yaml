@@ -89,7 +89,8 @@
                                         Picture:ComboBoxResp.Selected.Picture
                                     }
                                     ,
-                                    ResponsableT: ComboBoxResp.Selected.DisplayName
+                                    ResponsableT: ComboBoxResp.Selected.DisplayName, 
+                                    Activa: true
                                 }
                             );
                             //If(SubmitForm(Form2),
@@ -113,6 +114,7 @@
                             //NewForm(Form2)
                            ,
                             If(EditForm(Form2),  
+                        
                                 Patch(
                                     Asignaciones_1,
                                     Defaults(Asignaciones_1),
@@ -194,6 +196,12 @@
                             
                             NewForm(Form2)
                     Text: ="Desasignar"
+                    Visible: |-
+                        =//Comprueba que alguien tenga asignado este dispositivo
+                        If( VarDispositivo.Activa = true,
+                            true,
+                            false
+                        )
                     Width: =96
                     X: =0
                     Y: =0
@@ -222,9 +230,11 @@
                         FormMode.Edit
                     )*/
                     
-                    If(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp).Activa = false,
+                    If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
                         FormMode.New,
-                        FormMode.Edit
+                        If(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp).Activa = false,
+                        FormMode.New,
+                        FormMode.Edit)
                     )
                 Item: |-
                     =//LookUp(Asignaciones_1,ID=2)
