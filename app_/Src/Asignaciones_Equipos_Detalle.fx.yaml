@@ -91,28 +91,26 @@
                                     ResponsableT: ComboBoxResp.Selected.DisplayName
                                 }
                             );
-                            If(SubmitForm(Form2),
-                                Notify("Asignado con éxito",NotificationType.Success);
-                                Navigate(Asignaciones_Equipos);
-                                Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
-                                    {
-                                        Asignado:true
-                                    }
-                                );
-                                ClearCollect(
-                                    FiltroDispositivos,
-                                    Filter(
-                                        [@Dispositivos],
-                                        Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
-                                    )
-                                );
-                                Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
-                                Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
-                                Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                            //If(SubmitForm(Form2),
+                            Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
+                                {
+                                    Asignado:true
+                                }
                             );
-                            NewForm(Form2)
+                            ClearCollect(
+                                FiltroDispositivos,
+                                Filter(
+                                    [@Dispositivos],
+                                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                )
+                            );
+                            Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                            Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                            Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                            Notify("Asignado con éxito",NotificationType.Success);
+                            Navigate(Asignaciones_Equipos);
+                            //NewForm(Form2)
                             ,
-                        
                             If(EditForm(Form2),   
                                 Notify("Actualizado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
@@ -472,22 +470,20 @@
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayFields: =["DisplayName"]
+                        DisplayFields: =["Claims"]
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        IsSearchable: =false
                         Items: |-
                             =//Office365Users.SearchUser({searchTerm:ComboBoxResp.SearchText}).DisplayName
                             Choices([@Asignaciones_1].ResponsableP)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
-                        SearchFields: =["DisplayName"]
-                        SearchItems: =[]
+                        SearchFields: =["Claims"]
+                        SearchItems: =Choices(Asignaciones_1.ResponsableP,ComboBoxResp.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
-                        Template: =ListItemTemplate.Person
                         X: =40
                         Y: =40
                         ZIndex: =5
