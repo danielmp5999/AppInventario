@@ -176,13 +176,22 @@
                     OnSelect: |-
                         =//PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
                         //RemoveIf(Asignaciones_1,ID=ID);
-                        Notify("Eliminado con éxito", NotificationType.Success);
-                                Navigate(Asignaciones_Equipos);
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
                                         Asignado:false
                                     }
                                 );
+                        
+                                Patch(Asignaciones_1,
+                                    LookUp(Asignaciones_1, And(Id_Disp.Id = VarDispositivo.Id_Disp.Id, Activa = true)), 
+                                    {
+                                        Activa: false
+                                    }
+                                );
+                        
+                                Notify("Eliminado con éxito", NotificationType.Success);
+                                Navigate(Asignaciones_Equipos);
+                        
                                 ClearCollect(
                                     FiltroDispositivos,
                                     Filter(
@@ -231,8 +240,10 @@
                     )*/
                     
                     If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
-                        FormMode.New,
-                        FormMode.Edit
+                        FormMode.New, 
+                        If(IsBlank(LookUp(FiltroAsignaciones, And(Id_Disp.Id=VarIDDisp, Activa = true))), 
+                        FormMode.New,   
+                        FormMode.Edit)
                     )
                 Item: |-
                     =//LookUp(Asignaciones_1,ID=2)
