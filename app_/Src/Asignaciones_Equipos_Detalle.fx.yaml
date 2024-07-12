@@ -153,7 +153,7 @@
                             );
                             NewForm(Form2)
                         )
-                    Text: |-
+                    Text: |
                         =If(Form2.Mode = FormMode.New,
                             "Asignar",
                             "Reasignar"
@@ -172,9 +172,7 @@
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     OnSelect: |-
-                        =
-                        
-                        //PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
+                        =//PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
                         //RemoveIf(Asignaciones_1,ID=ID);
                         Notify("Eliminado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
@@ -217,9 +215,14 @@
             Form2 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =Asignaciones_1
-                DefaultMode: |
+                DefaultMode: |-
                     =//FormMode.Edit
-                    If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
+                    /*If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
+                        FormMode.New,
+                        FormMode.Edit
+                    )*/
+                    
+                    If(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp).Activa = false,
                         FormMode.New,
                         FormMode.Edit
                     )
