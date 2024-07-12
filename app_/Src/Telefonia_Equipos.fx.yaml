@@ -116,7 +116,6 @@
             FillPortions: =0
             Height: =50
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -126,66 +125,62 @@
             RadiusTopRight: =4
             ZIndex: =3
 
-            Icon4_1 As icon.Search:
+            Container9 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =ContainerT.Width - Icon15.Width*2
+                ZIndex: =1
+
+                Icon4_1 As icon.Search:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =35
+                    Icon: =Icon.Search
+                    PaddingLeft: =6
+                    Width: =35
+                    ZIndex: =1
+
+                "TextInputCanvasT As 'Text input'":
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Placeholder: ="Buscar por ID del dispositivo"
+                    TriggerOutput: ="FocusOut"
+                    Width: |-
+                        =//Container2.Width-Icon4.Width-Icon4.Width
+                        //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
+                        //If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, 1000, Telefonia_Equipos.Size = ScreenSize.Large,800, Telefonia_Equipos.Size = ScreenSize.Medium, 400 , 150)
+                        Container9.Width - Icon4_1.Width
+                    X: |-
+                        =//0
+                        35
+                    Y: =0
+                    ZIndex: =2
+
+            Icon15 As icon.Add:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =App.Theme.Colors.Darker30
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =35
-                Icon: =Icon.Search
-                PaddingLeft: =6
-                Width: =35
-                ZIndex: =1
-
-            "TextInputCanvasT As 'Text input'":
-                BorderStyle: =""
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =320
-                Placeholder: ="Buscar por ID del dispositivo"
-                TriggerOutput: ="FocusOut"
-                Width: |-
-                    =//Container2.Width-Icon4.Width-Icon4.Width
-                    //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
-                    If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, 1000, Telefonia_Equipos.Size = ScreenSize.Large,800, Telefonia_Equipos.Size = ScreenSize.Medium, 400 , 150)
-                X: |-
-                    =//0
-                    35
-                Y: =0
-                ZIndex: =2
-
-            ButtonCanvas1_1 As Button:
-                Align: =Align.Justify
-                BorderStyle: =""
-                DisplayMode: =DisplayMode.Edit
-                FontSize: |-
-                    =If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, 18, 
-                    Telefonia_Equipos.Size = ScreenSize.Large,13, 
-                    Telefonia_Equipos.Size = ScreenSize.Medium, 12 ,
-                     9)
                 Height: =40
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
+                Icon: =Icon.Add
                 OnSelect: |-
-                    =//false
-                    Navigate(Telefonia_Equipos_Detalles);
+                    =Navigate(Telefonia_Equipos_Detalles);
                     NewForm(FormT);
-                PaddingLeft: =
-                PaddingRight: =
-                Text: ="Registrar equipo"
-                Width: |-
-                    =//If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 130, Inventario_Equipos.Size = ScreenSize.Large,115, Inventario_Equipos.Size = ScreenSize.Medium, 100 , 80)
-                    
-                    If(Telefonia_Equipos.Size = ScreenSize.ExtraLarge, ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-240, 
-                    Telefonia_Equipos.Size = ScreenSize.Large,ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-80, 
-                    Telefonia_Equipos.Size = ScreenSize.Medium, ContainerT.Width-Icon4_1.Width-TextInputCanvasT.Width-20 , 
-                    100)
-                X: |
-                    =//0
-                    TextInputCanvasT.X+TextInputCanvasT.Width
-                Y: =0
-                ZIndex: =3
+                Width: =40
+                ZIndex: =4
 
         MainContainerT As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer

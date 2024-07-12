@@ -5542,19 +5542,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "Telefonia_Equipos",
-                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.ButtonCanvas1_1"
+                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15"
               }
             }
           ],
@@ -5564,27 +5564,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel"
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT.AccessibleLabel",
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Telefonia_Equipos",
-                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.TextInputCanvasT"
+                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.Icon15"
               }
             }
           ],
@@ -6286,6 +6286,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Container9.TextInputCanvasT.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Telefonia_Equipos.ScreenContainerT.ContainerT.Container9.TextInputCanvasT.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Telefonia_Equipos",
+                "type": "Telefonia_Equipos.ScreenContainerT.ContainerT.Container9.TextInputCanvasT"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
         },
         {
           "locations": [
