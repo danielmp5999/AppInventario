@@ -158,6 +158,7 @@
                         LayoutMinWidth: =Parent.Width
                         OnSelect: |+
                             =Refresh(Asignaciones_1);
+                            Refresh(Dispositivos);
                             Navigate(Asignaciones,ScreenTransition.CoverRight);
                             /*ClearCollect(
                                 FiltroUtilitaria,

@@ -190,7 +190,7 @@
                             //[@Lista]
                             FiltroDispositivos
                             ,
-                            Asignado=varFiltroB,Categorias.Value=Category_gallery.Selected.CategoryName
+                            Asignado = varFiltroB,Categorias.Value=Category_gallery.Selected.CategoryName
                             //,StartsWith(RESPONSABLE,TextInputCanvas2.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
@@ -203,7 +203,7 @@
                 OnSelect: |-
                     =//false
                     Navigate(Asignaciones_Equipos_Detalle);
-                    EditForm(Form2);
+                    //NewForm(Form2);
                     Set(VarIDDisp, ThisItem.ID);
                     //Set(VarIDDispositivo,LookUp(Asignaciones_1,Id_Disp.Id=ThisItem.ID));
                     

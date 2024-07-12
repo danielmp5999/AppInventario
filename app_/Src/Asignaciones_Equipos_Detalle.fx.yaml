@@ -232,18 +232,19 @@
             Form2 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =Asignaciones_1
-                DefaultMode: |-
+                DefaultMode: |
                     =//FormMode.Edit
                     /*If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
                         FormMode.New,
                         FormMode.Edit
                     )*/
                     
-                    If(IsBlank(LookUp(FiltroAsignaciones,Id_Disp.Id=VarIDDisp)),
-                        FormMode.New, 
-                        If(IsBlank(LookUp(FiltroAsignaciones, And(Id_Disp.Id=VarIDDisp, Activa = true))), 
-                        FormMode.New,   
-                        FormMode.Edit)
+                    
+                    If(!IsBlank(LookUp(FiltroAsignaciones, And(Id_Disp.Id= VarIDDisp, Activa = true))) ,
+                        FormMode.Edit,
+                        If(IsBlank(LookUp(FiltroAsignaciones, Id_Disp.Id= VarIDDisp)),
+                            FormMode.New 
+                        )
                     )
                 Item: |-
                     =//LookUp(Asignaciones_1,ID=2)
