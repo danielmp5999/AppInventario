@@ -142,6 +142,7 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Placeholder: ="Buscar por ID del dispositivo"
+                TriggerOutput: ="FocusOut"
                 Width: |-
                     =//Container2.Width-Icon4.Width-Icon4.Width
                     //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)

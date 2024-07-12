@@ -83,7 +83,7 @@
       }
     },
     "TemplateDisplayName": "Barcode Reader",
-    "Version": "1.0.20"
+    "Version": "1.0.23"
   },
   "Button": {
     "CustomGroupControlTemplateName": "",
@@ -380,7 +380,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.38"
+    "Version": "0.0.39"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
@@ -395,7 +395,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.38"
+    "Version": "0.0.39"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

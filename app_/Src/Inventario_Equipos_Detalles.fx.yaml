@@ -450,6 +450,7 @@
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: |-
                             =//Parent.Default
@@ -523,6 +524,7 @@
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: |-
                             =//Parent.Default
@@ -841,6 +843,7 @@
                         BorderStyle: =""
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
@@ -982,6 +985,7 @@
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
                         Width: =Parent.Width - 48

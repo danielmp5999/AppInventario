@@ -3294,7 +3294,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BorderStyle"
+        "BorderStyle",
+        "TriggerOutput"
       ],
       "DynamicProperties": [
         {
@@ -3363,6 +3364,11 @@
         {
           "Category": "Data",
           "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "TriggerOutput",
           "RuleProviderType": "Unknown"
         },
         {

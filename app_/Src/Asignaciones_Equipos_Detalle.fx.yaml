@@ -643,6 +643,7 @@
                         DisplayMode: =DisplayMode.View
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
@@ -656,7 +657,7 @@
                     DataField: ="{Identifier}"
                     Default: =ThisItem.Identifier
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,'{Identifier}')
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,Identifier)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =false
@@ -682,6 +683,7 @@
                         DisplayMode: =DisplayMode.View
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        TriggerOutput: ="FocusOut"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
