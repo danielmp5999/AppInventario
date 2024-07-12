@@ -111,10 +111,28 @@
                             Notify("Asignado con éxito",NotificationType.Success);
                             Navigate(Asignaciones_Equipos);
                             //NewForm(Form2)
-                           /* ,
-                            If(EditForm(Form2),   
-                                Notify("Actualizado con éxito", NotificationType.Success);
-                                Navigate(Asignaciones_Equipos);
+                           ,
+                            If(EditForm(Form2),  
+                                Patch(
+                                    Asignaciones_1,
+                                    Defaults(Asignaciones_1),
+                                    {
+                                        Id_Disp: DataCardValueIDDisp.Selected,
+                                        Fecha_Asignacion: DataCardValueFechaAsig.SelectedDate,
+                                        Firma: ImageFirma.Image,
+                                        ResponsableP: {
+                                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser", 
+                                            Claims: "i:0#.f|membership|" & Lower(ComboBoxResp.Selected.Email), 
+                                            Department:ComboBoxResp.Selected.Department, 
+                                            DisplayName:ComboBoxResp.Selected.DisplayName,
+                                            Email: ComboBoxResp.Selected.Email, 
+                                            JobTitle:ComboBoxResp.Selected.JobTitle, 
+                                            Picture:ComboBoxResp.Selected.Picture
+                                        }
+                                        ,
+                                        ResponsableT: ComboBoxResp.Selected.DisplayName
+                                    }
+                                ); 
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
                                         Asignado:true
@@ -127,11 +145,13 @@
                                         Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
                                     )
                                 );
+                                Notify("Actualizado con éxito", NotificationType.Success);
+                                Navigate(Asignaciones_Equipos);
                                 Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
                                 Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                                 Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                             );
-                            NewForm(Form2)*/
+                            NewForm(Form2)
                         )
                     Text: |-
                         =If(Form2.Mode = FormMode.New,
@@ -155,12 +175,12 @@
                         =
                         
                         //PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
-                        RemoveIf(Asignaciones_1,ID=ID);
+                        //RemoveIf(Asignaciones_1,ID=ID);
                         Notify("Eliminado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
-                                        Asignado:true
+                                        Asignado:false
                                     }
                                 );
                                 ClearCollect(
@@ -403,7 +423,9 @@
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
                         Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                        Image: |-
+                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                            //Parent.Default
                         Tooltip: =Parent.DisplayName
                         Width: =AddPicture1.Width
                         X: =AddPicture1.X
@@ -468,6 +490,7 @@
                         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                         ChevronHoverBackground: =App.Theme.Colors.Darker10
                         ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        DefaultSelectedItems: =Parent.Default
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
