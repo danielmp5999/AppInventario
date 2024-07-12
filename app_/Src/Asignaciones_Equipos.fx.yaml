@@ -160,6 +160,7 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Placeholder: ="Buscar por responsable"
+                TriggerOutput: ="FocusOut"
                 Width: =Container3.Width-Icon3.Width-Icon3.Width
                 X: =0
                 Y: =0
