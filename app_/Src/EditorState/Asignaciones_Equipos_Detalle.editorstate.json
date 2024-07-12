@@ -41,7 +41,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "%AddPicture.ID%",
       "Name": "AddPicture1",
@@ -656,7 +656,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
@@ -736,14 +736,6 @@
           "InvariantPropertyName": "SelectMultiple",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "DefaultSelectedItems",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -793,11 +785,6 @@
         {
           "Category": "Data",
           "PropertyName": "SelectMultiple",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DefaultSelectedItems",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2005,7 +1992,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey19",
@@ -2538,7 +2525,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage19",
@@ -2814,7 +2801,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Firma_DataCard1",
@@ -4088,8 +4075,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)",
+          "AutoRuleBindingEnabled": true,
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Image",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -4144,7 +4131,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "Image8",
@@ -4155,7 +4142,7 @@
         {
           "Category": "Data",
           "PropertyName": "Image",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -5449,7 +5436,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": false,
+      "IsLocked": true,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible19",
