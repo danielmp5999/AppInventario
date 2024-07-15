@@ -112,6 +112,7 @@
                             Notify("Asignado con éxito",NotificationType.Success);
                             Reset(PenInput1);
                             Navigate(Asignaciones_Equipos);
+                            
                             //NewForm(Form2)
                            ,
                             If(EditForm(Form2),  
@@ -208,7 +209,7 @@
                     Text: ="Desasignar"
                     Visible: |-
                         =//Comprueba que alguien tenga asignado este dispositivo
-                        If( VarDispositivo.Activa = true,
+                        If( Form2.Mode = FormMode.Edit,
                             true,
                             false
                         )
@@ -535,6 +536,43 @@
                         X: =40
                         Y: =40
                         ZIndex: =5
+
+                ID_DataCard2 As typedDataCard.fluentV9TextualViewCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ID"
+                    Default: =ThisItem.ID
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,ID)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Width: =444
+                    X: =2
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey18 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue16 As 'Text input'":
+                        DisplayMode: =DisplayMode.View
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey18.Y + DataCardKey18.Height + 4
+                        ZIndex: =2
 
             ImageFirma As image:
                 BorderColor: =App.Theme.Colors.Darker40
