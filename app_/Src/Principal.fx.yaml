@@ -44,7 +44,7 @@
                 IsProfilePictureVisible: =true
                 LayoutMinHeight: =75
                 LayoutMinWidth: =Parent.Width
-                Logo: =inventario
+                Logo: ='BAMXP_Caritas stroke2'
                 OnSelectLogo: =false
                 Style: ='Header.Style'.Light
                 Title: ="Bienvenido"

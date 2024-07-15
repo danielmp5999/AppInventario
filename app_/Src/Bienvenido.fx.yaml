@@ -83,3 +83,12 @@ Bienvenido As screen:
         Y: =LblSuccessMsg1.Y + LblSuccessMsg1.Height +10
         ZIndex: =6
 
+    Image2 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Image: ='BAMXP_Caritas-BLK'
+        X: =Bienvenido.Width/2-Image2.Width/2
+        Y: =iconCircle1.Y -Image2.Height
+        ZIndex: =7
+
