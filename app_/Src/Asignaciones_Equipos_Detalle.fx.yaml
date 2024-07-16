@@ -66,6 +66,7 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
+                Width: =ButtonAsignar.Width*3
                 ZIndex: =4
 
                 ButtonAsignar As Button:
