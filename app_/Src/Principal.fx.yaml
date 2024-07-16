@@ -177,7 +177,7 @@
                                 FiltroDispositivos,
                                 Filter(
                                     [@Dispositivos],
-                                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                    Or(Estatus.Value = "Activo"/*, Estatus.Value = "Inactivo", Estatus.Value = "En revision"*/)
                                 )
                             );
                             Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));

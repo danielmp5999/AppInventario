@@ -26,6 +26,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -45,7 +46,9 @@
                 Icon: =Icon.ArrowLeft
                 OnSelect: |-
                     =//false
-                    Navigate(Inventario_Equipos)
+                    //Navigate(Inventario_Equipos);
+                    Back();
+                    ResetForm(Form1);
                 PaddingLeft: =10
                 Width: =45
                 ZIndex: =1
@@ -76,50 +79,68 @@
                 Width: |-
                     =//96
                     //HeaderContainer8.Width-Icon7.Width-200
-                    If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 1150, Inventario_Equipos_Detalles.Size = ScreenSize.Large,850, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 500 , 180)
+                    
+                    //If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 1150, Inventario_Equipos_Detalles.Size = ScreenSize.Large,850, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 500 , 180)
+                    
+                    HeaderContainer8.Width - Icon7.Width - Container11.Width 
                 X: =0
                 Y: =0
                 ZIndex: =2
 
-            ButtonCanvas2 As Button:
-                Align: =Align.Justify
-                AlignInContainer: =AlignInContainer.Center
-                BorderStyle: =""
-                DisplayMode: =DisplayMode.Edit
-                FontSize: =If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, 18, Inventario_Equipos_Detalles.Size = ScreenSize.Large,13, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, 12 , 9)
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                OnSelect: |-
-                    =//false
-                    SubmitForm(Form1);
-                    Navigate(Inventario);
-                    ResetForm(Form1);
-                    
-                    
-                    ClearCollect(
-                        FiltroDispositivos,
-                        Filter(
-                            [@Dispositivos],
-                            Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+            Container11 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                LayoutGap: =5
+                LayoutMinHeight: =75
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Icon17.Width*2+5
+                ZIndex: =5
+
+                Icon17 As icon.VerticalLine:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =50
+                    Icon: =Icon.Save
+                    OnSelect: |-
+                        =//false
+                        If(SubmitForm(Form1),
+                            Navigate(Inventario);
+                            ResetForm(Form1);
+                        
+                        
+                            ClearCollect(
+                                FiltroDispositivos,
+                                Filter(
+                                    [@Dispositivos],
+                                    Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                )
+                            );
+                            Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                            Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                            Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                         )
-                    );
-                    Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
-                    Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
-                    Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
-                Text: =If(Form1.Mode=FormMode.New,"Registrar Equipo","Actualizar Equipo")
-                Width: |-
-                    =//96
-                    //HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30
-                    
-                    If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30, 
-                    Inventario_Equipos_Detalles.Size = ScreenSize.Large,HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-30, 
-                    Inventario_Equipos_Detalles.Size = ScreenSize.Medium, HeaderContainer8.Width-Icon7.Width-TextCanvas3.Width-20 , 
-                    100)
-                X: |
-                    =0
-                Y: =0
-                ZIndex: =3
+                    Width: =50
+                    ZIndex: =1
+
+                "Icon18 As icon.'3DPrinting'":
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =50
+                    Icon: =Icon.Trash
+                    OnSelect: =Set(varEliminarEquipo,true)
+                    Width: =50
+                    ZIndex: =2
 
         MainContainer8 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -142,7 +163,10 @@
                     If(IsBlank(Form1),FormMode.New,FormMode.Edit)
                 Item: |-
                     =If(Form1.Mode = FormMode.Edit,
+                        If(varScreenAsigna,
+                        LookUp(Dispositivos,ID = VarIDDisp),
                         Gallery5.Selected
+                        )
                     )
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
@@ -209,7 +233,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Donador)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue12.Selected
                     Width: |-
                         =//667
@@ -279,7 +303,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Modelo)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue14.Selected
                     Width: |-
                         =//667
@@ -349,7 +373,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,TipoDisp)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue15.Selected
                     Width: |-
                         =//667
@@ -415,7 +439,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="CodBAMXP"
                     Default: =ThisItem.Cod_BAMXP
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =Parent.DisplayMode.View
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Cod_BAMXP)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -494,7 +518,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, 'Codigo de barras')
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue13.Value
                     Width: |-
                         =//667
@@ -569,7 +593,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: |
                         =100
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue1.Attachments
                     Width: |-
                         =//667
@@ -744,7 +768,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Fecha_Llegada)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue4.SelectedDate
                     Width: |-
                         =//667
@@ -815,7 +839,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =Value(DataCardValue2.Value)
                     Width: |
                         =//667
@@ -884,7 +908,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Marca)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue10.Selected
                     Width: |-
                         =//667
@@ -914,12 +938,27 @@
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         InputTextPlaceholder: ="Selecciona la marca..."
-                        Items: =Choices([@Dispositivos].Marca)
+                        Items: |-
+                            =[Choices([@Dispositivos].Marca)]
+                            //Concat(Choices([@Dispositivos].Marca),"s",",")
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 4
                         ZIndex: =2
+
+                        Value1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: |-
+                                ="*[Id:n, Value:s]"
+                            FieldVariantName: ="textualColumn"
+                            Height: =100
+                            Order: =1
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
 
                     ErrorMessage10 As Text:
                         BorderStyle: =""
@@ -955,7 +994,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Caracteristicas)
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue3.Value
                     Width: |-
                         =//667
@@ -1026,7 +1065,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Diag_Inicial)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue8.Selected
                     Width: |-
                         =//667
@@ -1096,7 +1135,7 @@
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Estatus)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue5.Selected
                     Width: |-
                         =//667
@@ -1162,7 +1201,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Categorias"
                     Default: =ThisItem.Categorias
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =Parent.DisplayMode.View
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Categorias)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -1192,7 +1231,9 @@
                     DataCardValue9 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         BorderStyle: =""
-                        DefaultSelectedItems: =[Parent.Default]
+                        DefaultSelectedItems: |-
+                            =//[Parent.Default]
+                            [LookUp(Choices([@Dispositivos].Categorias),Value = CatInventario.Selected.CategoryName)]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Items: =Choices([@Dispositivos].Categorias)
@@ -1417,4 +1458,107 @@
             FillPortions: =1
             Image: =varUrlImage
             ZIndex: =3
+
+    Container12 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =Inventario_Equipos_Detalles.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varEliminarEquipo
+        Width: =Inventario_Equipos_Detalles.Width
+        ZIndex: =3
+
+        Container13 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =Color.White
+            FillPortions: =0
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            TextCanvas9 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =RGBA(0, 0, 0, 1)
+                Height: =Parent.Height
+                Size: =25
+                Text: ="¿Eliminar permanentemente?"
+                Width: =Parent.Width
+                Wrap: =true
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        Container14 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =20
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =3
+
+            ButtonCanvas1 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |
+                    =
+                    
+                    Remove(Dispositivos,Gallery5.Selected);
+                    Set(varEliminarEquipo,false);
+                    
+                    ClearCollect(
+                        FiltroDispositivos,
+                        Filter(
+                            [@Dispositivos],
+                            Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                        )
+                    );
+                    Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                    Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                    Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                    
+                    ResetForm(Form1);
+                    Navigate(Inventario);
+                Text: ="Eliminar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas2 As Button:
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Set(varEliminarEquipo,false)
+                Text: ="Cancelar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
 

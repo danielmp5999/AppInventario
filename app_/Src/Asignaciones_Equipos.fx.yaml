@@ -100,11 +100,31 @@
                 Height: =55
                 Items: |-
                     =//["Asignados", "Disponibles"]
-                    [ "Disponibles "&CountRows(Filter(FiltroDispositivos,Asignado = false,Categorias.Value=Category_gallery.Selected.CategoryName)),"Asignados "&CountRows(Filter(FiltroDispositivos,Asignado = true,Categorias.Value=Category_gallery.Selected.CategoryName))]
+                    [ 
+                        "Disponibles "&
+                        CountRows(
+                            Filter(
+                                FiltroDispositivos,
+                                Asignado = false,
+                                Categorias.Value=Category_gallery.Selected.CategoryName,
+                                Estatus.Value = "Activo"
+                            )
+                        ),
+                    
+                        "Asignados "&
+                        CountRows(
+                            Filter(
+                                FiltroDispositivos,
+                                Asignado = true,
+                                Categorias.Value=Category_gallery.Selected.CategoryName
+                                //,Estatus.Value = "Activo"
+                            )
+                        )
+                    ]
                 LayoutMinHeight: =55
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =If(TabList1.Selected.Value = "Asignados "&CountRows(Filter(FiltroDispositivos,Asignado=true,Categorias.Value=Category_gallery.Selected.CategoryName)),
+                    =If(TabList1.Selected.Value = "Asignados "&CountRows(Filter(FiltroDispositivos,Asignado=true,Categorias.Value=Category_gallery.Selected.CategoryName/*,Estatus.Value = "Activo"*/)),
                         Set(varFiltroB,true),
                         Set(varFiltroB,false)
                     )
@@ -190,7 +210,10 @@
                             //[@Lista]
                             FiltroDispositivos
                             ,
-                            Asignado = varFiltroB,Categorias.Value=Category_gallery.Selected.CategoryName
+                            Asignado = varFiltroB,
+                            Categorias.Value=Category_gallery.Selected.CategoryName
+                            //,Estatus.Value = "Activo"
+                            
                             //,StartsWith(RESPONSABLE,TextInputCanvas2.Value)
                         //;StartsWith(Codigo_BAMXP;C_Busqueda_asig.Text)
                         )
@@ -205,6 +228,7 @@
                     Navigate(Asignaciones_Equipos_Detalle);
                     //NewForm(Form2);
                     Set(VarIDDisp, ThisItem.ID);
+                    Set(varisFrimaVisible, false);
                     //Set(VarIDDispositivo,LookUp(Asignaciones_1,Id_Disp.Id=ThisItem.ID));
                     
                     ClearCollect(FiltroAsignaciones, Asignaciones_1);
