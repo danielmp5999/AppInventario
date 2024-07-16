@@ -1698,6 +1698,7 @@
             LayoutMinWidth: =400
             NumberOfColumns: =1
             UseFluentV9Cards: =true
+            Width: =ContainerFormAgregarMarca.Width/1.2
             ZIndex: =1
 
             Marca_DataCard3 As typedDataCard.fluentV9TextualEditCard:
@@ -1712,7 +1713,7 @@
                 MaxLength: =DataSourceInfo([@Marcas], DataSourceInfo.MaxLength, Marca)
                 Required: =true
                 Update: =DataCardValue24.Value
-                Width: =800
+                Width: =Parent.Width
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -1851,6 +1852,7 @@
             LayoutMinWidth: =400
             NumberOfColumns: =1
             UseFluentV9Cards: =true
+            Width: =ContainerFormAgregarModelo.Width/1.2
             ZIndex: =1
 
             id_Marca_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
@@ -1864,7 +1866,7 @@
                 Height: =70
                 Required: =false
                 Update: =DataCardValue37.Selected
-                Width: =800
+                Width: =Parent.Width
                 X: =0
                 Y: =0
                 ZIndex: =1
@@ -1952,7 +1954,7 @@
                 MaxLength: =DataSourceInfo([@Modelo], DataSourceInfo.MaxLength, Modelo)
                 Required: =true
                 Update: =DataCardValue38.Value
-                Width: =800
+                Width: =Parent.Width
                 X: =0
                 Y: =1
                 ZIndex: =1
