@@ -44,7 +44,10 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =40
                 Icon: =Icon.ArrowLeft
-                OnSelect: =Navigate(Asignaciones_Equipos)
+                OnSelect: |
+                    =Navigate(Asignaciones_Equipos);
+                    ResetForm(Form2);
+                    Reset(PenInput1);
                 Width: =40
                 ZIndex: =1
 
@@ -71,7 +74,7 @@
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     OnSelect: |-
-                        =If(Form2.Mode = FormMode.New,
+                        =/*If(Form2.Mode = FormMode.New,
                             Patch(
                                 Asignaciones_1,
                                 Defaults(Asignaciones_1),
@@ -157,6 +160,60 @@
                             );
                             NewForm(Form2)
                         )
+                        */
+                        /*
+                        If(Form2.Mode = FormMode.New,
+                            If(SubmitForm(Form2),
+                                Notify("Enviado con exito",NotificationType.Success);
+                                Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
+                                    {
+                                        Asignado:true
+                                    }
+                                );
+                                ClearCollect(
+                                    FiltroDispositivos,
+                                    Filter(
+                                        [@Dispositivos],
+                                        Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                    )
+                                );
+                                Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                                Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                                Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                                Notify("Asignado con éxito",NotificationType.Success);
+                                Reset(PenInput1);
+                                Navigate(Asignaciones_Equipos);
+                            ),
+                            If(SubmitForm(Form2),
+                                Notify("Enviado con exito",NotificationType.Success);
+                                Reset(PenInput1);
+                            )
+                        )
+                        */
+                        
+                         If(SubmitForm(Form2),
+                                Notify("Enviado con exito",NotificationType.Success);
+                                Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
+                                    {
+                                        Asignado:true
+                                    }
+                                );
+                                ClearCollect(
+                                    FiltroDispositivos,
+                                    Filter(
+                                        [@Dispositivos],
+                                        Or(Estatus.Value = "Activo", Estatus.Value = "Inactivo", Estatus.Value = "En revision")
+                                    )
+                                );
+                                Set(CantidadActivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Activo")));
+                                Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
+                                Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
+                                Notify("Asignado con éxito",NotificationType.Success);
+                                Reset(PenInput1);
+                                Navigate(Asignaciones_Equipos);
+                                Set(varisFrimaVisible, true);
+                                Set(varisFrimaVisible,false)
+                            )
                     Text: |
                         =If(Form2.Mode = FormMode.New,
                             "Asignar",
@@ -178,19 +235,21 @@
                     OnSelect: |-
                         =//PENDIENTE SOLO ELIMINAR POR ID Y ACTUALIZAR SWITCH DISPOSITIVOS EN FALSE PARA ASIGNARLOS
                         //RemoveIf(Asignaciones_1,ID=ID);
+                                Remove(Asignaciones_1, LookUp(Asignaciones_1,ID = Value(DataCardValue16.Value)));
+                                Reset(PenInput1);
                                 Patch(Dispositivos,LookUp(Dispositivos,ID=VarIDDisp),
                                     {
                                         Asignado:false
                                     }
                                 );
-                        
+                        /*
                                 Patch(Asignaciones_1,
                                     LookUp(Asignaciones_1, And(Id_Disp.Id = VarDispositivo.Id_Disp.Id, Activa = true)), 
                                     {
                                         Activa: false
                                     }
                                 );
-                        
+                        */
                                 Notify("Eliminado con éxito", NotificationType.Success);
                                 Navigate(Asignaciones_Equipos);
                         
@@ -254,8 +313,101 @@
                     //LookUp(Asignaciones_1,ID=VarIDDisp)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
+                NumberOfColumns: =2
                 UseFluentV9Cards: =true
                 ZIndex: =1
+
+                Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,'{Attachments}')
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue18.Attachments
+                    Width: =667
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCardKey25 As label:
+                        AutoHeight: =true
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =34
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue18 As attachments:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =App.Theme.Colors.Primary
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =App.Theme.Colors.Lighter70
+                        Items: =Parent.Default
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =App.Theme.Colors.Darker30
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey25.Y + DataCardKey25.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage21 As label:
+                        AutoHeight: =true
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue18.Y + DataCardValue18.Height
+                        ZIndex: =3
+
+                    StarVisible21 As label:
+                        Align: =Align.Center
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =DataCardKey25.Height
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey25.Y
+                        ZIndex: =4
 
                 Id_Disp_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
@@ -270,7 +422,13 @@
                     Height: =70
                     Required: =false
                     Update: =DataCardValueIDDisp.Selected
-                    Width: =444
+                    Width: |-
+                        =//667
+                        
+                        /*
+                        If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width , Form1.Width-20)
+                        */
+                        If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -337,7 +495,7 @@
                     Height: =70
                     Required: =true
                     Update: =DataCardValueFechaAsig.SelectedDate
-                    Width: =444
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
                     X: =1
                     Y: =0
                     ZIndex: =1
@@ -392,105 +550,106 @@
                         Y: =DataCardKey17.Y
                         ZIndex: =4
 
-                DataCard3 As typedDataCard.blankCard:
+                ResponsableT_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ResponsableT"
+                    Default: =ThisItem.ResponsableT
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,ResponsableT)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@Asignaciones_1], DataSourceInfo.MaxLength, ResponsableT)
+                    Required: =false
+                    Update: =DataCardValue17.Value
+                    Width: |-
+                        =//667
+                        If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey22 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue17 As 'Text input'":
+                        AccessibleLabel: =Parent.DisplayName
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: |
+                            =If(Form2.Mode = FormMode.Edit,
+                                Parent.Default,
+                                Concat(ComboBoxResp.SelectedItems,DisplayName)
+                            )
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey22.Y + DataCardKey22.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage18 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue17.Y + DataCardValue17.Height
+                        ZIndex: =3
+
+                    StarVisible18 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey22.Y
+                        ZIndex: =4
+
+                DataCard1 As typedDataCard.blankCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =200
-                    Width: =444
-                    X: =2
-                    Y: =0
-                    ZIndex: =1
-
-                    btn_reg_firma As Button:
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =32
-                        OnSelect: =Set(varisFrimaVisible, true)
-                        Text: ="Registrar firma"
-                        Width: =120
-                        X: =40
-                        Y: =40
-                        ZIndex: =1
-
-                Firma_DataCard1 As typedDataCard.fluentV9AddLargePictureCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Firma"
-                    Default: =ThisItem.Firma
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,Firma)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =Image8.Image
-                    Width: =444
-                    X: =0
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =1
                     Y: =1
                     ZIndex: =1
 
-                    DataCardKey19 As Text:
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    Image8 As image:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Image4 As image:
+                        BorderColor: =App.Theme.Colors.Darker40
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1.Height
-                        Image: |-
-                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
-                            //Parent.Default
-                        Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1.Width
-                        X: =AddPicture1.X
-                        Y: =AddPicture1.Y
-                        ZIndex: =2
+                        Height: =150
+                        Image: =LookUp(Asignaciones_1,ID = Value(DataCardValue16.Value)).Firma
+                        Width: =150
+                        X: =Parent.Width/2 - Image4.Width/2
+                        Y: =40
+                        ZIndex: =1
 
-                    AddPicture1 As addMedia:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =200
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey19.Y + DataCardKey19.Height + 5
-                        ZIndex: =3
-
-                    ErrorMessage19 As Text:
-                        BorderStyle: =""
+                    TextCanvas7 As Text:
                         DisplayMode: =DisplayMode.Edit
-                        Height: =10
-                        Size: =12
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =Image8.Y + Image8.Height
-                        ZIndex: =4
-
-                    StarVisible19 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =DataCardKey19.Height
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
+                        Height: =32
+                        Text: ="Firma"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =96
                         X: =0
-                        Y: =DataCardKey19.Y
-                        ZIndex: =5
+                        Y: =0
+                        ZIndex: =2
 
                 ResponsableP_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
@@ -503,9 +662,9 @@
                     Height: =70
                     Required: =false
                     Update: =ComboBoxResp.Selected
-                    Width: =444
-                    X: =1
-                    Y: =1
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =0
+                    Y: =2
                     ZIndex: =1
 
                     ComboBoxResp As combobox:
@@ -537,6 +696,16 @@
                         Y: =40
                         ZIndex: =5
 
+                    TextCanvas8 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: ="Nuevo responsable"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =Parent.Width
+                        X: =10
+                        Y: =0
+                        ZIndex: =6
+
                 ID_DataCard2 As typedDataCard.fluentV9TextualViewCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -547,9 +716,10 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =false
-                    Width: =444
-                    X: =2
-                    Y: =1
+                    Visible: =false
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =1
+                    Y: =2
                     ZIndex: =1
 
                     DataCardKey18 As Text:
@@ -574,11 +744,120 @@
                         Y: =DataCardKey18.Y + DataCardKey18.Height + 4
                         ZIndex: =2
 
+                DataCard3 As typedDataCard.blankCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =200
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =0
+                    Y: =3
+                    ZIndex: =1
+
+                    btn_reg_firma As Button:
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        OnSelect: =Set(varisFrimaVisible, true)
+                        Text: ="Registrar firma"
+                        Width: =120
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                Firma_DataCard1 As typedDataCard.fluentV9AddLargePictureCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Firma"
+                    Default: =ThisItem.Firma
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Asignaciones_1],DataSourceInfo.DisplayName,Firma)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =Image8.Image
+                    Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
+                    X: =1
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey19 As Text:
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =34
+                        Text: =Parent.DisplayName & " nueva"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    Image8 As image:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =AddPicture1.Height
+                        Image: |-
+                            =//If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                            //Parent.Default
+                            /*
+                            If(Form2.Mode = FormMode.New,
+                                ImageFirma.Image,
+                                Parent.Default
+                            )
+                            */
+                            ImageFirma.Image
+                        Tooltip: =Parent.DisplayName
+                        Width: =AddPicture1.Width
+                        ZIndex: =2
+
+                    AddPicture1 As addMedia:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =200
+                        Visible: =false
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey19.Y + DataCardKey19.Height + 5
+                        ZIndex: =3
+
+                    ErrorMessage19 As Text:
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =10
+                        Size: =12
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =Image8.Y + Image8.Height
+                        ZIndex: =4
+
+                    StarVisible19 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =DataCardKey19.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        X: =0
+                        Y: =DataCardKey19.Y
+                        ZIndex: =5
+
             ImageFirma As image:
                 BorderColor: =App.Theme.Colors.Darker40
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Image: =PenInput1.Image
+                Image: |-
+                    =If(!IsBlank(PenInput1),
+                        PenInput1.Image
+                    )
                 ZIndex: =2
 
     Container6 As groupContainer.verticalAutoLayoutContainer:
