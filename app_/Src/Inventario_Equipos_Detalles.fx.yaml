@@ -294,6 +294,69 @@
                         Y: =DataCardKey12.Y
                         ZIndex: =4
 
+                Num_Serie_DataCard2 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="NumSerie"
+                    Default: =ThisItem.Num_Serie
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,NumSerie)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, NumSerie)
+                    Required: =true
+                    Update: =DataCardValue39.Value
+                    Width: =If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width , Form1.Width-20)
+                    X: =0
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey42 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Número de serie"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue39 As 'Text input'":
+                        AccessibleLabel: =Parent.DisplayName
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey42.Y + DataCardKey42.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage40 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue39.Y + DataCardValue39.Height
+                        ZIndex: =3
+
+                    StarVisible40 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey42.Y
+                        ZIndex: =4
+
                 Modelo_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -329,16 +392,57 @@
                     DataCardValue14 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         BorderStyle: =""
-                        DefaultSelectedItems: =[Parent.Default]
+                        DefaultSelectedItems: |-
+                            =//[Parent.Default]
+                            [LookUp(Modelo,ID = Gallery5.Selected.Modelo.Id)]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         InputTextPlaceholder: ="Selecciona el modelo..."
-                        Items: =Choices([@Dispositivos].Modelo)
+                        Items: |-
+                            =//Choices([@Dispositivos].Modelo)
+                            Filter(Modelo, Or(id_Marca.Value = DataCardValue10.Selected.Value,id_Marca.Value = "[+]Agregar nuevo"))
+                        OnChange: =Set(varFormAgregarModelo,true)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey15.Y + DataCardKey15.Height + 4
                         ZIndex: =2
+
+                        Modelo1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="Modelo"
+                            FieldName: ="Modelo"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Height: =100
+                            Order: =2
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
+                        id_Marca1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="id_Marca"
+                            FieldName: ="id_Marca0"
+                            FieldType: ="E"
+                            FieldVariantName: ="textualColumn"
+                            Height: =100
+                            Order: =3
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+                        ID1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ID"
+                            FieldName: ="ID"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Height: =100
+                            Order: =3
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
 
                     ErrorMessage14 As Text:
                         BorderStyle: =""
@@ -599,7 +703,7 @@
                         =//667
                         If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width , Form1.Width-20)
                     X: =0
-                    Y: =8
+                    Y: =7
                     ZIndex: =1
 
                     DataCardKey1 As label:
@@ -759,6 +863,73 @@
                             DataCard2.Height/2-BarcodeReader2.Height/2
                         ZIndex: =2
 
+                Modelo_DataCard4 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Modelo"
+                    Default: =ThisItem.Modelo
+                    DisplayMode: =Parent.DisplayMode.Disabled
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Modelo)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =false
+                    Update: =DataCardValue40.Selected
+                    Visible: =true
+                    Width: =667
+                    X: =0
+                    Y: =9
+                    ZIndex: =1
+
+                    DataCardKey43 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue40 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: |-
+                            =[LookUp(Choices([@Dispositivos].Modelo),Id = DataCardValue14.Selected.ID)]
+                            /*If(Form1.Mode = FormMode.Edit,
+                                [Parent.Default],
+                                [LookUp(Choices([@Dispositivos].Modelo),Id = DataCardValue14.Selected.ID)]
+                            )*/
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@Dispositivos].Modelo)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey43.Y + DataCardKey43.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage41 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue40.Y + DataCardValue40.Height
+                        ZIndex: =3
+
+                    StarVisible41 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey43.Y
+                        ZIndex: =4
+
                 Fecha_Llegada_DataCard1 As typedDataCard.fluentV9DateEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -830,75 +1001,6 @@
                         Y: =DataCardKey4.Y
                         ZIndex: =4
 
-                Num_Serie_DataCard1 As typedDataCard.fluentV9NumberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="NumSerie"
-                    Default: =ThisItem.Num_Serie
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    Required: =true
-                    Update: =Value(DataCardValue2.Value)
-                    Width: |
-                        =//667
-                        If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width , Form1.Width-20)
-                    X: =0
-                    Y: =2
-                    ZIndex: =2
-
-                    DataCardKey2 As Text:
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: |
-                            =//Parent.DisplayName
-                            "Número de serie:"
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue2 As 'Text input'":
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        BorderStyle: =""
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        TriggerOutput: ="FocusOut"
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage2 As Text:
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue2.Y + DataCardValue2.Height
-                        ZIndex: =3
-
-                    StarVisible2 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey2.Y
-                        ZIndex: =4
-
                 Marca_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -939,8 +1041,9 @@
                         Height: =32
                         InputTextPlaceholder: ="Selecciona la marca..."
                         Items: |-
-                            =[Choices([@Dispositivos].Marca)]
+                            =Choices([@Dispositivos].Marca)
                             //Concat(Choices([@Dispositivos].Marca),"s",",")
+                        OnChange: =Set(varFormAgregarMarca,true)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -1282,7 +1385,7 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =0
+                    X: =1
                     Y: =7
                     ZIndex: =2
 
@@ -1350,8 +1453,8 @@
                     Width: |-
                         =//667
                         If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width/2 , Form1.Width)
-                    X: =1
-                    Y: =7
+                    X: =0
+                    Y: =8
                     ZIndex: =2
 
                     DataCardKey7 As Text:
@@ -1556,6 +1659,400 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Set(varEliminarEquipo,false)
+                Text: ="Cancelar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+    ContainerFormAgregarMarca As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =Inventario_Equipos_Detalles.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: |-
+            =//varFormAgregarMarca
+            If(And(DataCardValue10.Selected.Id = 10,varFormAgregarMarca),
+                true,
+                false
+            )
+        Width: =Inventario_Equipos_Detalles.Width
+        ZIndex: =4
+
+        Form4 As form.PowerApps_CoreControls_Form:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =App.Theme.Colors.Darker40
+            DataSource: =Marcas
+            DefaultMode: =FormMode.New
+            Fill: =Color.White
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =250
+            LayoutMinWidth: =400
+            NumberOfColumns: =1
+            UseFluentV9Cards: =true
+            ZIndex: =1
+
+            Marca_DataCard3 As typedDataCard.fluentV9TextualEditCard:
+                BorderColor: =App.Theme.Colors.Darker40
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Marca"
+                Default: =ThisItem.Marca
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Marcas],DataSourceInfo.DisplayName,Marca)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                MaxLength: =DataSourceInfo([@Marcas], DataSourceInfo.MaxLength, Marca)
+                Required: =true
+                Update: =DataCardValue24.Value
+                Width: =800
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey38 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                "DataCardValue24 As 'Text input'":
+                    AccessibleLabel: =Parent.DisplayName
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =32
+                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                    Required: =Parent.Required
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Value: =Parent.Default
+                    Width: =Parent.Width - 48
+                    X: =24
+                    Y: =DataCardKey38.Y + DataCardKey38.Height + 4
+                    ZIndex: =2
+
+                ErrorMessage36 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DataCardValue24.Y + DataCardValue24.Height
+                    ZIndex: =3
+
+                StarVisible36 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey38.Y
+                    ZIndex: =4
+
+        Container16 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =20
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+            ButtonCanvas5 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =RGBA(8, 222, 8, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =If(SubmitForm(Form4),
+                        Set(varFormAgregarMarca,false);
+                        NewForm(Form4);
+                        Refresh(Dispositivos);
+                        Refresh(Marcas);
+                    )
+                Text: ="Agregar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas6 As Button:
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =Set(varFormAgregarMarca,false);
+                    NewForm(Form4);
+                    ResetForm(Form1)
+                Text: ="Cancelar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+    ContainerFormAgregarModelo As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =Inventario_Equipos_Detalles.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: |-
+            =//varFormAgregarMarca
+            If(And(DataCardValue14.Selected.ID = 8,varFormAgregarModelo),
+                true,
+                false
+            )
+        Width: =Inventario_Equipos_Detalles.Width
+        ZIndex: =5
+
+        Form4_1 As form.PowerApps_CoreControls_Form:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =App.Theme.Colors.Darker40
+            DataSource: =Modelo
+            DefaultMode: =FormMode.New
+            Fill: =Color.White
+            FillPortions: =0
+            Height: =180
+            LayoutMinHeight: =250
+            LayoutMinWidth: =400
+            NumberOfColumns: =1
+            UseFluentV9Cards: =true
+            ZIndex: =1
+
+            id_Marca_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                BorderColor: =App.Theme.Colors.Darker40
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="id_Marca0"
+                Default: =ThisItem.id_Marca
+                DisplayMode: =Parent.DisplayMode.View
+                DisplayName: =DataSourceInfo([@Modelo],DataSourceInfo.DisplayName,id_Marca0)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                Required: =false
+                Update: =DataCardValue37.Selected
+                Width: =800
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey40 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue37 As Combobox.pcfdataset:
+                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                    DefaultSelectedItems: |-
+                        =//[Parent.Default]
+                        [LookUp(Choices([@Modelo].id_Marca0),Id = DataCardValue10.Selected.Id)]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =32
+                    Items: =Filter(Choices([@Modelo].id_Marca0), Id <> 10)
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Width: =Parent.Width - 48
+                    X: =24
+                    Y: =DataCardKey40.Y + DataCardKey40.Height + 4
+                    ZIndex: =2
+
+                    Id1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                        FieldDisplayName: ="Id"
+                        FieldName: ="Id"
+                        FieldType: ="n"
+                        FieldVariantName: ="textualColumn"
+                        Height: =100
+                        Order: =2
+                        Width: =100
+                        X: =0
+                        Y: =0
+                        ZIndex: =11
+
+                    Value2 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                        FieldDisplayName: ="Value"
+                        FieldName: ="Value"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Height: =100
+                        Order: =1
+                        Width: =100
+                        X: =0
+                        Y: =0
+                        ZIndex: =12
+
+                ErrorMessage38 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DataCardValue37.Y + DataCardValue37.Height
+                    ZIndex: =3
+
+                StarVisible38 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =20
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey40.Y
+                    ZIndex: =4
+
+            Modelo_DataCard2 As typedDataCard.fluentV9TextualEditCard:
+                BorderColor: =App.Theme.Colors.Darker40
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Modelo"
+                Default: =ThisItem.Modelo
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Modelo],DataSourceInfo.DisplayName,Modelo)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                MaxLength: =DataSourceInfo([@Modelo], DataSourceInfo.MaxLength, Modelo)
+                Required: =true
+                Update: =DataCardValue38.Value
+                Width: =800
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardKey41 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                "DataCardValue38 As 'Text input'":
+                    AccessibleLabel: =Parent.DisplayName
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =32
+                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                    Required: =Parent.Required
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Value: =Parent.Default
+                    Width: =Parent.Width - 48
+                    X: =24
+                    Y: =DataCardKey41.Y + DataCardKey41.Height + 4
+                    ZIndex: =2
+
+                ErrorMessage39 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DataCardValue38.Y + DataCardValue38.Height
+                    ZIndex: =3
+
+                StarVisible39 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey41.Y
+                    ZIndex: =4
+
+        Container16_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =20
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+            ButtonCanvas5_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =RGBA(8, 222, 8, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =If(SubmitForm(Form4_1),
+                        Set(varFormAgregarModelo,false);
+                        NewForm(Form4_1);
+                        Refresh(Dispositivos);
+                        Refresh(Marcas);
+                        Refresh(Modelo);
+                    )
+                Text: ="Agregar"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas6_1 As Button:
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =Set(varFormAgregarModelo,false);
+                    NewForm(Form4_1);
+                    ResetForm(Form1)
                 Text: ="Cancelar"
                 Width: =96
                 X: =0

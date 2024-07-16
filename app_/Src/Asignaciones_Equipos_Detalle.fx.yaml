@@ -716,7 +716,9 @@
                     Height: =50
                     Required: =false
                     Update: =Image8.Image
-                    Visible: =Form2.Mode = FormMode.Edit
+                    Visible: |-
+                        =//Form2.Mode = FormMode.Edit
+                        true
                     Width: =If(Asignaciones_Equipos_Detalle.Size = ScreenSize.ExtraLarge, Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Large,Form2.Width/2, Asignaciones_Equipos_Detalle.Size = ScreenSize.Medium, Form2.Width , Form2.Width-20)
                     X: =1
                     Y: =3
