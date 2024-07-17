@@ -4053,7 +4053,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -4442,7 +4442,7 @@
       "MetaDataIDKey": "",
       "Name": "DataCard2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6892,8 +6892,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "[Parent.Default]",
           "InvariantPropertyName": "DefaultSelectedItems",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -15688,7 +15688,7 @@
       "MetaDataIDKey": "",
       "Name": "Modelo_DataCard4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16106,7 +16106,7 @@
       "MetaDataIDKey": "",
       "Name": "Prestamo_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

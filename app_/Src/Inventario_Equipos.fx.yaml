@@ -179,7 +179,9 @@
                     =Navigate(Inventario_Equipos_Detalles);
                     NewForm(Form1);
                     Set(varFormAgregarMarca,false);
-                    Set(varFormAgregarModelo,false)
+                    Set(varFormAgregarModelo,false);
+                    Set(varMarca, Blank());
+                    Set(varModelo, Blank())
                 Width: =40
                 ZIndex: =5
 
@@ -223,7 +225,9 @@
                     EditForm(Form1);
                     Set(varScreenAsigna,false);
                     Set(varFormAgregarMarca,false);
-                    Set(varFormAgregarModelo,false)
+                    Set(varFormAgregarModelo,false);
+                    Set(varMarca, Blank());
+                    Set(varModelo, Blank())
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 3, Inventario_Equipos.Size = ScreenSize.Large, 2 , 2)
                 ZIndex: =1

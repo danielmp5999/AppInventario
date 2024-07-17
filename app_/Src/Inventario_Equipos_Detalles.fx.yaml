@@ -111,6 +111,11 @@
                     Icon: =Icon.Save
                     OnSelect: |-
                         =//false
+                        If(varReset = true,
+                            
+                            Set(varReset, false)
+                        );
+                        
                         If(SubmitForm(Form1),
                             Navigate(Inventario);
                             ResetForm(Form1);
@@ -300,10 +305,10 @@
                     DataField: ="NumSerie"
                     Default: =ThisItem.Num_Serie
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,NumSerie)
+                    DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, NumSerie)
+                    MaxLength: =DataSourceInfo([@Dispositivos], DataSourceInfo.MaxLength, Num_Serie)
                     Required: =true
                     Update: =DataCardValue39.Value
                     Width: =If(Inventario_Equipos_Detalles.Size = ScreenSize.ExtraLarge, Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Large,Form1.Width/2, Inventario_Equipos_Detalles.Size = ScreenSize.Medium, Form1.Width , Form1.Width-20)
@@ -394,14 +399,31 @@
                         BorderStyle: =""
                         DefaultSelectedItems: |-
                             =//[Parent.Default]
-                            [LookUp(Modelo,ID = Gallery5.Selected.Modelo.Id)]
+                            If(Form1.Mode = FormMode.New,
+                                If(IsBlank(varModelo),
+                                    [Parent.Default],
+                                    [LookUp(Modelo,Modelo = varModelo)]
+                                )
+                                ,
+                                //[LookUp(Modelo,ID = Gallery5.Selected.Modelo.Id)]
+                                If(IsBlank(varModelo),
+                                    [LookUp(Modelo,ID = Gallery5.Selected.Modelo.Id)],
+                                    [LookUp(Modelo,Modelo = varModelo)]
+                                )
+                            )
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         InputTextPlaceholder: ="Selecciona el modelo..."
                         Items: |-
                             =//Choices([@Dispositivos].Modelo)
                             Filter(Modelo, Or(id_Marca.Value = DataCardValue10.Selected.Value,id_Marca.Value = "[+]Agregar nuevo"))
-                        OnChange: =Set(varFormAgregarModelo,true)
+                        OnChange: |
+                            =Set(varFormAgregarModelo,true);
+                            
+                            If(DataCardValue14.Selected.ID = 8,
+                                Reset(DataCardValue14);
+                                Set(varFormAgregarModeloItem, true)
+                            )
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -582,7 +604,10 @@
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: |-
                             =//Parent.Default
-                            "W" & Last(Dispositivos).ID + 1
+                            If(Form1.Mode = FormMode.New,
+                                "W" & Last(Dispositivos).ID + 1,
+                                Parent.Default
+                            )
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey11.Y + DataCardKey11.Height + 4
@@ -1036,14 +1061,24 @@
                     DataCardValue10 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         BorderStyle: =""
-                        DefaultSelectedItems: =[Parent.Default]
+                        DefaultSelectedItems: |-
+                            =If(IsBlank(varMarca),
+                                [Parent.Default],
+                                [LookUp(Choices([@Dispositivos].Marca),Value = varMarca)]
+                            )
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         InputTextPlaceholder: ="Selecciona la marca..."
                         Items: |-
                             =Choices([@Dispositivos].Marca)
                             //Concat(Choices([@Dispositivos].Marca),"s",",")
-                        OnChange: =Set(varFormAgregarMarca,true)
+                        OnChange: |
+                            =Set(varFormAgregarMarca,true);
+                            
+                            If(DataCardValue10.Selected.Id = 10,
+                                Reset(DataCardValue10);
+                                Set(varFormAgregarMarcaItem, true)
+                            )
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -1679,7 +1714,7 @@
         RadiusTopRight: =4
         Visible: |-
             =//varFormAgregarMarca
-            If(And(DataCardValue10.Selected.Id = 10,varFormAgregarMarca),
+            If(And(varFormAgregarMarcaItem,varFormAgregarMarca),
                 true,
                 false
             )
@@ -1791,11 +1826,15 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: |-
-                    =If(SubmitForm(Form4),
+                    =Set(varMarca,DataCardValue24.Value);
+                    If(SubmitForm(Form4),
+                        //Set(varMarca,DataCardValue24.Value);
                         Set(varFormAgregarMarca,false);
                         NewForm(Form4);
                         Refresh(Dispositivos);
-                        Refresh(Marcas);
+                        Set(varFormAgregarMarcaItem,false);
+                        
+                        //Refresh(Marcas);
                     )
                 Text: ="Agregar"
                 Width: =96
@@ -1812,7 +1851,10 @@
                 OnSelect: |-
                     =Set(varFormAgregarMarca,false);
                     NewForm(Form4);
-                    ResetForm(Form1)
+                    //ResetForm(Form1)
+                    //Reset(DataCardValue10)
+                    Set(varReset, true);
+                    Set(varFormAgregarMarcaItem,false);
                 Text: ="Cancelar"
                 Width: =96
                 X: =0
@@ -1833,7 +1875,7 @@
         RadiusTopRight: =4
         Visible: |-
             =//varFormAgregarMarca
-            If(And(DataCardValue14.Selected.ID = 8,varFormAgregarModelo),
+            If(And(varFormAgregarModeloItem,varFormAgregarModelo),
                 true,
                 false
             )
@@ -1861,7 +1903,7 @@
                 DataField: ="id_Marca0"
                 Default: =ThisItem.id_Marca
                 DisplayMode: =Parent.DisplayMode.View
-                DisplayName: =DataSourceInfo([@Modelo],DataSourceInfo.DisplayName,id_Marca0)
+                DisplayName: =DataSourceInfo([@Modelo],DataSourceInfo.DisplayName,id_Marca)
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =70
                 Required: =false
@@ -1886,10 +1928,10 @@
                     AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                     DefaultSelectedItems: |-
                         =//[Parent.Default]
-                        [LookUp(Choices([@Modelo].id_Marca0),Id = DataCardValue10.Selected.Id)]
+                        [LookUp(Choices([@Modelo].id_Marca),Id = DataCardValue10.Selected.Id)]
                     DisplayMode: =Parent.DisplayMode
                     Height: =32
-                    Items: =Filter(Choices([@Modelo].id_Marca0), Id <> 10)
+                    Items: =Filter(Choices([@Modelo].id_Marca), Id <> 10)
                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                     Width: =Parent.Width - 48
                     X: =24
@@ -2032,11 +2074,13 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: |-
-                    =If(SubmitForm(Form4_1),
+                    =Set(varModelo, DataCardValue38.Value);
+                    If(SubmitForm(Form4_1),
                         Set(varFormAgregarModelo,false);
                         NewForm(Form4_1);
                         Refresh(Dispositivos);
-                        Refresh(Marcas);
+                        Set(varFormAgregarModeloItem, false);
+                        //Refresh(Marcas);
                         Refresh(Modelo);
                     )
                 Text: ="Agregar"
@@ -2054,7 +2098,9 @@
                 OnSelect: |-
                     =Set(varFormAgregarModelo,false);
                     NewForm(Form4_1);
-                    ResetForm(Form1)
+                    //ResetForm(Form1)
+                    Set(varFormAgregarModeloItem, false);
+                    //Refresh(Modelo);
                 Text: ="Cancelar"
                 Width: =96
                 X: =0
