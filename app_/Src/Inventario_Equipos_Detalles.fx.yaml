@@ -74,7 +74,7 @@
                         14,
                         10
                     )
-                Text: =If(Form1.Mode=FormMode.New,"REGISTRAR EQUIPO NUEVO","EDITAR DETALLES DE EQUIPO")
+                Text: =If(Form1.Mode=FormMode.New,"REGISTRAR EQUIPO NUEVO","DETALLES DE EQUIPO")
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: |-
                     =//96
@@ -91,6 +91,7 @@
                 DropShadow: =DropShadow.Light
                 FillPortions: =0
                 LayoutGap: =5
+                LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =75
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
@@ -98,8 +99,21 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =Icon17.Width*2+5
+                Width: =Icon17.Width*3+5
                 ZIndex: =5
+
+                Icon19 As icon.CancelBadge:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =50
+                    Icon: =Icon.Edit
+                    OnSelect: =Set(varFormDisplayMode,Parent.DisplayMode.Edit)
+                    Visible: =varFormDisplayMode = "view"
+                    Width: =50
+                    ZIndex: =1
 
                 Icon17 As icon.VerticalLine:
                     AlignInContainer: =AlignInContainer.Center
@@ -132,8 +146,9 @@
                             Set(CantidadInactivo, CountRows(Filter(FiltroDispositivos, Estatus.Value = "Inactivo")));
                             Set(CantidadEnRevision, CountRows(Filter(FiltroDispositivos, Estatus.Value = "En revision")));
                         )
+                    Visible: =Or(varFormDisplayMode = "edit",Form1.Mode = FormMode.New)
                     Width: =50
-                    ZIndex: =1
+                    ZIndex: =2
 
                 "Icon18 As icon.'3DPrinting'":
                     AlignInContainer: =AlignInContainer.Center
@@ -144,8 +159,9 @@
                     Height: =50
                     Icon: =Icon.Trash
                     OnSelect: =Set(varEliminarEquipo,true)
+                    Visible: =And(varFormDisplayMode = "edit",Form1.Mode = FormMode.Edit)
                     Width: =50
-                    ZIndex: =2
+                    ZIndex: =3
 
         MainContainer8 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -163,9 +179,7 @@
             Form1 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =Dispositivos
-                DefaultMode: |-
-                    =//FormMode.New
-                    If(IsBlank(Form1),FormMode.New,FormMode.Edit)
+                DefaultMode: =
                 Item: |-
                     =If(Form1.Mode = FormMode.Edit,
                         If(varScreenAsigna,
@@ -234,7 +248,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Donador"
                     Default: =ThisItem.Donador
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Donador)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -304,7 +320,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="NumSerie"
                     Default: =ThisItem.Num_Serie
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Num_Serie)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -367,7 +385,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Modelo"
                     Default: =ThisItem.Modelo
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Modelo)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -495,7 +515,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="TipoDisp"
                     Default: =ThisItem.TipoDisp
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,TipoDisp)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -565,7 +585,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="CodBAMXP"
                     Default: =ThisItem.Cod_BAMXP
-                    DisplayMode: =Parent.DisplayMode.View
+                    DisplayMode: =varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Cod_BAMXP)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -642,7 +662,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Codigodebarras"
                     Default: =ThisItem.'Codigo de barras'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =///Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,'Codigo de barras')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -717,7 +739,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
                     Default: =ThisItem.Attachments
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Attachments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: |
@@ -960,7 +982,7 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Fecha_Llegada"
                     Default: =ThisItem.Fecha_Llegada
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Fecha_Llegada)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -1031,7 +1053,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Marca"
                     Default: =ThisItem.Marca
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Marca)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -1127,7 +1151,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Caracteristicas"
                     Default: =ThisItem.Caracteristicas
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Caracteristicas)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -1199,7 +1225,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Diag_Inicial"
                     Default: =ThisItem.Diag_Inicial
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Diag_Inicial)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
@@ -1269,7 +1297,9 @@
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Estatus"
                     Default: =ThisItem.Estatus
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        varFormDisplayMode
                     DisplayName: =DataSourceInfo([@Dispositivos],DataSourceInfo.DisplayName,Estatus)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70

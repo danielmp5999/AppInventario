@@ -8,7 +8,7 @@
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
-        LayoutGap: =16
+        LayoutGap: =5
         LayoutMode: =LayoutMode.Auto
         PaddingBottom: =16
         PaddingLeft: =16
@@ -107,12 +107,11 @@
                 Y: =0
                 ZIndex: =3
 
-        Container2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+        Container15 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             FillPortions: =0
-            Height: =50
-            LayoutGap: =10
+            Height: =100
+            LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -120,70 +119,100 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =2
+            ZIndex: =3
 
-            Container10 As groupContainer.horizontalAutoLayoutContainer:
+            Container2 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 FillPortions: =0
-                LayoutMinHeight: =50
+                Height: =50
+                LayoutGap: =10
+                LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =Container2.Width - Icon4.Width*2
                 ZIndex: =1
 
-                Icon4 As icon.Search:
+                Container10 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Container2.Width - Icon4.Width*2
+                    ZIndex: =1
+
+                    Icon4 As icon.Search:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =35
+                        Icon: =Icon.Search
+                        PaddingLeft: =6
+                        Width: =35
+                        ZIndex: =1
+
+                    "TextInputCanvas1 As 'Text input'":
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Placeholder: ="Buscar por ID del dispositivo"
+                        TriggerOutput: ="FocusOut"
+                        Width: |-
+                            =//Container2.Width-Icon4.Width-Icon4.Width
+                            //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
+                            If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,800, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
+                        X: |-
+                            =//0
+                            35
+                        Y: =0
+                        ZIndex: =2
+
+                Icon16 As icon.Add:
                     AlignInContainer: =AlignInContainer.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =App.Theme.Colors.Darker30
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =35
-                    Icon: =Icon.Search
-                    PaddingLeft: =6
-                    Width: =35
-                    ZIndex: =1
+                    Height: =40
+                    Icon: =Icon.Add
+                    OnSelect: |-
+                        =Navigate(Inventario_Equipos_Detalles);
+                        NewForm(Form1);
+                        Set(varFormAgregarMarca,false);
+                        Set(varFormAgregarModelo,false);
+                        Set(varMarca, Blank());
+                        Set(varModelo, Blank());
+                        Set(varFormDisplayMode, Parent.DisplayMode)
+                    Width: =40
+                    ZIndex: =5
 
-                "TextInputCanvas1 As 'Text input'":
+                Icon21 As icon.ChevronUp:
                     AlignInContainer: =AlignInContainer.Center
-                    BorderStyle: =""
-                    DisplayMode: =DisplayMode.Edit
-                    FillPortions: =1
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =320
-                    Placeholder: ="Buscar por ID del dispositivo"
-                    TriggerOutput: ="FocusOut"
-                    Width: |-
-                        =//Container2.Width-Icon4.Width-Icon4.Width
-                        //If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1120, Inventario_Equipos.Size = ScreenSize.Large,830, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
-                        If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 1000, Inventario_Equipos.Size = ScreenSize.Large,800, Inventario_Equipos.Size = ScreenSize.Medium, 400 , 150)
-                    X: |-
-                        =//0
-                        35
-                    Y: =0
-                    ZIndex: =2
-
-            Icon16 As icon.Add:
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =App.Theme.Colors.Darker30
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =40
-                Icon: =Icon.Add
-                OnSelect: |-
-                    =Navigate(Inventario_Equipos_Detalles);
-                    NewForm(Form1);
-                    Set(varFormAgregarMarca,false);
-                    Set(varFormAgregarModelo,false);
-                    Set(varMarca, Blank());
-                    Set(varModelo, Blank())
-                Width: =40
-                ZIndex: =5
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =40
+                    Icon: =VarIconMore
+                    OnSelect: |-
+                        =
+                        If(varAux,
+                            Set(varAux, false);
+                            Set(VarIconMore, Icon.ChevronUp),
+                            Set(varAux, true);
+                            Set(VarIconMore, Icon.ChevronDown);
+                        )
+                    Width: =40
+                    ZIndex: =6
 
         MainContainer6 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -198,7 +227,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            ZIndex: =3
+            ZIndex: =4
 
             "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
                 BorderColor: =App.Theme.Colors.Darker40
@@ -227,7 +256,8 @@
                     Set(varFormAgregarMarca,false);
                     Set(varFormAgregarModelo,false);
                     Set(varMarca, Blank());
-                    Set(varModelo, Blank())
+                    Set(varModelo, Blank());
+                    Set(varFormDisplayMode, Parent.DisplayMode.View)
                 TemplateSize: =Min(320, Self.Height - 60)
                 WrapCount: =If(Inventario_Equipos.Size = ScreenSize.ExtraLarge, 3, Inventario_Equipos.Size = ScreenSize.Large, 2 , 2)
                 ZIndex: =1

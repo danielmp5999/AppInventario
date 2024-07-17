@@ -288,7 +288,8 @@
                     LayoutMinWidth: =96
                     OnSelect: |-
                         =Navigate(Inventario_Equipos_Detalles);
-                        Set(varScreenAsigna,true)
+                        Set(varScreenAsigna,true);
+                        Set(varFormDisplayMode, Parent.DisplayMode.View)
                     Text: ="Detalles"
                     Width: =96
                     X: =0
